@@ -1,0 +1,53 @@
+{
+  "name": "dolan-client-volantis",
+  "private": true,
+  "packageManager": "pnpm@7.12.2",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "start": "node .output/server/index.mjs",
+    "nuxi": "nuxi",
+    "lint:js": "eslint .",
+    "lint:js:fix": "nr lint:js --fix",
+    "lint:css": "stylelint src/**/*.{html,vue,css,scss}",
+    "lint:css:fix": "nr lint:css --fix",
+    "lint": "nr lint:js && nr lint:css",
+    "lint:fix": "nr lint:js:fix && nr lint:css:fix",
+    "postinstall": "nuxi prepare"
+  },
+  "devDependencies": {
+    "@antfu/ni": "^0.18.0",
+    "@dolan-x/shared": "^0.0.32",
+    "@iconify-json/carbon": "^1.1.8",
+    "@iconify-json/zondicons": "^1.1.2",
+    "@nuxtjs/color-mode": "^3.1.6",
+    "@nuxtjs/google-fonts": "3.0.0-0",
+    "@pinia/nuxt": "^0.4.2",
+    "@so1ve/eslint-config": "^0.29.1",
+    "@so1ve/stylelint-config": "^0.2.3",
+    "@vueuse/nuxt": "^9.2.0",
+    "eslint": "^8.24.0",
+    "nuxt": "^3.0.0-rc.11",
+    "pinia": "^2.0.22",
+    "sass": "^1.55.0",
+    "stylelint": "^14.12.1",
+    "typescript": "^4.8.3",
+    "unplugin-icons": "^0.14.10",
+    "vite-plugin-toml": "^0.4.0"
+  },
+  "pnpm": {
+    "allowedDeprecatedVersions": {
+      "stable": "*"
+    },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "unplugin",
+        "vite",
+        "vue",
+        "webpack",
+        "postcss",
+        "rollup"
+      ]
+    }
+  }
+}
