@@ -1,0 +1,101 @@
+'0':
+  other: '0'
+'1':
+  other: '1'
+'2':
+  other: '2'
+'3':
+  other: '3'
+'4':
+  other: '4'
+'5':
+  other: '5'
+'6':
+  other: '6'
+'7':
+  other: '7'
+'8':
+  other: '8'
+'9':
+  other: '9'
+ellipsis:
+  other: …
+colon:
+  other: ': '
+minute:
+  one: min
+  other: mins
+tocTitle: Contents
+readMore: Read More
+prevPage: Newer
+nextPage: Older
+copy: Copy
+copied:
+  other: Copied!
+copyrightAuthor:
+  other: Author
+copyrightLink:
+  other: Link
+copyrightLicense:
+  other: License
+shareOn:
+  other: 'Share on:'
+shareOnTitle:
+  other: 'Share on '
+shareViaTitle:
+  other: 'Share via '
+relatedPosts:
+  other: 'See Also:'
+loadComments:
+  other: Load Comments?
+pageNotFound:
+  other: 404 - Page not found
+fofLinkText:
+  other: Take Me Home
+# searchResultsTitle:
+#   one: 'Found one result for “{{ .Term }}”'
+#   other: 'Found {{ .Count }} results for “{{ .Term }}”'
+# searchResultsNone:
+#   other: 'No results found for “{{ .Term }}”'
+twitter:
+  other: Twitter
+facebook:
+  other: Facebook
+linkedin:
+  other: LinkedIn
+telegram:
+  other: Telegram
+weibo:
+  other: Weibo
+douban:
+  other: Douban
+qq:
+  other: QQ
+qzone:
+  other: Qzone
+qrcode:
+  other: QR Code
+january:
+  other: January
+february:
+  other: February
+march:
+  other: March
+april:
+  other: April
+may:
+  other: May
+june:
+  other: June
+july:
+  other: July
+august:
+  other: August
+september:
+  other: September
+october:
+  other: October
+november:
+  other: November
+december:
+  other: December

@@ -1,6 +1,7 @@
 // https://codyhouse.co/ds/globals/colors
 
 @import "../utils/mixins.scss";
+@import "../variables.scss";
 
 @mixin light-theme {
   --theme-name: "light";
@@ -49,12 +50,7 @@
   }
 }
 
-// @if $defaultTheme == "light" {
-//   :root {
-//     @include light-theme;
-//   }
-// } @else {
-//   :root[data-theme="light"] {
-//     @include light-theme;
-//   }
-// }
+:root,
+:root[data-theme="light"] {
+  @include light-theme;
+}

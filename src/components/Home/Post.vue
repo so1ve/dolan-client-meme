@@ -3,23 +3,35 @@ import type { Post } from "@dolan-x/shared";
 
 const props = defineProps<{
   posts: Post[]
+  metas: Record<string, any>
 }>();
+const localePath = useLocalePath();
+const route = useRoute();
+const page = +(route.params.page || 1);
+
+const hasPrev = $computed(() => page > 1 && props.metas.pages > 1);
+const prevLink = $computed(() => page - 1 === 1 ? "/" : `/page/${page - 1}`);
+const hasNext = $computed(() => page < props.metas.pages);
+const nextLink = $computed(() => `/page/${page + 1}`);
 </script>
 
 <template>
   <!-- {{ range $paginator.Pages }} -->
-  <PostItem v-for="post in props.posts" :key="post.slug" :post="post" />
-  <!-- <ul class="pagination">
-        {{ if $paginator.HasPrev }}
-        <li class="pagination-prev">
-          <a href="{{ $paginator.Prev.URL }}" rel="prev">&lt; {{ i18n "prevPage" }}</a>
-        </li>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <li class="pagination-next">
-          <a href="{{ $paginator.Next.URL }}" rel="next">{{ i18n "nextPage" }} &gt;</a>
-        </li>
-      </ul> -->
+  <div>
+    <PostItem v-for="post in props.posts" :key="post.slug" :post="post" />
+    <ul class="pagination">
+      <li v-if="hasPrev" class="pagination-prev">
+        <NuxtLink :to="localePath(prevLink)" rel="prev">
+          &lt; {{ $t('prevPage') }}
+        </NuxtLink>
+      </li>
+      <li v-if="hasNext" class="pagination-next">
+        <NuxtLink :to="localePath(nextLink)" rel="prev">
+          {{ $t('nextPage') }} &gt;
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped lang="scss">

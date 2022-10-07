@@ -17,11 +17,13 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.18.0",
+    "@dolan-x/markdown-renderer": "^0.0.32",
     "@dolan-x/shared": "^0.0.32",
     "@iconify-json/carbon": "^1.1.8",
     "@iconify-json/zondicons": "^1.1.2",
     "@nuxtjs/color-mode": "^3.1.6",
     "@nuxtjs/google-fonts": "3.0.0-0",
+    "@nuxtjs/i18n": "8.0.0-alpha.2",
     "@pinia/nuxt": "^0.4.2",
     "@so1ve/eslint-config": "^0.29.1",
     "@so1ve/stylelint-config": "^0.2.3",

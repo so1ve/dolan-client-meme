@@ -14,9 +14,11 @@ const icon = computed(() => SVG[props.icon]);
 
 <style scoped lang="scss">
 .icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: 1.05em;
   height: 1em;
+  margin: 0 0.3em 0 0;
   fill: currentColor;
 }
 </style>

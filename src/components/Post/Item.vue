@@ -4,12 +4,13 @@ import type { Post } from "@dolan-x/shared";
 const props = defineProps<{
   post: Post
 }>();
+const localePath = useLocalePath();
 </script>
 
 <template>
   <article class="content post home">
     <h2 class="post-title">
-      <NuxtLink :href="getPostSlug(props.post.slug)" class="summary-title-link">
+      <NuxtLink :to="localePath(getPostSlug(props.post.slug))" class="summary-title-link">
         {{ props.post.title }}
       </NuxtLink>
     </h2>
@@ -19,8 +20,9 @@ const props = defineProps<{
       {{ props.post.excerpt }}
     </summary>
     <div class="read-more-container">
-      <NuxtLink :href="getPostSlug(props.post.slug)" class="read-more-link">
+      <NuxtLink :to="localePath(getPostSlug(props.post.slug))" class="read-more-link">
         <!-- {{ i18n "readMore" }} » -->
+        {{ $t('readMore') }}
       </NuxtLink>
     </div>
   </article>
@@ -36,6 +38,10 @@ article.content.post.home {
 
 .summary-title-link {
   color: var(--color-contrast-higher);
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
 
 .summary {

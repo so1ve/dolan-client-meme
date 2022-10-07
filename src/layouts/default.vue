@@ -6,6 +6,7 @@
         <slot />
       </div>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -27,6 +28,12 @@
     display: block;
     width: $postWidth;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: $maxWidth) {
+  .main-inner {
+    width: auto !important;
   }
 }
 </style>

@@ -1,8 +1,19 @@
+@import "./utils/functions.scss";
+
 $fontSize: 16px;
 $tabSize: 4;
 $lineHeight: 2;
 $postWidth: 36em;
 $listWidth: 36em;
+$greaterWidth: null;
+
+@if $postWidth > $listWidth {
+  $greaterWidth: $postWidth;
+} @else {
+  $greaterWidth: $listWidth;
+}
+
+$maxWidth: $fontSize * (strip-unit($greaterWidth) + 5);
 $headerLayoutFlex: true;
 $enableHeaderAutoHide: true;
 $enableNavToggle: true;
@@ -17,6 +28,9 @@ $duration: 0.5s;
 $primaryColorLightH: 220;
 $primaryColorLightS: 90%;
 $primaryColorLightL: 56%;
+$primaryColorDarkH: 201;
+$primaryColorDarkS: 65%;
+$primaryColorDarkL: 62%;
 $fontFamilySiteBrand: "";
 $fontFamilyMenu: "";
 $fontFamilyTitle: "Noto Serif SC", "EB Garamond", serif;

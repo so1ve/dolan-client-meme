@@ -8,20 +8,17 @@ export default defineNuxtConfig({
       ViteToml(),
     ],
   },
-  runtimeConfig: {
-    public: {
-      apiUrl: "",
-    },
-  },
   modules: [
     "@vueuse/nuxt",
     "@pinia/nuxt",
+    "@nuxtjs/i18n",
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "unplugin-icons/nuxt",
   ],
   colorMode: {
-    classSuffix: "",
+    fallback: "light",
+    dataValue: "theme",
   },
   googleFonts: {
     families: {
@@ -34,6 +31,27 @@ export default defineNuxtConfig({
         wght: [400, 700],
         ital: [400, 700],
       },
+    },
+  },
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        file: "en.yaml",
+      },
+      {
+        code: "zh",
+        file: "zh.yaml",
+      },
+    ],
+    // TODO: Remove lazy when nuxt-community/i18n-module#1518 is fixed
+    lazy: true,
+    langDir: "i18n/",
+    defaultLocale: "zh",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root", // recommended
     },
   },
   experimental: {

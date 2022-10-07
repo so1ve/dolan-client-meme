@@ -1,14 +1,24 @@
 <script setup lang="ts">
 import type { MenuItem } from "./Menu.vue";
+
 const props = defineProps<{
   title: string
 }>();
+const localePath = useLocalePath();
 
 const menuItems: MenuItem[] = [
   {
-    name: "测试",
+    name: "测试1",
     url: "/",
     icon: "home",
+  },
+  {
+    name: "测试2",
+    url: "/2",
+    icon: "tags",
+  },
+  {
+    identifier: "theme-switcher",
   },
 ];
 </script>
@@ -18,7 +28,7 @@ const menuItems: MenuItem[] = [
     <div class="header-wrapper">
       <div class="header-inner">
         <div class="site-brand">
-          <NuxtLink href="/" class="brand">
+          <NuxtLink :to="localePath('/')" class="brand">
             {{ props.title }}
           </NuxtLink>
         </div>
@@ -101,6 +111,142 @@ $brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
 
   &:hover {
     color: $siteBrandFontColor;
+  }
+}
+
+@media (max-width: $maxWidth) {
+  .header-inner {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .site-brand {
+    margin-left: 1em;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    margin: 2em 0;
+    text-align: center;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .menu-item {
+    margin: 0;
+    padding: 1em;
+
+    .icon {
+      margin: 0;
+    }
+  }
+
+  .menu-item-name {
+    display: block;
+  }
+
+  .header.open {
+    .nav {
+      display: block;
+      animation: appear $duration;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes appear {
+      0% {
+        height: 0;
+        margin: 0;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+
+      100% {
+        height: $navHeight;
+        margin: 2em 0;
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+    }
+
+    .nav-curtain {
+      animation: appearCurtain $duration;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes appearCurtain {
+      0% {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      100% {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .header.fade {
+    .nav {
+      display: block;
+      animation: fade $duration;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fade {
+      0% {
+        height: $navHeight;
+        margin: 2em 0;
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+
+      100% {
+        height: 0;
+        margin: 0;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+    }
+
+    .nav-curtain {
+      animation: fadeCurtain $duration;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeCurtain {
+      0% {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  #langs li {
+    width: auto;
   }
 }
 </style>
