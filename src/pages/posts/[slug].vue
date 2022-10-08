@@ -10,6 +10,7 @@ const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
 
 let post = $ref({} as Post);
 let renderedTitle = $ref("");
+let renderedContent = $ref("");
 if (data.value) {
   if (data.value.code === 404) {
     throw notFound();
@@ -17,6 +18,7 @@ if (data.value) {
   }
   post = data.value.data;
   renderedTitle = await renderMarkdown(post.title);
+  renderedContent = await renderMarkdown(post.content);
 }
 </script>
 
@@ -49,8 +51,7 @@ if (data.value) {
     {{- partial "utils/toc.html" . -}}
     {{- end -}} -->
 
-        <div class="post-body e-content">
-          <!-- {{ partial "utils/content.html" . }} -->
+        <div class="post-body e-content" v-html="renderedContent">
         </div>
 
         <!-- {{ partial "components/post-copyright.html" . }} -->
@@ -120,63 +121,65 @@ if (data.value) {
 }
 
 .post {
-  p {
-    margin: 1em 0;
-    line-height: $lineHeight;
-  }
-
-  img {
-    display: block;
-    clear: both;
-    max-width: 100%;
-    margin: 2em auto;
-    border: 1px solid var(--color-contrast-lower);
-  }
-
-  video {
-    display: block;
-    clear: both;
-    max-width: 100%;
-    margin: 2em auto;
-  }
-
-  sup {
-    vertical-align: super;
-    font-size: 70%;
-
-    a {
-      text-decoration: none;
+  :deep {
+    p {
+      margin: 1em 0;
+      line-height: $lineHeight;
     }
-  }
 
-  ol,
-  ul {
-    margin: 0;
-    padding-left: 2em;
-    line-height: $lineHeight;
-  }
+    img {
+      display: block;
+      clear: both;
+      max-width: 100%;
+      margin: 2em auto;
+      border: 1px solid var(--color-contrast-lower);
+    }
 
-  hr {
-    margin: 2.427em 0 1.5em;
-    border: none;
-    text-align: center;
+    video {
+      display: block;
+      clear: both;
+      max-width: 100%;
+      margin: 2em auto;
+    }
 
-    &::after {
-      content: "···";
+    sup {
+      vertical-align: super;
+      font-size: 70%;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    ol,
+    ul {
+      margin: 0;
       padding-left: 2em;
-      letter-spacing: 2em;
+      line-height: $lineHeight;
     }
-  }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .anchor-link {
-    &:hover {
-      --anchor-opacity: 1;
+    hr {
+      margin: 2.427em 0 1.5em;
+      border: none;
+      text-align: center;
+
+      &::after {
+        content: "···";
+        padding-left: 2em;
+        letter-spacing: 2em;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .anchor-link {
+      &:hover {
+        --anchor-opacity: 1;
+      }
     }
   }
 }
@@ -278,66 +281,68 @@ ul {
   --anchor-opacity: 0;
 }
 
-.table-container {
-  overflow-x: auto;
-  margin: 2em 0;
-}
+:deep {
+  .table-container {
+    overflow-x: auto;
+    margin: 2em 0;
+  }
 
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-color: var(--color-contrast-lower);
-}
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-color: var(--color-contrast-lower);
+  }
 
-th {
-  font-weight: 700;
-}
+  th {
+    font-weight: 700;
+  }
 
-th,
-td {
-  padding: 0.4em;
-  border: 1px solid var(--color-contrast-lower);
-  font-size: 0.9em;
-}
+  th,
+  td {
+    padding: 0.4em;
+    border: 1px solid var(--color-contrast-lower);
+    font-size: 0.9em;
+  }
 
-table > tbody > tr:nth-of-type(odd) {
-  background-color: alpha(var(--color-contrast-lower), 0.5);
-}
+  table > tbody > tr:nth-of-type(odd) {
+    background-color: alpha(var(--color-contrast-lower), 0.5);
+  }
 
-table > tbody > tr:hover {
-  background-color: var(--color-contrast-lower);
-}
+  table > tbody > tr:hover {
+    background-color: var(--color-contrast-lower);
+  }
 
-dt {
-  font-weight: 700;
-}
+  dt {
+    font-weight: 700;
+  }
 
-dd {
-  margin-left: 2em;
-}
-
-code {
-  padding: math.div($fontSize, 8), math.div($fontSize, 4);
-  background-color: alpha(var(--color-contrast-lower), 0.5);
-  font-size: 80%;
-}
-
-pre {
-  overflow: auto;
-  max-height: $maxHeight;
-  margin: 2rem 0;
-  padding: 1em;
-  background-color: alpha(var(--color-contrast-lower), 0.5);
-  font-size: 0.8rem;
-  line-height: 1.618;
-  word-wrap: normal;
-  overflow-wrap: normal;
+  dd {
+    margin-left: 2em;
+  }
 
   code {
-    padding: 0;
-    background-color: unset;
+    padding: math.div($fontSize, 8), math.div($fontSize, 4);
+    background-color: alpha(var(--color-contrast-lower), 0.5);
+    font-size: 80%;
+  }
+
+  pre {
+    overflow: auto;
+    max-height: $maxHeight;
+    margin: 2rem 0;
+    padding: 1em;
+    background-color: alpha(var(--color-contrast-lower), 0.5);
     font-size: 0.8rem;
+    line-height: 1.618;
+    word-wrap: normal;
+    overflow-wrap: normal;
+
+    code {
+      padding: 0;
+      background-color: unset;
+      font-size: 0.8rem;
+    }
   }
 }
 
