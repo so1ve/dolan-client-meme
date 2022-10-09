@@ -19,16 +19,17 @@
 
   //   /* Color values matching manni style */
 
-  //   --chroma-line-numbers-background: #ffc;
-  //   --chroma-line-numbers-color: #7f7f7f;
-  //   --chroma-keyword-color: #069;
-  //   --chroma-name-color: #99f;
-  //   --chroma-attribute-color: #309;
-  //   --chroma-literal-color: #c30;
-  //   --chroma-number-color: #f60;
-  //   --chroma-comment-color: #09f;
-  //   --chroma-deleted-color: #fcc;
-  //   --chroma-output-color: #aaa;
+    // --chroma-line-numbers-background: #ffc;
+    // --chroma-line-numbers-color: #7f7f7f;
+    --shiki-token-keyword: #069;
+    // --chroma-name-color: #99f;
+    // --chroma-attribute-color: #309;
+    --shiki-token-string: #c30;
+    --shiki-token-string-expression: #c30;
+    // --chroma-number-color: #f60;
+    --shiki-token-commen: #09f;
+    // --chroma-deleted-color: #fcc;
+    // --chroma-output-color: #aaa;
   // }
 
   .theme-icon-light {

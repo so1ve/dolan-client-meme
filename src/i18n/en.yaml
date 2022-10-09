@@ -1,27 +1,27 @@
-'0':
-  other: '0'
-'1':
-  other: '1'
-'2':
-  other: '2'
-'3':
-  other: '3'
-'4':
-  other: '4'
-'5':
-  other: '5'
-'6':
-  other: '6'
-'7':
-  other: '7'
-'8':
-  other: '8'
-'9':
-  other: '9'
+"0":
+  other: "0"
+"1":
+  other: "1"
+"2":
+  other: "2"
+"3":
+  other: "3"
+"4":
+  other: "4"
+"5":
+  other: "5"
+"6":
+  other: "6"
+"7":
+  other: "7"
+"8":
+  other: "8"
+"9":
+  other: "9"
 ellipsis:
   other: …
 colon:
-  other: ': '
+  other: ": "
 minute:
   one: min
   other: mins
@@ -39,13 +39,13 @@ copyrightLink:
 copyrightLicense:
   other: License
 shareOn:
-  other: 'Share on:'
+  other: "Share on:"
 shareOnTitle:
-  other: 'Share on '
+  other: "Share on "
 shareViaTitle:
-  other: 'Share via '
+  other: "Share via "
 relatedPosts:
-  other: 'See Also:'
+  other: "See Also:"
 loadComments:
   other: Load Comments?
 pageNotFound:

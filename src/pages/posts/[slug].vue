@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import * as shiki from "shiki";
+import rehypeShiki from "@leafac/rehype-shiki";
 import type { Post } from "@dolan-x/shared";
-import { renderMarkdown } from "@dolan-x/markdown-renderer";
+import { getRenderer } from "@dolan-x/markdown-renderer";
+
+const highlighter = await shiki.getHighlighter({ theme: "css-variables" });
+const renderer = getRenderer(instance => instance.use(rehypeShiki, { highlighter }));
+const renderMarkdown = async (md: string) => String(await renderer.process(md));
 
 const route = useRoute();
 const slug = $computed(() => route.params.slug);
@@ -51,8 +57,7 @@ if (data.value) {
     {{- partial "utils/toc.html" . -}}
     {{- end -}} -->
 
-        <div class="post-body e-content" v-html="renderedContent">
-        </div>
+        <div class="post-body e-content" v-html="renderedContent" />
 
         <!-- {{ partial "components/post-copyright.html" . }} -->
       </article>
