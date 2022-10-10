@@ -13,11 +13,6 @@ const menuItems: MenuItem[] = [
     icon: "home",
   },
   {
-    name: "测试2",
-    url: "/2",
-    icon: "tags",
-  },
-  {
     identifier: "theme-switcher",
   },
 ];

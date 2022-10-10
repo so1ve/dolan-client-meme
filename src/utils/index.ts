@@ -12,7 +12,7 @@ export const defineAPI = <T>() => defineEventHandler<DolanResponse<T>>((async (e
         "Content-Type": "application/json",
       },
       params,
-      baseURL: process.env.DOLAN_API_URL,
+      baseURL: import.meta.env.VITE_DOLAN_API_URL as string,
       onResponseError: async (e) => { res = e.response._data; },
     });
   } catch {}

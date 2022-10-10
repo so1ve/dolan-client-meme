@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import * as shiki from "shiki";
-import rehypeShiki from "@leafac/rehype-shiki";
+import rehypePrism from "rehype-prism";
 import type { Post } from "@dolan-x/shared";
 import { getRenderer } from "@dolan-x/markdown-renderer";
 
-const highlighter = await shiki.getHighlighter({ theme: "css-variables" });
-const renderer = getRenderer(instance => instance.use(rehypeShiki, { highlighter }));
-const renderMarkdown = async (md: string) => String(await renderer.process(md));
+const renderer = getRenderer(instance => instance.use(rehypePrism));
+const renderMarkdown = (md: string) => String(renderer.processSync(md));
 
 const route = useRoute();
 const slug = $computed(() => route.params.slug);
@@ -23,8 +21,8 @@ if (data.value) {
   // TODO
   }
   post = data.value.data;
-  renderedTitle = await renderMarkdown(post.title);
-  renderedContent = await renderMarkdown(post.content);
+  renderedTitle = renderMarkdown(post.title);
+  renderedContent = renderMarkdown(post.content);
 }
 </script>
 
