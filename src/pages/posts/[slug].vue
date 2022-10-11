@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import rehypePrism from "rehype-prism";
+import remarkPrism from "remark-prism";
 import type { Post } from "@dolan-x/shared";
 import { getRenderer } from "@dolan-x/markdown-renderer";
 
-const renderer = getRenderer(instance => instance.use(rehypePrism));
+const renderer = getRenderer({ modifyRemark: instance => instance.use(remarkPrism) });
 const renderMarkdown = (md: string) => String(renderer.processSync(md));
 
 const route = useRoute();
 const slug = $computed(() => route.params.slug);
 const apiURL = $computed(() => `/api/posts/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
-// console.log({ data, route });
 
 let post = $ref({} as Post);
 let renderedTitle = $ref("");

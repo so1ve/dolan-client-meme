@@ -20,17 +20,18 @@
 
   //   /* Color values matching dracula style */
 
-  //   --chroma-line-numbers-background: #ffc;
-  //   --chroma-line-numbers-color: #7f7f7f;
-  //   --chroma-keyword-color: #ff79c6;
-  //   --chroma-name-color: #8be9fd;
-  //   --chroma-attribute-color: #50fa7b;
-  //   --chroma-literal-color: #f1fa8c;
-  //   --chroma-number-color: #bd93f9;
-  //   --chroma-comment-color: #6272a4;
-  //   --chroma-deleted-color: #8b080b;
-  //   --chroma-output-color: #44475a;
-  // }
+  .token {
+    // --chroma-line-numbers-background: #ffc;
+    &.line-numbers { color: #7f7f7f; }
+    &.keyword { color: #ff79c6; }
+
+    // --chroma-name-color: #8be9fd;
+    // --chroma-attribute-color: #50fa7b;
+    &.string { color: #f1fa8c; }
+    &.number { color: #bd93f9; }
+    &.comment { color: #6272a4; }
+    &.deleted { color: #8b080b; }
+  }
 
   .theme-icon-light {
     display: none;
