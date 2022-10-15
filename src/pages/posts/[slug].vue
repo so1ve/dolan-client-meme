@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import remarkPrism from "remark-prism";
 import type { Post } from "@dolan-x/shared";
-import { getRenderer } from "@dolan-x/markdown-renderer";
-
-const renderer = getRenderer({ modifyRemark: instance => instance.use(remarkPrism) });
-const renderMarkdown = (md: string) => String(renderer.processSync(md));
 
 const route = useRoute();
 const slug = $computed(() => route.params.slug);
@@ -12,16 +7,16 @@ const apiURL = $computed(() => `/api/posts/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
 
 let post = $ref({} as Post);
-let renderedTitle = $ref("");
-let renderedContent = $ref("");
+let renderedTitle = ref("");
+let renderedContent = ref("");
 if (data.value) {
   if (data.value.code === 404) {
     throw notFound();
   // TODO
   }
   post = data.value.data;
-  renderedTitle = renderMarkdown(post.title);
-  renderedContent = renderMarkdown(post.content);
+  renderedTitle = await useRenderMarkdown(post.title);
+  renderedContent = await useRenderMarkdown(post.content);
 }
 </script>
 
@@ -86,7 +81,8 @@ if (data.value) {
 
 <style scoped lang="scss">
 @use "sass:math";
-@import "@/styles//variables.scss";
+@import "@/styles/variables.scss";
+@import "@/styles/utils/functions.scss";
 
 .single .main-inner {
   width: $postWidth;

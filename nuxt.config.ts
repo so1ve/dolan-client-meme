@@ -2,6 +2,7 @@ import { ViteToml } from "vite-plugin-toml";
 
 export default defineNuxtConfig({
   srcDir: "src/",
+  build: { transpile: ["vscode-textmate"] },
   vite: {
     plugins: [
       // @ts-expect-error Ignore type error
