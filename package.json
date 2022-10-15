@@ -1,7 +1,8 @@
 {
   "name": "dolan-client-volantis",
-  "private": true,
+  "version": "0.0.0",
   "packageManager": "pnpm@7.13.4",
+  "main": "nuxt.config.ts",
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
