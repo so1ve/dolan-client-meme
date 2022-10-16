@@ -22,12 +22,12 @@ const nextLink = $computed(() => `/page/${page + 1}`);
     <ul class="pagination">
       <li v-if="hasPrev" class="pagination-prev">
         <NuxtLink :to="localePath(prevLink)" rel="prev">
-          &lt; {{ $t('prevPage') }}
+          &lt; {{ $t('prevPage.other') }}
         </NuxtLink>
       </li>
       <li v-if="hasNext" class="pagination-next">
         <NuxtLink :to="localePath(nextLink)" rel="prev">
-          {{ $t('nextPage') }} &gt;
+          {{ $t('nextPage.other') }} &gt;
         </NuxtLink>
       </li>
     </ul>

@@ -25,11 +25,16 @@ colon:
 minute:
   one: min
   other: mins
-tocTitle: Contents
-readMore: Read More
-prevPage: Newer
-nextPage: Older
-copy: Copy
+tocTitle:
+  other: Contents
+readMore:
+  other: Read More
+prevPage:
+  other: Newer
+nextPage:
+  other: Older
+copy:
+  other: Copy
 copied:
   other: Copied!
 copyrightAuthor:

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { ColorScheme as _ColorScheme } from "#components";
+// Workaround: Type
+const ColorScheme = defineComponent(_ColorScheme);
+
 const colorMode = useColorMode();
 
 const isLight = computed(() => colorMode.preference === "light");

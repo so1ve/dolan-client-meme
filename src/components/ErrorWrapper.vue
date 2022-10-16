@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import type { FetchError } from "ohmyfetch";
-
-const props = defineProps<{
-  error: true | Error | null
-}>();
+// Workaround
+const props = defineProps({
+  error: {
+    type: [Error, Boolean, () => null],
+    required: true,
+  },
+});
 </script>
 
 <template>

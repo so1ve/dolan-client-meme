@@ -10,7 +10,7 @@ const localePath = useLocalePath();
 <template>
   <article class="content post home">
     <h2 class="post-title">
-      <NuxtLink :to="localePath(getPostSlug(props.post.slug))" class="summary-title-link">
+      <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="summary-title-link">
         {{ props.post.title }}
       </NuxtLink>
     </h2>
@@ -20,9 +20,9 @@ const localePath = useLocalePath();
       {{ props.post.excerpt }}
     </summary>
     <div class="read-more-container">
-      <NuxtLink :to="localePath(getPostSlug(props.post.slug))" class="read-more-link">
+      <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="read-more-link">
         <!-- {{ i18n "readMore" }} » -->
-        {{ $t('readMore') }}
+        {{ $t('readMore.other') }}
       </NuxtLink>
     </div>
   </article>
