@@ -1,11 +1,8 @@
 <script setup lang="ts">
 // Workaround
-const props = defineProps({
-  error: {
-    type: [Error, Boolean, () => null],
-    required: true,
-  },
-});
+const props = defineProps<{
+  error: any
+}>();
 </script>
 
 <template>
