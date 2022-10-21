@@ -4,6 +4,9 @@ import "./styles/main.scss";
 useHead({
   title: "Dolan Client MemE",
 });
+
+const configStore = useConfigStore();
+await configStore.fetchConfig();
 </script>
 
 <template>

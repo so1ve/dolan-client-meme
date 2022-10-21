@@ -13,8 +13,14 @@ export const useConfigStore = defineStore("config", () => {
     custom: {},
   } as ConfigAll));
 
+  async function fetchConfig () {
+    const { data } = await useFetch("/api/config");
+    config.value = data.value!.data;
+  }
+
   return {
     config,
+    fetchConfig,
   };
 });
 
