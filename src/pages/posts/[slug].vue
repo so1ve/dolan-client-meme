@@ -7,8 +7,8 @@ const apiURL = $computed(() => `/api/posts/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
 
 let post = $ref({} as Post);
-let renderedTitle = ref("");
-let renderedContent = ref("");
+let renderedTitle = $ref("");
+let renderedContent = $ref("");
 if (data.value) {
   if (data.value.code === 404) {
     throw notFound();

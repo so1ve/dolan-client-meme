@@ -14,10 +14,10 @@ function toggleColorMode (e: MouseEvent) {
 
 <template>
   <ColorScheme placeholder="🌓">
-    <a class="theme-switcher" href="#" @click="toggleColorMode">
+    <span class="theme-switcher" @click="toggleColorMode">
       <Icon v-if="isLight" icon="sun" />
       <Icon v-else icon="moon" />
-    </a>
+    </span>
   </ColorScheme>
 </template>
 
@@ -27,6 +27,7 @@ function toggleColorMode (e: MouseEvent) {
 .theme-switcher {
   z-index: 4;
   color: var(--color-contrast-medium);
+  cursor: pointer;
   transition: color $duration;
 
   &:hover {
