@@ -44,7 +44,6 @@ export default defineNuxtConfig({
         file: "zh.json",
       },
     ],
-    // TODO: Remove lazy when nuxt-community/i18n-module#1518 is fixed
     langDir: "i18n",
     defaultLocale: "zh",
     detectBrowserLanguage: {
