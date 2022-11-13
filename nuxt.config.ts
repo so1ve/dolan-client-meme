@@ -38,16 +38,15 @@ export default defineNuxtConfig({
     locales: [
       {
         code: "en",
-        file: "en.yaml",
+        file: "en.json",
       },
       {
         code: "zh",
-        file: "zh.yaml",
+        file: "zh.json",
       },
     ],
     // TODO: Remove lazy when nuxt-community/i18n-module#1518 is fixed
-    lazy: true,
-    langDir: "i18n/",
+    langDir: "i18n",
     defaultLocale: "zh",
     detectBrowserLanguage: {
       useCookie: true,
