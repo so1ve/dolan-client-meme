@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   build: { transpile: ["vscode-textmate"] },
   vite: {
     plugins: [
-      // @ts-expect-error Ignore type error
       ViteToml(),
     ],
   },
