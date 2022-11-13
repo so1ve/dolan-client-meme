@@ -26,55 +26,8 @@ if (data.value) {
       <article class="content post">
         <h1 class="post-title" v-html="renderedTitle" />
         <PostMeta :post="post" />
-
-        <!-- {{ with .Params.subtitle }}
-    {{- $raw := . -}}
-    <div class="post-subtitle p-name">
-      {{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}
-    </div>
-    {{ end }} -->
-
-        <!-- {{ if .Site.Params.displayPostDescription }}
-    {{ with .Params.description }}
-    {{- $raw := . -}}
-    <div class="post-description p-summary">
-      {{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}
-    </div> -->
-        <!-- {{ if .Params.meta | default .Site.Params.enablePostMeta }}
-    {{ partial "components/post-meta.html" (dict "$" . "isHome" false) }}
-    {{ end }}
-
-    {{ $enableTOC := .Params.toc | default .Site.Params.enableTOC -}}
-    {{- if $enableTOC -}}
-    {{- partial "utils/toc.html" . -}}
-    {{- end -}} -->
-
         <div class="post-body e-content" v-html="renderedContent" />
-
-        <!-- {{ partial "components/post-copyright.html" . }} -->
       </article>
-
-      <!-- {{ if and .Site.Params.enableGoogleAdUnits (eq hugo.Environment "production") -}}
-  {{ partial "third-party/google-adsense-unit.html" . }}
-  {{ -end }}
-
-  {{ partial "components/post-updated-badge.html" . }}
-
-  {{ partial "components/post-gitinfo.html" . }}
-
-  {{ partial "components/post-share.html" . }}
-
-  {{ partial "components/related-posts.html" . }}
-
-  {{ partial "components/post-tags.html" . }}
-
-  {{ partial "components/minimal-footer.html" . }}
-
-  {{ partial "components/minimal-footer-about.html" . }}
-
-  {{ partial "components/post-nav.html" . }}
-
-  {{ partial "components/comments.html" . }} -->
     </ErrorWrapper>
   </div>
 </template>
