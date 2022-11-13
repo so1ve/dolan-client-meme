@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "packageManager": "pnpm@7.13.5",
   "main": "nuxt.config.ts",
+  "files": [
+    "src",
+    "nuxt.config.ts"
+  ],
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
@@ -17,27 +21,27 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
-    "@antfu/ni": "^0.18.2",
+    "@antfu/ni": "^0.18.5",
     "@dolan-x/markdown-renderer": "^0.0.38",
     "@dolan-x/shared": "^0.0.38",
     "@iconify-json/carbon": "^1.1.9",
     "@iconify-json/zondicons": "^1.1.2",
     "@leafac/rehype-shiki": "^2.2.1",
     "@nuxtjs/color-mode": "^3.1.8",
-    "@nuxtjs/google-fonts": "3.0.0-0",
-    "@nuxtjs/i18n": "8.0.0-alpha.3",
+    "@nuxtjs/google-fonts": "3.0.0-1",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@8.0.0-beta.4-27805200.6d1344c",
     "@pinia/nuxt": "^0.4.3",
-    "@so1ve/eslint-config": "^0.29.1",
+    "@so1ve/eslint-config": "^0.31.0",
     "@so1ve/stylelint-config": "^0.3.0",
-    "@vueuse/nuxt": "^9.3.1",
-    "eslint": "^8.25.0",
-    "nuxt": "3.0.0-rc.12",
+    "@vueuse/nuxt": "^9.5.0",
+    "eslint": "^8.27.0",
+    "nuxt": "3.0.0-rc.13",
     "pinia": "^2.0.23",
-    "sass": "^1.55.0",
+    "sass": "^1.56.1",
     "shiki-es": "^0.1.2",
-    "stylelint": "^14.14.0",
+    "stylelint": "^14.14.1",
     "typescript": "^4.8.4",
-    "unplugin-icons": "^0.14.12",
+    "unplugin-icons": "^0.14.13",
     "vite-plugin-toml": "^0.4.0"
   },
   "pnpm": {
