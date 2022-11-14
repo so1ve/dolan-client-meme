@@ -28,8 +28,7 @@
                 "required": [
                   "name",
                   "url"
-                ],
-                "additionalProperties": false
+                ]
               },
               {
                 "type": "object",
@@ -41,8 +40,7 @@
                 },
                 "required": [
                   "identifier"
-                ],
-                "additionalProperties": false
+                ]
               }
             ]
           }
@@ -59,8 +57,7 @@
         "menu",
         "displayPoweredBy",
         "siteCreated"
-      ],
-      "additionalProperties": false
+      ]
     }
   },
   "properties": {
@@ -87,8 +84,7 @@
             "required": [
               "name",
               "url"
-            ],
-            "additionalProperties": false
+            ]
           },
           {
             "type": "object",
@@ -100,8 +96,7 @@
             },
             "required": [
               "identifier"
-            ],
-            "additionalProperties": false
+            ]
           }
         ]
       }

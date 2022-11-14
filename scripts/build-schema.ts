@@ -7,6 +7,7 @@ async function main () {
     path: "./src/types/config.ts",
     tsconfig: "./tsconfig.json",
     type: "*",
+    additionalProperties: true,
   };
 
   const outPath = "./schemas/schema.json";
