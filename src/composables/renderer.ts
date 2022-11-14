@@ -1,4 +1,4 @@
-import rehypeShiki from "@leafac/rehype-shiki";
+import rehypeShiki from "@so1ve/rehype-shiki";
 import { getRenderer } from "@dolan-x/markdown-renderer";
 
 export async function useRenderMarkdown (md: string) {

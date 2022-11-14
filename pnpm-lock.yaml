@@ -1,20 +1,17 @@
 lockfileVersion: 5.4
 
-overrides:
-  '@leafac/html': npm:@so1ve/leafac-html
-
 specifiers:
   '@antfu/ni': ^0.18.5
   '@dolan-x/markdown-renderer': ^0.0.38
   '@dolan-x/shared': ^0.0.38
   '@iconify-json/carbon': ^1.1.9
   '@iconify-json/zondicons': ^1.1.2
-  '@leafac/rehype-shiki': ^2.2.1
   '@nuxtjs/color-mode': ^3.1.8
   '@nuxtjs/google-fonts': 3.0.0-1
   '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.4-27805200.6d1344c
   '@pinia/nuxt': ^0.4.3
   '@so1ve/eslint-config': ^0.31.0
+  '@so1ve/rehype-shiki': ^2.2.1
   '@so1ve/stylelint-config': ^0.3.0
   '@vueuse/nuxt': ^9.5.0
   eslint: ^8.27.0
@@ -35,12 +32,12 @@ devDependencies:
   '@dolan-x/shared': 0.0.38
   '@iconify-json/carbon': 1.1.9
   '@iconify-json/zondicons': 1.1.2
-  '@leafac/rehype-shiki': 2.2.1
   '@nuxtjs/color-mode': 3.1.8
   '@nuxtjs/google-fonts': 3.0.0-1
   '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.4-27805200.6d1344c
   '@pinia/nuxt': 0.4.3_typescript@4.8.4
   '@so1ve/eslint-config': 0.31.0_rmayb2veg2btbq6mbmnyivgasy
+  '@so1ve/rehype-shiki': 2.2.1
   '@so1ve/stylelint-config': 0.3.0_stylelint@14.14.1
   '@vueuse/nuxt': 9.5.0_nuxt@3.0.0-rc.13
   eslint: 8.27.0
@@ -381,7 +378,7 @@ packages:
       '@babel/helper-function-name': 7.19.0
       '@babel/helper-hoist-variables': 7.18.6
       '@babel/helper-split-export-declaration': 7.18.6
-      '@babel/parser': 7.19.0
+      '@babel/parser': 7.20.3
       '@babel/types': 7.20.2
       debug: 4.3.4
       globals: 11.12.0
@@ -746,21 +743,6 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
-    dev: true
-
-  /@leafac/rehype-shiki/2.2.1:
-    resolution: {integrity: sha512-rN2r98YDdy1q61TppykZmk1np01K6jFBC/3FsLHbDYhMu0wpJ+1XW8LjrjotpBSoyy0MOzrnlVf74nUT6RJ4jA==}
-    peerDependencies:
-      shiki: ^0.11.1
-    peerDependenciesMeta:
-      shiki:
-        optional: true
-    dependencies:
-      '@leafac/html': /@so1ve/leafac-html/3.0.3
-      hast-util-to-text: 3.1.1
-      rehype-parse: 8.0.4
-      unified: 10.1.2
-      unist-util-modify-children: 3.0.0
     dev: true
 
   /@mapbox/node-pre-gyp/1.0.9:
@@ -1400,6 +1382,21 @@ packages:
       sanitize-xml-string: 1.1.0
     dev: true
 
+  /@so1ve/rehype-shiki/2.2.1:
+    resolution: {integrity: sha512-1bsWL5jn+ekXb0Tk43B9tzEL54t2VfoZswtKw0dECak4ObCFVHWRXczGNtFvazjUdAHkz9PwjV09+3xd6GuwuQ==}
+    peerDependencies:
+      shiki: ^0.11.1
+    peerDependenciesMeta:
+      shiki:
+        optional: true
+    dependencies:
+      '@leafac/html': /@so1ve/leafac-html/3.0.3
+      hast-util-to-text: 3.1.1
+      rehype-parse: 8.0.4
+      unified: 10.1.2
+      unist-util-modify-children: 3.0.0
+    dev: true
+
   /@so1ve/stylelint-config-basic/0.3.0_stylelint@14.14.1:
     resolution: {integrity: sha512-W65HDN1UtAA1yMFP628iYey1E6IVsWyr7AtuOaj7g5SiXnWYOPTkLHZ7giss31+lUKn3RsrxRx+84JoG3MeLxw==}
     peerDependencies:
@@ -1748,7 +1745,7 @@ packages:
   /@vue/compiler-core/3.2.41:
     resolution: {integrity: sha512-oA4mH6SA78DT+96/nsi4p9DX97PHcNROxs51lYk7gb9Z4BPKQ3Mh+BLn6CQZBw857Iuhu28BfMSRHAlPvD4vlw==}
     dependencies:
-      '@babel/parser': 7.19.0
+      '@babel/parser': 7.20.3
       '@vue/shared': 3.2.41
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -1842,7 +1839,7 @@ packages:
   /@vue/reactivity-transform/3.2.41:
     resolution: {integrity: sha512-mK5+BNMsL4hHi+IR3Ft/ho6Za+L3FA5j8WvreJ7XzHrqkPq8jtF/SMo7tuc9gHjLDwKZX1nP1JQOKo9IEAn54A==}
     dependencies:
-      '@babel/parser': 7.19.0
+      '@babel/parser': 7.20.3
       '@vue/compiler-core': 3.2.41
       '@vue/shared': 3.2.41
       estree-walker: 2.0.2
