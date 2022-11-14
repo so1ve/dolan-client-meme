@@ -12,7 +12,7 @@ const customConfig = $computed(() => configStore.config.custom);
         <slot />
       </div>
     </main>
-    <Footer :display-powered-by="customConfig.displayPoweredBy" />
+    <Footer :display-powered-by="customConfig.displayPoweredBy" :site-created="customConfig.siteCreated" />
   </div>
 </template>
 

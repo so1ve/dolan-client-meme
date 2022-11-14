@@ -1,10 +1,12 @@
 <script setup lang="ts">
 const props = defineProps<{
+  siteCreated: string
   displayPoweredBy: boolean
 }>();
 
 // TODO
-const siteCreated = useDateFormat("2021-01-01", "YYYY");
+const siteCreated = useDateFormat(props.siteCreated, "YYYY");
+const yearNow = useDateFormat(new Date(), "YYYY");
 </script>
 
 <template>
@@ -12,6 +14,9 @@ const siteCreated = useDateFormat("2021-01-01", "YYYY");
     <div class="footer-inner">
       <div class="site-info">
         ©&nbsp;{{ siteCreated }}
+        <template v-if="siteCreated !== yearNow">
+          - {{ yearNow }}
+        </template>
         <div v-if="props.displayPoweredBy" class="powered-by">
           Powered by <a href="https://github.com/dolan-x" target="_blank">Dolan</a> | Client is <a href="https://github.com/so1ve/dolan-client-meme" target="_blank">MemE</a>
         </div>
