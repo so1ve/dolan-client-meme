@@ -1,5 +1,5 @@
 // Can't import directly because of ts-json-schema-generator limit
-export type MenuItem = {
+type MenuItem = {
   name: string
   url: string
   icon?: string
