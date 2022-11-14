@@ -8,9 +8,9 @@
     "nuxt.config.ts"
   ],
   "scripts": {
-    "build:nuxt": "nuxi build",
+    "build": "nuxi build",
     "build:schema": "tsx scripts/build-schema.ts",
-    "build": "nr build:nuxt && nr build:schema",
+    "build:all": "nr build && nr build:schema",
     "dev": "nuxi dev",
     "typecheck": "nuxi typecheck",
     "start": "node .output/server/index.mjs",

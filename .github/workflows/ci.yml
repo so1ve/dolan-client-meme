@@ -77,4 +77,4 @@ jobs:
         run: nci
 
       - name: Build
-        run: nr build
+        run: nr build:all
