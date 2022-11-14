@@ -11,7 +11,7 @@ specifiers:
   '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.4-27805200.6d1344c
   '@pinia/nuxt': ^0.4.3
   '@so1ve/eslint-config': ^0.31.0
-  '@so1ve/rehype-shiki': ^2.2.1
+  '@so1ve/rehype-shiki': 2.2.1-fix.1
   '@so1ve/stylelint-config': ^0.3.0
   '@vueuse/nuxt': ^9.5.0
   eslint: ^8.27.0
@@ -37,7 +37,7 @@ devDependencies:
   '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.4-27805200.6d1344c
   '@pinia/nuxt': 0.4.3_typescript@4.8.4
   '@so1ve/eslint-config': 0.31.0_rmayb2veg2btbq6mbmnyivgasy
-  '@so1ve/rehype-shiki': 2.2.1
+  '@so1ve/rehype-shiki': 2.2.1-fix.1
   '@so1ve/stylelint-config': 0.3.0_stylelint@14.14.1
   '@vueuse/nuxt': 9.5.0_nuxt@3.0.0-rc.13
   eslint: 8.27.0
@@ -1382,15 +1382,15 @@ packages:
       sanitize-xml-string: 1.1.0
     dev: true
 
-  /@so1ve/rehype-shiki/2.2.1:
-    resolution: {integrity: sha512-1bsWL5jn+ekXb0Tk43B9tzEL54t2VfoZswtKw0dECak4ObCFVHWRXczGNtFvazjUdAHkz9PwjV09+3xd6GuwuQ==}
+  /@so1ve/rehype-shiki/2.2.1-fix.1:
+    resolution: {integrity: sha512-vKG7k5xnmorKS0NI+l3iTOjGu9OZmqIjeNPd2dnzyUbTvQB0SLG2hMrFFuoLmLftnlhG2j/0m2b5lgapO1bEYw==}
     peerDependencies:
       shiki: ^0.11.1
     peerDependenciesMeta:
       shiki:
         optional: true
     dependencies:
-      '@leafac/html': /@so1ve/leafac-html/3.0.3
+      '@so1ve/leafac-html': 3.0.3
       hast-util-to-text: 3.1.1
       rehype-parse: 8.0.4
       unified: 10.1.2

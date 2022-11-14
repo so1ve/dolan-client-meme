@@ -34,7 +34,7 @@
     "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@8.0.0-beta.4-27805200.6d1344c",
     "@pinia/nuxt": "^0.4.3",
     "@so1ve/eslint-config": "^0.31.0",
-    "@so1ve/rehype-shiki": "^2.2.1",
+    "@so1ve/rehype-shiki": "2.2.1-fix.1",
     "@so1ve/stylelint-config": "^0.3.0",
     "@vueuse/nuxt": "^9.5.0",
     "eslint": "^8.27.0",
