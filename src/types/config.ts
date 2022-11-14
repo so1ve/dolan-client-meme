@@ -9,8 +9,19 @@ type MenuItem = {
 
 export interface ConfigSchema {
   title: string
+  favicon: string
   menu: MenuItem[]
   displayPoweredBy: boolean
+  author: {
+    name: string
+    email?: string
+    motto?: string
+    avatar?: string
+    website?: string
+    twitter?: string
+  }
   // e.g 1969-07-20T20:17:43+00:00
+  siteLogo: string
+  siteDescription: string
   siteCreated: string
 }

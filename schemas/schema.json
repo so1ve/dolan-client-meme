@@ -8,6 +8,9 @@
         "title": {
           "type": "string"
         },
+        "favicon": {
+          "type": "string"
+        },
         "menu": {
           "type": "array",
           "items": {
@@ -48,20 +51,59 @@
         "displayPoweredBy": {
           "type": "boolean"
         },
+        "author": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "motto": {
+              "type": "string"
+            },
+            "avatar": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            },
+            "twitter": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        "siteLogo": {
+          "type": "string"
+        },
+        "siteDescription": {
+          "type": "string"
+        },
         "siteCreated": {
           "type": "string"
         }
       },
       "required": [
         "title",
+        "favicon",
         "menu",
         "displayPoweredBy",
+        "author",
+        "siteLogo",
+        "siteDescription",
         "siteCreated"
       ]
     }
   },
   "properties": {
     "title": {
+      "type": "string"
+    },
+    "favicon": {
       "type": "string"
     },
     "menu": {
@@ -103,6 +145,38 @@
     },
     "displayPoweredBy": {
       "type": "boolean"
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "motto": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "twitter": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "siteLogo": {
+      "type": "string"
+    },
+    "siteDescription": {
+      "type": "string"
     },
     "siteCreated": {
       "type": "string"

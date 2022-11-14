@@ -7,6 +7,10 @@ let tags: Tag[];
 if (data.value) {
   tags = data.value.data;
 }
+
+useHead({
+  title: "Tags",
+});
 </script>
 
 <template>
