@@ -5,7 +5,7 @@ const route = useRoute();
 const slug = $computed(() => route.params.slug);
 const tagApiUrl = $computed(() => `/api/tags/${slug}` as const);
 const { data: tagData, error: tagError } = await useAsyncData(tagApiUrl, () => $fetch(tagApiUrl));
-const { data, error } = await useFetch("/api/posts", { query: { tag: slug } });
+const { data, error } = await useAsyncData(`/api/posts?tag=${slug}`, () => $fetch("/api/posts", { query: { tag: slug } }));
 
 let posts = $ref([] as Post[]);
 let title = $ref("");

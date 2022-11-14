@@ -10,6 +10,7 @@ type MenuItem = {
 export interface ConfigSchema {
   menu: MenuItem[]
   displayPoweredBy: boolean
+  favicon: string
   author: {
     name: string
     email?: string

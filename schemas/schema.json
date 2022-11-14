@@ -45,6 +45,9 @@
         "displayPoweredBy": {
           "type": "boolean"
         },
+        "favicon": {
+          "type": "string"
+        },
         "author": {
           "type": "object",
           "properties": {
@@ -84,6 +87,7 @@
       "required": [
         "menu",
         "displayPoweredBy",
+        "favicon",
         "author",
         "siteLogo",
         "siteDescription",
@@ -131,6 +135,9 @@
     },
     "displayPoweredBy": {
       "type": "boolean"
+    },
+    "favicon": {
+      "type": "string"
     },
     "author": {
       "type": "object",
