@@ -12,6 +12,7 @@
     "build:schema": "tsx scripts/build-schema.ts",
     "build": "nr build:nuxt && nr build:schema",
     "dev": "nuxi dev",
+    "typecheck": "nuxi typecheck",
     "start": "node .output/server/index.mjs",
     "nuxi": "nuxi",
     "lint:js": "eslint .",
