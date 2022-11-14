@@ -9,10 +9,12 @@ const props = defineProps<{
 <template>
   <footer class="minimal-footer">
     <div class="post-tag">
-      <a v-for="tag, i in props.tags" :key="tag.slug" :href="useTagLink(tag.slug)" rel="tag" class="post-tag-link">
-        <template v-if="i > 0">&nbsp;</template>
+      <NuxtLink v-for="tag, i in props.tags" :key="tag.slug" :to="useTagLink(tag.slug)" rel="tag" class="post-tag-link">
+        <template v-if="i > 0">
+&nbsp;
+        </template>
         #{{ tag.name }}
-      </a>
+      </NuxtLink>
     </div>
   </footer>
 </template>

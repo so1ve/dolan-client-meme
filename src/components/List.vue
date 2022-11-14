@@ -48,8 +48,10 @@ const groupByYearedPosts = $computed(() => {
       </h2>
       <ul class="list-part">
         <li v-for="post in item.posts" :key="post.slug" class="list-item">
-          <a :href="usePostLink(post.slug)" class="list-item-title">{{ post.title }}</a>
-          <time :datetime="post.created" class="list-item-time">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
+          <NuxtLink :to="usePostLink(post.slug)" class="list-item-title">
+            {{ post.title }}
+            <time :datetime="post.created" class="list-item-time">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
+          </nuxtlink>
         </li>
       </ul>
     </template>

@@ -17,14 +17,14 @@ if (data.value) {
         Tags
       </h1>
       <!-- TODO: different sizes -->
-      <a
+      <NuxtLink
         v-for="tag in tags"
         :key="tag.slug"
-        :href="useTagLink(tag.slug)"
+        :to="useTagLink(tag.slug)"
         class="tag-cloud-item"
       >
         {{ tag.name }}
-      </a>
+      </NuxtLink>
     </ErrorWrapper>
   </div>
 </template>
