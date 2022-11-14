@@ -1,4 +1,5 @@
 export const usePostLink = (s: string) => `/posts/${s}`;
+export const useTagLink = (s: string) => `/tags/${s}`;
 export function useWordCount (content: string) {
   content = content.replace(/<\/?[a-z][^>]*>/gi, "");
   content = content.trim();

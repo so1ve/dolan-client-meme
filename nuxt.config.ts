@@ -31,6 +31,9 @@ export default defineNuxtConfig({
         wght: [400, 700],
         ital: [400, 700],
       },
+      "Cinzel Decorative": {
+        wght: [700],
+      },
     },
   },
   i18n: {
@@ -54,5 +57,8 @@ export default defineNuxtConfig({
   },
   experimental: {
     reactivityTransform: true,
+  },
+  typescript: {
+    shim: false,
   },
 });

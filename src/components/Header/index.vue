@@ -3,19 +3,9 @@ import type { MenuItem } from "./Menu.vue";
 
 const props = defineProps<{
   title: string
+  menuItems: MenuItem[]
 }>();
 const localePath = useLocalePath();
-
-const menuItems: MenuItem[] = [
-  {
-    name: "测试1",
-    url: "/",
-    icon: "home",
-  },
-  {
-    identifier: "theme-switcher",
-  },
-];
 </script>
 
 <template>
@@ -29,7 +19,7 @@ const menuItems: MenuItem[] = [
         </div>
         <!-- {{ template "site-brand" . }}
         {{ partial "menu.html" . }} -->
-        <HeaderMenu :items="menuItems" />
+        <HeaderMenu :items="props.menuItems" />
       </div>
     </div>
     <!-- {{ partial "components/nav-toggle.html" . }} -->
@@ -182,6 +172,7 @@ $brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
       animation-fill-mode: forwards;
     }
 
+    // stylelint-disable-next-line
     @keyframes appearCurtain {
       0% {
         opacity: 0;
@@ -227,6 +218,7 @@ $brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
       animation-fill-mode: forwards;
     }
 
+    // stylelint-disable-next-line
     @keyframes fadeCurtain {
       0% {
         opacity: 1;

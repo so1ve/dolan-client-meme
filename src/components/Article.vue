@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<{
-  renderedTitle: string
+  title: string
   renderedContent: string
 }>();
 </script>
 
 <template>
   <article class="content post">
-    <h1 class="post-title" v-html="props.renderedTitle" />
+    <h1 class="post-title" v-html="props.title" />
     <slot name="meta" />
     <div class="post-body e-content" v-html="props.renderedContent" />
   </article>
@@ -48,54 +48,52 @@ const props = defineProps<{
   }
 }
 
-:deep(.post) {
-  // :deep {
-  .table-container {
+.post {
+  :deep(.table-container) {
     overflow-x: auto;
     margin: 2em 0;
   }
 
-  table {
+  :deep(table) {
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
     border-color: var(--color-contrast-lower);
   }
 
-  th {
+  :deep(th) {
     font-weight: 700;
   }
 
-  th,
-  td {
+  :deep(th, td) {
     padding: 0.4em;
     border: 1px solid var(--color-contrast-lower);
     font-size: 0.9em;
   }
 
-  table > tbody > tr:nth-of-type(odd) {
+  :deep(table > tbody > tr:nth-of-type(odd)) {
     background-color: alpha(var(--color-contrast-lower), 0.5);
   }
 
-  table > tbody > tr:hover {
+  :deep(table > tbody > tr:hover) {
     background-color: var(--color-contrast-lower);
   }
 
-  dt {
+  :deep(dt) {
     font-weight: 700;
   }
 
-  dd {
+  :deep(dd) {
     margin-left: 2em;
   }
 
-  code {
+  :deep(code) {
     padding: math.div($fontSize, 8), math.div($fontSize, 4);
     background-color: alpha(var(--color-contrast-lower), 0.5);
     font-size: 80%;
   }
 
-  pre {
+  :deep(pre) {
     overflow: auto;
     max-height: $maxHeight;
     margin: 2rem 0;
@@ -113,12 +111,12 @@ const props = defineProps<{
     }
   }
 
-  p {
+  :deep(p) {
     margin: 1em 0;
     line-height: $lineHeight;
   }
 
-  img {
+  :deep(img) {
     display: block;
     clear: both;
     max-width: 100%;
@@ -126,14 +124,14 @@ const props = defineProps<{
     border: 1px solid var(--color-contrast-lower);
   }
 
-  video {
+  :deep(video) {
     display: block;
     clear: both;
     max-width: 100%;
     margin: 2em auto;
   }
 
-  sup {
+  :deep(sup) {
     vertical-align: super;
     font-size: 70%;
 
@@ -142,14 +140,13 @@ const props = defineProps<{
     }
   }
 
-  ol,
-  ul {
+  :deep(ol, ul) {
     margin: 0;
     padding-left: 2em;
     line-height: $lineHeight;
   }
 
-  hr {
+  :deep(hr) {
     margin: 2.427em 0 1.5em;
     border: none;
     text-align: center;
@@ -161,13 +158,7 @@ const props = defineProps<{
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .anchor-link {
+  :deep(h1, h2, h3, h4, h5, h6, .anchor-link) {
     &:hover {
       --anchor-opacity: 1;
     }
@@ -176,7 +167,7 @@ const props = defineProps<{
   // }
 }
 
-blockquote {
+:deep(blockquote) {
   margin: 2em 0;
   padding-left: 1em;
   border-left: 3px solid var(--color-contrast-low);

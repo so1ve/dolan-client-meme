@@ -1,12 +1,18 @@
+<script setup lang="ts">
+const configStore = useConfigStore();
+
+const customConfig = $computed(() => configStore.config.custom);
+</script>
+
 <template>
   <div class="container">
-    <Header title="Dolan Client MemE" />
+    <Header :menu-items="customConfig.menu" :title="customConfig.title" />
     <main class="main">
       <div class="main-inner">
         <slot />
       </div>
     </main>
-    <Footer />
+    <Footer :display-powered-by="customConfig.displayPoweredBy" />
   </div>
 </template>
 

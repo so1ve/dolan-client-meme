@@ -7,7 +7,7 @@ const apiURL = $computed(() => `/api/pages/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
 
 let page = $ref({} as Page);
-let renderedTitle = $ref("");
+let title = $ref("");
 let renderedContent = $ref("");
 if (data.value) {
   if (data.value.code === 404) {
@@ -15,15 +15,18 @@ if (data.value) {
   // TODO
   }
   page = data.value.data;
-  renderedTitle = await useRenderMarkdown(page.title);
+  title = page.title;
   renderedContent = await useRenderMarkdown(page.content);
+  useHead({
+    title: page.title,
+  });
 }
 </script>
 
 <template>
   <div>
     <ErrorWrapper :error="error">
-      <Article :rendered-content="renderedContent" :rendered-title="renderedTitle" />
+      <Article :rendered-content="renderedContent" :title="title" />
     </ErrorWrapper>
   </div>
 </template>

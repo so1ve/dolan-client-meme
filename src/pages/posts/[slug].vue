@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Post } from "@dolan-x/shared";
+import type { Post, Tag } from "@dolan-x/shared";
 
 const route = useRoute();
 const slug = $computed(() => route.params.slug);
@@ -7,7 +7,8 @@ const apiURL = $computed(() => `/api/posts/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
 
 let post = $ref({} as Post);
-let renderedTitle = $ref("");
+let tags = $ref([] as Tag[]);
+let title = $ref("");
 let renderedContent = $ref("");
 if (data.value) {
   if (data.value.code === 404) {
@@ -15,19 +16,29 @@ if (data.value) {
   // TODO
   }
   post = data.value.data;
-  renderedTitle = await useRenderMarkdown(post.title);
+  title = post.title;
   renderedContent = await useRenderMarkdown(post.content);
+  const { data: tagData } = await useFetch("/api/tags", {
+    query: {
+      slugs: post.tags.join(","),
+    },
+  });
+  tags = tagData.value!.data;
+  useHead({
+    title: post.title,
+  });
 }
 </script>
 
 <template>
   <div>
     <ErrorWrapper :error="error">
-      <Article :rendered-content="renderedContent" :rendered-title="renderedTitle">
+      <Article :rendered-content="renderedContent" :title="title">
         <template #meta>
           <PostMeta :post="post" />
         </template>
       </Article>
+      <PostMinimalFooter :tags="tags" />
     </ErrorWrapper>
   </div>
 </template>
