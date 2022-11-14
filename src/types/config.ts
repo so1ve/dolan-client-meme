@@ -8,8 +8,6 @@ type MenuItem = {
 };
 
 export interface ConfigSchema {
-  title: string
-  favicon: string
   menu: MenuItem[]
   displayPoweredBy: boolean
   author: {

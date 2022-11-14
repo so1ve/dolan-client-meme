@@ -4,14 +4,16 @@ import "./styles/main.scss";
 const configStore = useConfigStore();
 await configStore.fetchConfig();
 
+const siteConfig = $computed(() => configStore.config.site);
 const customConfig = $computed(() => configStore.config.custom);
 
 useHead({
   title: "Index",
-  titleTemplate: `%s | ${customConfig.title}`,
+  titleTemplate: `%s | ${siteConfig.name}`,
   meta: [
-    { name: "description", content: customConfig.siteDescription },
+    { name: "description", content: siteConfig.description },
     { name: "author", content: customConfig.author.name },
+    { name: "keywords", content: siteConfig.keywords.join(", ") },
     { name: "apple-mobile-web-app-capable", content: "yes" },
     { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     { name: "apple-mobile-web-app-title", content: customConfig.title },

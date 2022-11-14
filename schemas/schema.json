@@ -5,12 +5,6 @@
     "ConfigSchema": {
       "type": "object",
       "properties": {
-        "title": {
-          "type": "string"
-        },
-        "favicon": {
-          "type": "string"
-        },
         "menu": {
           "type": "array",
           "items": {
@@ -88,8 +82,6 @@
         }
       },
       "required": [
-        "title",
-        "favicon",
         "menu",
         "displayPoweredBy",
         "author",
@@ -100,12 +92,6 @@
     }
   },
   "properties": {
-    "title": {
-      "type": "string"
-    },
-    "favicon": {
-      "type": "string"
-    },
     "menu": {
       "type": "array",
       "items": {
