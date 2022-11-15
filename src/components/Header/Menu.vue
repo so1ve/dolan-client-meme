@@ -1,11 +1,13 @@
 <script setup lang="ts">
-export type MenuItem = {
+export interface CommonItem {
   name: string
   url: string
   icon?: string
-} | {
+}
+export interface ThemeSwitcher {
   identifier: "theme-switcher"
-};
+}
+export type MenuItem = CommonItem | ThemeSwitcher;
 // eslint-disable-next-line vue/define-macros-order
 const props = defineProps<{
   items: MenuItem[]
@@ -18,10 +20,7 @@ const localePath = useLocalePath();
     <ul id="menu" class="menu">
       <template v-for="item in props.items" :key="item.name">
         <li v-if="!('identifier' in item)" class="menu-item">
-          <NuxtLink class="menu-item-link" :to="localePath(item.url)">
-            <Icon v-if="item.icon" :icon="item.icon" />
-            <span class="menu-item-name">{{ item.name }}</span>
-          </NuxtLink>
+          <HeaderMenuLink :item="item" />
         </li>
         <li v-else-if="item.identifier === 'theme-switcher'" class="menu-item">
           <HeaderThemeSwitcher />
