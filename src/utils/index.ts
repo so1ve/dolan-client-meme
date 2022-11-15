@@ -17,5 +17,5 @@ export const defineAPI = <T>() => defineEventHandler<DolanResponse<T>>((async (e
     });
   } catch {}
 
-  return { ...res, query, event };
+  return res;
 }) as EventHandler<DolanResponse<T>>);
