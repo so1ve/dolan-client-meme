@@ -39,5 +39,5 @@ jobs:
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: rbf
+          project: ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
           entrypoint: .output/server/index.ts
