@@ -10,6 +10,10 @@ jobs:
       NITRO_PRESET: deno
       NODE_OPTIONS: --max_old_space_size=8192
 
+    permissions:
+      id-token: write
+      contents: read
+
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
@@ -35,5 +39,5 @@ jobs:
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
+          project: rbf
           entrypoint: .output/server/index.ts
