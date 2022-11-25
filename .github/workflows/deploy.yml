@@ -5,7 +5,6 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
 
     env:
       NITRO_PRESET: deno
