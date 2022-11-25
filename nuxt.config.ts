@@ -1,4 +1,5 @@
 import { ViteToml } from "vite-plugin-toml";
+import { DenoFixPlugin } from "./src/vite-plugins/deno-fix";
 
 export default defineNuxtConfig({
   srcDir: "src/",
@@ -53,6 +54,13 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: "i18n_redirected",
       redirectOn: "root", // recommended
+    },
+  },
+  nitro: {
+    rollupConfig: {
+      plugins: [
+        DenoFixPlugin(),
+      ],
     },
   },
   experimental: {
