@@ -5,7 +5,7 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     env:
       NITRO_PRESET: deno
       NODE_OPTIONS: --max_old_space_size=8192
