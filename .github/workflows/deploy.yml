@@ -40,4 +40,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
-          entrypoint: .output/server/index.ts
+          entrypoint: server/index.ts
+          root: .output
