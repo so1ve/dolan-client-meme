@@ -8,3 +8,4 @@ dist
 .stormkit
 .vercel
 .env.local
+src/public/shiki-assets
