@@ -5,6 +5,7 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ secrets.DEPLOY_NAME }}
 
     env:
       NITRO_PRESET: deno
@@ -36,10 +37,8 @@ jobs:
       - name: Build
         run: nr build
 
-      - run: echo ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
-
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
+          project: ${{ secrets.DEPLOY_NAME }}
           entrypoint: .output/server/index.ts
