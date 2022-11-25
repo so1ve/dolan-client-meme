@@ -34,7 +34,7 @@ jobs:
         run: nci
 
       - name: Build
-        run: nr build
+        run: nr build:all
 
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
