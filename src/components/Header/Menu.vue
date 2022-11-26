@@ -50,7 +50,7 @@ const localePath = useLocalePath();
 
   .menu-item {
     margin: 0;
-    padding: 1em;
+    padding: 2em;
     text-align: center;
 
     .icon {
