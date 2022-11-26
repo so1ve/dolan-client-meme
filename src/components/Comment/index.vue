@@ -7,5 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <CommentWaline v-if="props.config.type === 'waline'" :config="props.config" />
+  <ClientOnly>
+    <CommentWaline v-if="props.config.type === 'waline'" :config="props.config" />
+  </ClientOnly>
 </template>
