@@ -22,7 +22,6 @@ interface WalineEmojiInfo {
 interface WalineComment {
   type: "waline"
   serverURL: string
-  path: string
   meta?: WalineMeta[]
   requiredMeta?: WalineMeta[]
   wordLimit?: number | [number, number]
