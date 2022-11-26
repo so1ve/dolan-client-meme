@@ -43,3 +43,5 @@ $fontFamilyFooter: "";
 $fontFamilyBody: "EB Garamond", "Noto Serif SC", serif;
 $siteBrandFontSize: 1em;
 $siteBrandFontColor: var(--color-contrast-high);
+$headerBackground: linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%);
+$brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;

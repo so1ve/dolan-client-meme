@@ -31,6 +31,38 @@ const localePath = useLocalePath();
 </template>
 
 <style scoped lang="scss">
+@import "@/styles/variables.scss";
+@import "@/styles/utils/functions.scss";
+@import "@/styles/utils/mixins.scss";
+
+@media (max-width: $maxWidth) {
+  .nav {
+    display: none;
+    margin: 2em 0;
+    text-align: center;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .menu-item {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+
+    .icon {
+      margin: 0;
+    }
+  }
+
+  .menu-item-name {
+    display: block;
+  }
+}
+
 .nav {
   position: relative;
   z-index: 3;

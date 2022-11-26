@@ -5,11 +5,13 @@ const props = defineProps<{
   title: string
   menuItems: MenuItem[]
 }>();
+
 const localePath = useLocalePath();
+const store = useStore();
 </script>
 
 <template>
-  <header class="header">
+  <header class="header" :class="`${store.showNav ? 'open' : 'fade'}`">
     <div class="header-wrapper">
       <div class="header-inner">
         <div class="site-brand">
@@ -22,6 +24,7 @@ const localePath = useLocalePath();
         <HeaderMenu :items="props.menuItems" />
       </div>
     </div>
+    <HeaderNavToggle />
     <!-- {{ partial "components/nav-toggle.html" . }} -->
   </header>
 </template>
@@ -30,10 +33,6 @@ const localePath = useLocalePath();
 @import "@/styles/variables.scss";
 @import "@/styles/utils/functions.scss";
 @import "@/styles/utils/mixins.scss";
-
-// stylelint-disable-next-line order/order
-$headerBackground: linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%);
-$brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
 
 // :root {
 //   /* This is an approximate calculation, it won't cover all scenarios */
@@ -111,35 +110,6 @@ $brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
     margin-left: 1em;
   }
 
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    margin: 2em 0;
-    text-align: center;
-  }
-
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-  }
-
-  .menu-item {
-    margin: 0;
-    padding: 1em;
-
-    .icon {
-      margin: 0;
-    }
-  }
-
-  .menu-item-name {
-    display: block;
-  }
-
   .header.open {
     .nav {
       display: block;
@@ -166,7 +136,7 @@ $brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
       }
     }
 
-    .nav-curtain {
+    :deep(.nav-curtain) {
       animation: appearCurtain $duration;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
@@ -212,7 +182,7 @@ $brandHeight: $fontSize * strip-unit($siteBrandFontSize) * 1.618;
       }
     }
 
-    .nav-curtain {
+    :deep(.nav-curtain) {
       animation: fadeCurtain $duration;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
