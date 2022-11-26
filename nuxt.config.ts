@@ -1,5 +1,5 @@
 import { ViteToml } from "vite-plugin-toml";
-import { DenoFixPlugin } from "./src/vite-plugins/deno-fix";
+import { DenoFixPlugin } from "./src/rollup-plugins/deno-fix";
 
 export default defineNuxtConfig({
   srcDir: "src/",

@@ -1,4 +1,4 @@
-import type { Plugin } from "vite";
+import type { Plugin } from "rollup";
 
 export const DenoFixPlugin = () => ({
   name: "deno-fix",
