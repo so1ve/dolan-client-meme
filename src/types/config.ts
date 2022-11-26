@@ -7,6 +7,35 @@ type MenuItem = {
   identifier: "theme-switcher"
 };
 
+// Copied from waline dist file
+type WalineCommentSorting = "latest" | "oldest" | "hottest";
+type WalineMeta = "nick" | "mail" | "link";
+type WalineLoginStatus = "enable" | "disable" | "force";
+interface WalineEmojiInfo {
+  name: string
+  folder?: string
+  prefix?: string
+  type?: string
+  icon: string
+  items: string[]
+}
+interface WalineComment {
+  type: "waline"
+  serverURL: string
+  path: string
+  meta?: WalineMeta[]
+  requiredMeta?: WalineMeta[]
+  wordLimit?: number | [number, number]
+  pageSize?: number
+  lang?: string
+  commentSorting?: WalineCommentSorting
+  emoji?: (string | WalineEmojiInfo)[] | false
+  login?: WalineLoginStatus
+  copyright?: boolean
+  recaptchaV3Key?: string
+  reaction?: string[] | boolean
+}
+
 export interface ConfigSchema {
   menu: MenuItem[]
   displayPoweredBy: boolean
@@ -23,4 +52,5 @@ export interface ConfigSchema {
   siteLogo: string
   siteDescription: string
   siteCreated: string
+  comment: WalineComment
 }

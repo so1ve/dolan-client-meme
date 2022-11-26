@@ -2,6 +2,9 @@
 import type { Page } from "@dolan-x/shared";
 
 const route = useRoute();
+const configStore = useConfigStore();
+const customConfig = $computed(() => configStore.config.custom);
+
 const slug = $computed(() => route.params.slug);
 const apiURL = $computed(() => `/api/pages/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
@@ -27,6 +30,10 @@ if (data.value) {
   <div>
     <ErrorWrapper :error="error">
       <Article :rendered-content="renderedContent" :title="title" />
+      <template v-if="customConfig.comment">
+        <br>
+        <Comment :config="customConfig.comment" />
+      </template>
     </ErrorWrapper>
   </div>
 </template>

@@ -18,6 +18,7 @@ specifiers:
   '@so1ve/stylelint-config': ^0.3.0
   '@types/fs-extra': ^9.0.13
   '@vueuse/nuxt': ^9.6.0
+  '@waline/client': ^2.14.1
   eslint: ^8.28.0
   fs-extra: ^10.1.0
   nuxt: 3.0.0
@@ -46,6 +47,7 @@ devDependencies:
   '@so1ve/stylelint-config': 0.3.0_stylelint@14.15.0
   '@types/fs-extra': 9.0.13
   '@vueuse/nuxt': 9.6.0_nuxt@3.0.0
+  '@waline/client': 2.14.1
   eslint: 8.28.0
   fs-extra: 10.1.0
   nuxt: 3.0.0_il4nynbegyshnpve3y3r4aihba
@@ -1938,6 +1940,18 @@ packages:
       - vue
     dev: true
 
+  /@vueuse/core/9.6.0_vue@3.2.45:
+    resolution: {integrity: sha512-qGUcjKQXHgN+jqXEgpeZGoxdCbIDCdVPz3QiF1uyecVGbMuM63o96I1GjYx5zskKgRI0FKSNsVWM7rwrRMTf6A==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.6.0
+      '@vueuse/shared': 9.6.0_vue@3.2.45
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
   /@vueuse/head/1.0.18_vue@3.2.45:
     resolution: {integrity: sha512-V3EuLoZFrMgvCQYSE0pJupYglZ0ID3rr/8ATIgnZNn+fjRrIEn8oAwAe8FRFAUKgBb0rZt+QY94PaDF6/HOLOQ==}
     peerDependencies:
@@ -1982,6 +1996,27 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+    dev: true
+
+  /@vueuse/shared/9.6.0_vue@3.2.45:
+    resolution: {integrity: sha512-/eDchxYYhkHnFyrb00t90UfjCx94kRHxc7J1GtBCqCG4HyPMX+krV9XJgVtWIsAMaxKVU4fC8NSUviG1JkwhUQ==}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@waline/client/2.14.1:
+    resolution: {integrity: sha512-JnZidLAbuv9yf/+6LvLyv0t6dMHniIuFImgt4npctdCtG6cWuwIr8chhnJg4egiO5iVjlYbZeZYYvhwtjtPxwQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@vueuse/core': 9.6.0_vue@3.2.45
+      autosize: 5.0.2
+      marked: 4.2.3
+      vue: 3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /@zhead/schema/1.0.4:
@@ -2226,6 +2261,10 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.19
       postcss-value-parser: 4.2.0
+    dev: true
+
+  /autosize/5.0.2:
+    resolution: {integrity: sha512-FPVt5ynkqUAA9gcMZnJHka1XfQgr1WNd/yRfIjmj5WGmjua+u5Hl9hn8M2nU5CNy2bEIcj1ZUwXq7IOHsfZG9w==}
     dev: true
 
   /bail/2.0.2:
@@ -5346,6 +5385,12 @@ packages:
 
   /markdown-table/3.0.2:
     resolution: {integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==}
+    dev: true
+
+  /marked/4.2.3:
+    resolution: {integrity: sha512-slWRdJkbTZ+PjkyJnE30Uid64eHwbwa1Q25INCAYfZlK4o6ylagBy/Le9eWntqJFoFT93ikUKMv47GZ4gTwHkw==}
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: true
 
   /mathml-tag-names/2.1.3:
@@ -8686,6 +8731,23 @@ packages:
         optional: true
       vue:
         optional: true
+    dev: true
+
+  /vue-demi/0.13.11_vue@3.2.45:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      vue: 3.2.45
     dev: true
 
   /vue-devtools-stub/0.1.0:

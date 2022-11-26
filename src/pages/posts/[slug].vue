@@ -2,6 +2,9 @@
 import type { Post, Tag } from "@dolan-x/shared";
 
 const route = useRoute();
+const configStore = useConfigStore();
+const customConfig = $computed(() => configStore.config.custom);
+
 const slug = $computed(() => route.params.slug);
 const apiURL = $computed(() => `/api/posts/${slug}` as const);
 const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
@@ -40,6 +43,10 @@ if (data.value) {
         </template>
       </Article>
       <PostMinimalFooter :tags="tags" />
+      <template v-if="customConfig.comment">
+        <br>
+        <Comment :config="customConfig.comment" />
+      </template>
     </ErrorWrapper>
   </div>
 </template>

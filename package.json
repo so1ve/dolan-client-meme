@@ -39,6 +39,7 @@
     "@so1ve/stylelint-config": "^0.3.0",
     "@types/fs-extra": "^9.0.13",
     "@vueuse/nuxt": "^9.6.0",
+    "@waline/client": "^2.14.1",
     "eslint": "^8.28.0",
     "fs-extra": "^10.1.0",
     "nuxt": "3.0.0",
