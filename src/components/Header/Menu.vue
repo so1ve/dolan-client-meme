@@ -81,6 +81,7 @@ const localePath = useLocalePath();
 
   &-item {
     display: inline-block;
+    height: 20px;
     margin-left: 0.5em;
 
     &-link {
