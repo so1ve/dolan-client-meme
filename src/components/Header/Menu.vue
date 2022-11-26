@@ -43,7 +43,7 @@ const localePath = useLocalePath();
   }
 
   .menu {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
@@ -80,7 +80,8 @@ const localePath = useLocalePath();
   line-height: 1.5;
 
   &-item {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     height: 20px;
     margin-left: 0.5em;
 

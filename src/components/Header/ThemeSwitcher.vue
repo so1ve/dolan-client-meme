@@ -26,6 +26,8 @@ function toggleColorMode (e: MouseEvent) {
 
 .theme-switcher {
   z-index: 4;
+  display: inline-flex;
+  align-items: center;
   color: var(--color-contrast-medium);
   cursor: pointer;
   transition: color $duration;
