@@ -93,9 +93,6 @@
             "serverURL": {
               "type": "string"
             },
-            "path": {
-              "type": "string"
-            },
             "meta": {
               "type": "array",
               "items": {
@@ -226,8 +223,7 @@
           },
           "required": [
             "type",
-            "serverURL",
-            "path"
+            "serverURL"
           ]
         }
       },
@@ -330,9 +326,6 @@
           "const": "waline"
         },
         "serverURL": {
-          "type": "string"
-        },
-        "path": {
           "type": "string"
         },
         "meta": {
@@ -465,8 +458,7 @@
       },
       "required": [
         "type",
-        "serverURL",
-        "path"
+        "serverURL"
       ]
     }
   }
