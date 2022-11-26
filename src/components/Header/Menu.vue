@@ -71,6 +71,8 @@ const localePath = useLocalePath();
 }
 
 .menu {
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
