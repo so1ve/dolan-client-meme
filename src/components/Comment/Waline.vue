@@ -19,5 +19,5 @@ const darkmode = $computed(() => colorMode.preference === "dark");
 </script>
 
 <template>
-  <Waline v-bind="props.config" :path="path" :darkmode="darkmode" />
+  <Waline v-bind="props.config" :path="path" :dark="darkmode" />
 </template>
