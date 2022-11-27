@@ -1,4 +1,4 @@
-name: Deploy to Deno Deploy
+name: Deploy
 
 on: push
 
@@ -42,3 +42,39 @@ jobs:
           project: ${{ secrets.DENO_DEPLOY_PROJECT_NAME }}
           entrypoint: server/index.ts
           root: .output
+
+  deploy-static:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # Allows authentication with Deno Deploy.
+      contents: read # Allows cloning the repo.
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.1
+
+      - name: Set node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          cache: pnpm
+
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
+
+      - name: Build static
+        run: nr build:copy-shiki-assets
+
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: dolan-client-meme-static
+          entrypoint: https://deno.land/std/http/file_server.ts
+          root: static
