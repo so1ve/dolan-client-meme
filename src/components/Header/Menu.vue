@@ -49,9 +49,9 @@ const localePath = useLocalePath();
   }
 
   .menu-item {
+    justify-content: center;
     margin: 0;
     padding: 2em;
-    text-align: center;
 
     .icon {
       margin: 0;
