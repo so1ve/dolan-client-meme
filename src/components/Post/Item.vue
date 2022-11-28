@@ -5,7 +5,6 @@ const props = defineProps<{
   post: Post
 }>();
 const localePath = useLocalePath();
-const renderedExcerpt = await useRenderMarkdown(props.post.excerpt);
 </script>
 
 <template>
@@ -17,7 +16,9 @@ const renderedExcerpt = await useRenderMarkdown(props.post.excerpt);
     </h2>
     <PostMeta :post="props.post" />
     <!-- {{ partial "components/post-meta.html" (dict "$" . "isHome" true) }} -->
-    <summary class="summary" v-html="renderedExcerpt" />
+    <summary class="summary">
+      {{ props.post.excerpt }}
+    </summary>
     <div class="read-more-container">
       <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="read-more-link">
         <!-- {{ i18n "readMore" }} » -->
