@@ -52,4 +52,5 @@ export interface ConfigSchema {
   siteDescription: string
   siteCreated: string
   comment: WalineComment
+  grayFilter: boolean
 }
