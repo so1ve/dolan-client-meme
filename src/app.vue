@@ -7,8 +7,6 @@ await configStore.fetchConfig();
 const siteConfig = $computed(() => configStore.config.site);
 const customConfig = $computed(() => configStore.config.custom);
 
-const grayFilter = customConfig.grayFilter ? "grayscale(1)" : "none";
-
 useHead({
   title: "Index",
   titleTemplate: `%s | ${siteConfig.name}`,
@@ -41,9 +39,5 @@ useHead({
 #__nuxt {
   width: 100%;
   height: 100%;
-}
-
-.container {
-  filter: v-bind(grayFilter);
 }
 </style>

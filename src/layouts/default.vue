@@ -2,6 +2,8 @@
 const configStore = useConfigStore();
 
 const customConfig = $computed(() => configStore.config.custom);
+
+const grayFilter = $computed(() => customConfig.grayFilter ? "grayscale(1)" : "none");
 </script>
 
 <template>
@@ -23,6 +25,7 @@ const customConfig = $computed(() => configStore.config.custom);
   position: relative;
   min-width: 100%;
   min-height: 100%;
+  filter: v-bind(grayFilter);
 }
 
 .main {
