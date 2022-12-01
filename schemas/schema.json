@@ -225,6 +225,9 @@
             "type",
             "serverURL"
           ]
+        },
+        "grayFilter": {
+          "type": "boolean"
         }
       },
       "required": [
@@ -235,7 +238,8 @@
         "siteLogo",
         "siteDescription",
         "siteCreated",
-        "comment"
+        "comment",
+        "grayFilter"
       ]
     }
   },
@@ -460,6 +464,9 @@
         "type",
         "serverURL"
       ]
+    },
+    "grayFilter": {
+      "type": "boolean"
     }
   }
 }
