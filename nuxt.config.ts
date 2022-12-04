@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "unplugin-icons/nuxt",
-    "@kevinmarrec/nuxt-pwa",
+    // "@kevinmarrec/nuxt-pwa",
   ],
   colorMode: {
     fallback: "light",
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
       redirectOn: "root", // recommended
     },
   },
-  pwa: {},
+  // pwa: {},
   nitro: {
     rollupConfig: {
       plugins: [
