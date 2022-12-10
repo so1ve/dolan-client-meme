@@ -1,9 +1,22 @@
 <script setup lang="ts">
-import type { Post } from "@dolan-x/shared";
+import type { Category, Post } from "@dolan-x/shared";
 
 const props = defineProps<{
   post: Post
 }>();
+
+let category = $ref({} as Category);
+if (props.post.category) {
+  const categoryAPIURL = $computed(() => `/api/categories/${props.post.category}` as const);
+  const { data, error } = await useAsyncData(categoryAPIURL, () => $fetch(categoryAPIURL));
+  if (data.value) {
+    if (data.value.code === 404) {
+      throw notFound();
+      // TODO
+    }
+    category = data.value.data;
+  }
+}
 
 const formattedCreatedTime = useDateFormat(props.post.created, "YYYY.MM.DD");
 const formattedUpdatedTime = useDateFormat(props.post.updated, "YYYY.MM.DD");
@@ -12,13 +25,16 @@ const wordCount = $computed(() => props.post.content.length);
 
 <template>
   <div class="post-meta">
-    <time :datetime="props.post.created" class="post-meta-item">
+    <time :datetime="String(props.post.created)" class="post-meta-item">
       <!-- TODO: Custom Icon -->
       <Icon icon="calendar-alt" class="post-meta-icon" />&nbsp;{{ formattedCreatedTime }}
     </time>
-    <time :datetime="props.post.updated" class="post-meta-item">
+    <time :datetime="String(props.post.updated)" class="post-meta-item">
       <Icon icon="calendar-check" class="post-meta-icon" />&nbsp;{{ formattedUpdatedTime }}
     </time>
+    <NuxtLink v-if="category.name" :to="useCategoryLink(category.slug)" class="post-meta-item">
+      <Icon icon="folder" class="post-meta-icon" />&nbsp;{{ category.name }}
+    </NuxtLink>
     <span class="post-meta-item wordcount">
       <Icon icon="pencil-alt" class="post-meta-icon" />&nbsp;{{ wordCount }}
     </span>

@@ -3,7 +3,7 @@ import type { Tag } from "@dolan-x/shared";
 
 const { data, error } = await useFetch("/api/tags");
 
-let tags: Tag[];
+let tags = $ref([] as Tag[]);
 if (data.value) {
   tags = data.value.data;
 }
