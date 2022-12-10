@@ -41,6 +41,7 @@
     "@types/fs-extra": "^9.0.13",
     "@vueuse/nuxt": "^9.6.0",
     "@waline/client": "^2.14.1",
+    "discuss": "^1.2.0",
     "eslint": "^8.28.0",
     "fs-extra": "^10.1.0",
     "nuxt": "3.0.0",
@@ -50,6 +51,7 @@
     "stylelint": "^14.15.0",
     "ts-json-schema-generator": "^1.1.2",
     "tsx": "^3.12.1",
+    "twikoo": "^1.6.8",
     "typescript": "^4.9.3",
     "unplugin-icons": "^0.14.14",
     "vite-plugin-toml": "^0.4.0"
