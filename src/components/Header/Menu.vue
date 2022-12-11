@@ -1,14 +1,6 @@
 <script setup lang="ts">
-export interface CommonItem {
-  name: string
-  url: string
-  icon?: string
-}
-export interface ThemeSwitcher {
-  identifier: "theme-switcher"
-}
-export type MenuItem = CommonItem | ThemeSwitcher;
-// eslint-disable-next-line vue/define-macros-order
+import type { MenuItem } from "@/types/config";
+
 const props = defineProps<{
   items: MenuItem[]
 }>();

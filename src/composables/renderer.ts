@@ -1,4 +1,4 @@
-export async function useRenderMarkdown (md: string) {
+export async function useRenderMarkdown(md: string) {
   const { data } = await useFetch("/api/render", {
     method: "POST",
     body: { md },

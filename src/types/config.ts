@@ -1,5 +1,5 @@
 // Can't import directly because of ts-json-schema-generator limit
-type MenuItem = {
+export type MenuItem = {
   name: string
   url: string
   icon?: string
@@ -35,6 +35,19 @@ interface WalineComment {
   reaction?: string[] | boolean
 }
 
+export interface Share {
+  enable?: boolean
+  shareOnTwitter?: boolean
+  shareOnFacebook?: boolean
+  shareOnLinkedIn?: boolean
+  shareOnTelegram?: boolean
+  shareOnWeibo?: boolean
+  shareOnDouban?: boolean
+  shareOnQQ?: boolean
+  shareOnQzone?: boolean
+  shareViaQRCode?: boolean
+}
+
 export interface ConfigSchema {
   menu: MenuItem[]
   displayPoweredBy: boolean
@@ -51,6 +64,7 @@ export interface ConfigSchema {
   siteLogo: string
   siteDescription: string
   siteCreated: string
+  share: Share
   comment: WalineComment
-  grayFilter: boolean
+  grayFilter?: boolean
 }

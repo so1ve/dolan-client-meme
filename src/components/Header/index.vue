@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MenuItem } from "./Menu.vue";
+import type { MenuItem } from "@/types/config";
 
 const props = defineProps<{
   title: string

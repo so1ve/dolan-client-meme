@@ -1,7 +1,7 @@
 import type { EventHandler } from "h3";
 
 export interface DolanResponse<T> { code: number; message: string; data: T; metas: Record<string, any> }
-export const defineAPI = <T = any>({ contentType }: { contentType?: string } = {}) => defineEventHandler<DolanResponse<T>>((async (event) => {
+export const defineAPI = <T = any>({ contentType }: { contentType?: string } = {}) => defineEventHandler<DolanResponse<T>>((async(event) => {
   const query = getQuery(event);
   const path = event.node.req.url!.replace("/api", "");
 
@@ -13,7 +13,7 @@ export const defineAPI = <T = any>({ contentType }: { contentType?: string } = {
       },
       query,
       baseURL: process.env.DOLAN_API_URL as string,
-      onResponseError: async (e) => { res = e.response._data; },
+      onResponseError: async(e) => { res = e.response._data; },
     });
   } catch {}
 

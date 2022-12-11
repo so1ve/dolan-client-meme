@@ -12,7 +12,7 @@ specifiers:
   '@kevinmarrec/nuxt-pwa': ^0.13.0
   '@nuxtjs/color-mode': ^3.2.0
   '@nuxtjs/google-fonts': 3.0.0-1
-  '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.4-27823156.ccef92b
+  '@nuxtjs/i18n': 8.0.0-beta.7
   '@pinia/nuxt': ^0.4.6
   '@so1ve/eslint-config': ^0.32.3
   '@so1ve/rehype-shiki': 2.2.1-fix.1
@@ -20,11 +20,13 @@ specifiers:
   '@types/fs-extra': ^9.0.13
   '@vueuse/nuxt': ^9.6.0
   '@waline/client': ^2.14.1
+  defu: ^6.1.1
   discuss: ^1.2.0
   eslint: ^8.29.0
   fs-extra: ^11.1.0
   nuxt: 3.0.0
   pinia: ^2.0.28
+  qrcode.vue: ^3.3.3
   sass: ^1.56.2
   shiki-es: ^0.1.2
   stylelint: ^14.16.0
@@ -44,7 +46,7 @@ devDependencies:
   '@kevinmarrec/nuxt-pwa': 0.13.0
   '@nuxtjs/color-mode': 3.2.0
   '@nuxtjs/google-fonts': 3.0.0-1
-  '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.4-27823156.ccef92b
+  '@nuxtjs/i18n': 8.0.0-beta.7
   '@pinia/nuxt': 0.4.6_typescript@4.9.4
   '@so1ve/eslint-config': 0.32.3_ha6vam6werchizxrnqvarmz2zu
   '@so1ve/rehype-shiki': 2.2.1-fix.1
@@ -52,11 +54,13 @@ devDependencies:
   '@types/fs-extra': 9.0.13
   '@vueuse/nuxt': 9.6.0_nuxt@3.0.0
   '@waline/client': 2.14.1
+  defu: 6.1.1
   discuss: 1.2.0_typescript@4.9.4
   eslint: 8.29.0
   fs-extra: 11.1.0
   nuxt: 3.0.0_poed3pgj4s7rav5bfbhalbwwpy
   pinia: 2.0.28_typescript@4.9.4
+  qrcode.vue: 3.3.3
   sass: 1.56.2
   shiki-es: 0.1.2
   stylelint: 14.16.0
@@ -1689,7 +1693,7 @@ packages:
       '@nuxt/schema': 3.0.0-rc.12
       c12: 0.2.13
       consola: 2.15.3
-      defu: 6.1.0
+      defu: 6.1.1
       globby: 13.1.2
       hash-sum: 2.0.0
       ignore: 5.2.0
@@ -1789,7 +1793,7 @@ packages:
     dependencies:
       c12: 0.2.13
       create-require: 1.1.1
-      defu: 6.1.0
+      defu: 6.1.1
       jiti: 1.16.0
       pathe: 0.3.9
       pkg-types: 0.3.6
@@ -1956,8 +1960,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/i18n-edge/8.0.0-beta.4-27823156.ccef92b:
-    resolution: {integrity: sha512-fK9PCjrSnbHC8eiXPZqa+M7UC0W1l6NEdgda+W+UyKyRxjy5RUIwFK9NafKUL+/Tr51rnIFJtIqHRdntRO+aMw==}
+  /@nuxtjs/i18n/8.0.0-beta.7:
+    resolution: {integrity: sha512-TH0cQz2XDSOdBsO3ZBjWC107IaPNTezPwDFPdUwCU0wCP7JfB1kwke4mkCLeizUijFbKTTlAsFnGkyyvQe7UmQ==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       '@intlify/bundle-utils': 3.4.0_vue-i18n@9.3.0-beta.10
@@ -3445,7 +3449,7 @@ packages:
   /c12/0.2.13:
     resolution: {integrity: sha512-wJL0/knDbqM/3moLb+8Xd+w3JdkggkIIhiNBkxZ1mWlskKC/vajb85wM3UPg/D9nK6RbI1NgaVTg6AeXBVbknA==}
     dependencies:
-      defu: 6.1.0
+      defu: 6.1.1
       dotenv: 16.0.2
       gittar: 0.1.1
       jiti: 1.16.0
@@ -4154,10 +4158,6 @@ packages:
     dependencies:
       has-property-descriptors: 1.0.0
       object-keys: 1.1.1
-    dev: true
-
-  /defu/6.1.0:
-    resolution: {integrity: sha512-pOFYRTIhoKujrmbTRhcW5lYQLBXw/dlTwfI8IguF1QCDJOcJzNH1w+YFjxqy6BAuJrClTy6MUE8q+oKJ2FLsIw==}
     dev: true
 
   /defu/6.1.1:
@@ -9230,6 +9230,15 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /qrcode.vue/3.3.3:
+    resolution: {integrity: sha512-OsD4tQjIbxg/K6D5ZkWjBdYI9eg9K2i8qeYILdEAX5mdAydSAxV7xKmmZSP/hA12olLqEMZ9ryqDQrwa9jEMgw==}
+    peerDependencies:
+      vue: ^3.0.0
+    peerDependenciesMeta:
+      vue:
+        optional: true
+    dev: true
+
   /qs/6.11.0:
     resolution: {integrity: sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==}
     engines: {node: '>=0.6'}
@@ -9289,7 +9298,7 @@ packages:
   /rc9/1.2.2:
     resolution: {integrity: sha512-zbe8+HR2X28eZepAwohuKkebbEsA67h0DO9I7g12QrHa2CQopR9gztOLPIPXXGTvcxeUjAN4wZ+b29t3m/u05g==}
     dependencies:
-      defu: 6.1.0
+      defu: 6.1.1
       destr: 1.1.1
       flat: 5.0.2
     dev: true

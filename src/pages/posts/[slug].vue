@@ -43,6 +43,9 @@ if (data.value) {
         </template>
       </Article>
       <PostMinimalFooter :tags="tags" />
+      <ClientOnly>
+        <PostShare :post="post" :tags="tags" />
+      </ClientOnly>
       <template v-if="customConfig.comment">
         <br>
         <Comment :config="customConfig.comment" />
