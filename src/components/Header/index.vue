@@ -8,10 +8,19 @@ const props = defineProps<{
 
 const localePath = useLocalePath();
 const store = useStore();
+const headerAnimationClass = $computed(() => {
+  if (store.showNav === true) {
+    return "open";
+  }
+  if (store.showNav === false) {
+    return "fade";
+  }
+  return "";
+});
 </script>
 
 <template>
-  <header class="header" :class="`${store.showNav ? 'open' : 'fade'}`">
+  <header class="header" :class="headerAnimationClass">
     <div class="header-wrapper">
       <div class="header-inner">
         <div class="site-brand">
@@ -19,13 +28,10 @@ const store = useStore();
             {{ props.title }}
           </NuxtLink>
         </div>
-        <!-- {{ template "site-brand" . }}
-        {{ partial "menu.html" . }} -->
         <HeaderMenu :items="props.menuItems" />
       </div>
     </div>
     <HeaderNavToggle />
-    <!-- {{ partial "components/nav-toggle.html" . }} -->
   </header>
 </template>
 

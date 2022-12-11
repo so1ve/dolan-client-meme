@@ -88,6 +88,7 @@ const localePath = useLocalePath();
     &-link {
       display: inline-flex;
       align-items: center;
+      height: 20px;
       color: var(--color-contrast-medium);
 
       &:hover,

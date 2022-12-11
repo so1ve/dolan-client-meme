@@ -1,7 +1,7 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
 
 export const useStore = defineStore("store", () => {
-  const showNav = ref(false);
+  const showNav = ref<null | boolean>(null);
   const toggleNav = () => showNav.value = !showNav.value;
 
   return {

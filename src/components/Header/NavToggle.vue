@@ -1,16 +1,20 @@
 <script setup lang="ts">
 const store = useStore();
+
+const toggleNav = (e: MouseEvent) => {
+  e.preventDefault();
+  store.toggleNav();
+};
 </script>
 
 <template>
-  <input id="nav-toggle" type="checkbox" aria-hidden="true">
-  <label for="nav-toggle" class="nav-toggle" :class="`${store.showNav ? 'open' : 'fade'}`" @click="store.toggleNav">
+  <a class="nav-toggle" :class="{ open: store.showNav, fade: !store.showNav }" @click="toggleNav">
     <div class="nav-toggle-inner">
       <span />
       <span />
       <span />
     </div>
-  </label>
+  </a>
   <label ref="curtainRef" for="nav-toggle" class="nav-curtain" />
 </template>
 
@@ -31,7 +35,6 @@ const store = useStore();
 
 .nav-toggle-inner {
   display: inline-block;
-  padding: 1em;
 }
 
 .nav-toggle {
@@ -41,7 +44,6 @@ const store = useStore();
   display: none;
   width: 1em;
   height: 1em;
-  margin-right: 1em;
   cursor: pointer;
 
   span {
