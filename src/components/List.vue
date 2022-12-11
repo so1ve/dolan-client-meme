@@ -51,7 +51,7 @@ const groupByYearedPosts = $computed(() => {
           <NuxtLink :to="usePostLink(post.slug)" class="list-item-title">
             {{ post.title }}
           </nuxtlink>
-          <time :datetime="post.created" class="list-item-time">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
+          <time :datetime="String(post.created)" class="list-item-time">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
         </li>
       </ul>
     </template>

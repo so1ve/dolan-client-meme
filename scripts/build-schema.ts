@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import type { Config } from "ts-json-schema-generator";
 import { createGenerator } from "ts-json-schema-generator";
 
-async function main () {
+async function main() {
   const config: Config = {
     path: "./src/types/config.ts",
     tsconfig: "./tsconfig.json",

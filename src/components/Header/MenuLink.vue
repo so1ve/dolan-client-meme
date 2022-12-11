@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CommonItem } from "./Menu.vue";
+import type { CommonItem } from "@/types/config";
 
 const props = defineProps<{
   item: CommonItem

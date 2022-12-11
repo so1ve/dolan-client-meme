@@ -1,9 +1,10 @@
 // Can't import directly because of ts-json-schema-generator limit
-export type MenuItem = {
+export interface CommonItem {
   name: string
   url: string
   icon?: string
-} | {
+}
+export type MenuItem = CommonItem | {
   identifier: "theme-switcher"
 };
 
