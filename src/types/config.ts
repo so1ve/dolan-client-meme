@@ -50,6 +50,7 @@ export interface Share {
 }
 
 export interface ConfigSchema {
+  title: string
   menu: MenuItem[]
   displayPoweredBy: boolean
   favicon: string

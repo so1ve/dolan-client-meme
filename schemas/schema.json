@@ -76,6 +76,9 @@
     "ConfigSchema": {
       "type": "object",
       "properties": {
+        "title": {
+          "type": "string"
+        },
         "menu": {
           "type": "array",
           "items": {
@@ -274,6 +277,7 @@
         }
       },
       "required": [
+        "title",
         "menu",
         "displayPoweredBy",
         "favicon",
@@ -287,6 +291,9 @@
     }
   },
   "properties": {
+    "title": {
+      "type": "string"
+    },
     "menu": {
       "type": "array",
       "items": {
