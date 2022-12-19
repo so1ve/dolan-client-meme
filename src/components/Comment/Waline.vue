@@ -15,7 +15,7 @@ const route = useRoute();
 const colorMode = useColorMode();
 
 const path = $computed(() => route.path);
-const darkmode = $computed(() => colorMode.preference === "dark");
+const darkmode = $computed(() => typeof window === "undefined" ? "auto" : colorMode.value === "dark");
 </script>
 
 <template>
