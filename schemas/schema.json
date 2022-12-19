@@ -1,45 +1,85 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/ConfigSchema",
   "definitions": {
+    "CommonItem": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "MenuItem": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/CommonItem"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "identifier": {
+              "type": "string",
+              "const": "theme-switcher"
+            }
+          },
+          "required": [
+            "identifier"
+          ]
+        }
+      ]
+    },
+    "Share": {
+      "type": "object",
+      "properties": {
+        "enable": {
+          "type": "boolean"
+        },
+        "shareOnTwitter": {
+          "type": "boolean"
+        },
+        "shareOnFacebook": {
+          "type": "boolean"
+        },
+        "shareOnLinkedIn": {
+          "type": "boolean"
+        },
+        "shareOnTelegram": {
+          "type": "boolean"
+        },
+        "shareOnWeibo": {
+          "type": "boolean"
+        },
+        "shareOnDouban": {
+          "type": "boolean"
+        },
+        "shareOnQQ": {
+          "type": "boolean"
+        },
+        "shareOnQzone": {
+          "type": "boolean"
+        },
+        "shareViaQRCode": {
+          "type": "boolean"
+        }
+      }
+    },
     "ConfigSchema": {
       "type": "object",
       "properties": {
         "menu": {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "icon": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "name",
-                  "url"
-                ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "const": "theme-switcher"
-                  }
-                },
-                "required": [
-                  "identifier"
-                ]
-              }
-            ]
+            "$ref": "#/definitions/MenuItem"
           }
         },
         "displayPoweredBy": {
@@ -82,6 +122,9 @@
         },
         "siteCreated": {
           "type": "string"
+        },
+        "share": {
+          "$ref": "#/definitions/Share"
         },
         "comment": {
           "type": "object",
@@ -238,8 +281,8 @@
         "siteLogo",
         "siteDescription",
         "siteCreated",
-        "comment",
-        "grayFilter"
+        "share",
+        "comment"
       ]
     }
   },
@@ -247,38 +290,7 @@
     "menu": {
       "type": "array",
       "items": {
-        "anyOf": [
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "name",
-              "url"
-            ]
-          },
-          {
-            "type": "object",
-            "properties": {
-              "identifier": {
-                "type": "string",
-                "const": "theme-switcher"
-              }
-            },
-            "required": [
-              "identifier"
-            ]
-          }
-        ]
+        "$ref": "#/definitions/MenuItem"
       }
     },
     "displayPoweredBy": {
@@ -321,6 +333,9 @@
     },
     "siteCreated": {
       "type": "string"
+    },
+    "share": {
+      "$ref": "#/definitions/Share"
     },
     "comment": {
       "type": "object",
