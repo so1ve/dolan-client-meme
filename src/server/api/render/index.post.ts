@@ -6,5 +6,5 @@ export default defineEventHandler(async(req) => {
   const { md = "" } = await readBody(req);
   const highlighter = await getHighlighter({ theme: "css-variables" });
   const renderer = getRenderer({ modifyRehype: instance => instance.use(rehypeShiki, { highlighter }) });
-  return String(renderer.processSync(md));
+  return String(await renderer.process(md));
 });
