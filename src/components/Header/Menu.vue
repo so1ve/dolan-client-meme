@@ -36,7 +36,7 @@ const localePath = useLocalePath();
 
   .menu {
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
   }
 
