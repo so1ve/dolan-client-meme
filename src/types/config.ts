@@ -36,6 +36,25 @@ interface WalineComment {
   reaction?: string[] | boolean
 }
 
+interface GitalkComment {
+  type: "gitalk"
+  clientID: string
+  clientSecret: string
+  repo: string
+  owner: string
+  admin: string[]
+  id?: string
+  labels?: string[]
+  title?: string
+  language?: string
+  perPage?: number
+  distractionFreeMode?: boolean
+  pagerDirection?: "last" | "first"
+  createIssueManually?: boolean
+  proxy?: string
+  enableHotKey?: boolean
+}
+
 export interface Share {
   enable?: boolean
   shareOnTwitter?: boolean
@@ -67,6 +86,6 @@ export interface ConfigSchema {
   siteDescription: string
   siteCreated: string
   share: Share
-  comment: WalineComment
+  comment: WalineComment | GitalkComment
   grayFilter?: boolean
 }

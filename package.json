@@ -24,6 +24,11 @@
     "lint:fix": "nr lint:js:fix && nr lint:css:fix",
     "postinstall": "nuxi prepare"
   },
+  "dependencies": {
+    "@giscus/vue": "^2.2.6",
+    "gitalk": "^1.8.0",
+    "vue-utterances": "^0.3.4"
+  },
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
     "@dolan-x/markdown-renderer": "^0.0.42",
@@ -71,7 +76,9 @@
         "postcss",
         "rollup",
         "unified",
-        "shiki"
+        "shiki",
+        "react",
+        "react-dom"
       ]
     },
     "overrides": {

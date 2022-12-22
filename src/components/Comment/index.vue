@@ -9,5 +9,6 @@ const props = defineProps<{
 <template>
   <ClientOnly>
     <CommentWaline v-if="props.config.type === 'waline'" :config="props.config" />
+    <CommentGitalk v-else-if="props.config.type === 'gitalk'" :config="props.config" />
   </ClientOnly>
 </template>
