@@ -23,7 +23,8 @@
     "lint": "nr lint:js && nr lint:css",
     "lint:fix": "nr lint:js:fix && nr lint:css:fix",
     "postinstall": "nuxi prepare",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "mcz"
   },
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
@@ -33,6 +34,7 @@
     "@iconify-json/carbon": "^1.1.11",
     "@iconify-json/zondicons": "^1.1.3",
     "@kevinmarrec/nuxt-pwa": "^0.13.0",
+    "@mini-cz/config-default": "^0.1.1",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/google-fonts": "3.0.0-1",
     "@nuxtjs/i18n": "8.0.0-beta.7",
@@ -49,6 +51,7 @@
     "fs-extra": "^11.1.0",
     "gitalk": "^1.8.0",
     "husky": "^8.0.2",
+    "mini-cz": "^0.1.2",
     "nuxt": "3.0.0",
     "pinia": "^2.0.28",
     "qrcode.vue": "^3.3.3",
