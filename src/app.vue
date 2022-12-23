@@ -2,13 +2,15 @@
 import "./styles/main.scss";
 
 const configStore = useConfigStore();
+const { t } = useI18n();
+
 await configStore.fetchConfig();
 
 const siteConfig = $computed(() => configStore.config.site);
 const customConfig = $computed(() => configStore.config.custom);
 
 useHead({
-  title: "Index",
+  title: t("index.other"),
   titleTemplate: `%s | ${siteConfig.name}`,
   meta: [
     { name: "description", content: siteConfig.description },

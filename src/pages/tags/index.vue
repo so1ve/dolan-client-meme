@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Tag } from "@dolan-x/shared";
 
+const { t } = useI18n();
 const { data, error } = await useFetch("/api/tags");
 
 let tags = $ref([] as Tag[]);
@@ -9,7 +10,7 @@ if (data.value) {
 }
 
 useHead({
-  title: "Tags",
+  title: t("tags.other"),
 });
 </script>
 

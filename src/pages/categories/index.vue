@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Category, Post } from "@dolan-x/shared";
 
+const { t } = useI18n();
+
 const { data: categoriesData, error: categoriesError } = await useFetch("/api/categories");
 const { data: postsData, error: postsError } = await useFetch("/api/posts", { params: { all: "" } });
 
@@ -14,7 +16,6 @@ if (postsData.value) {
 }
 
 const map = new Map<Category, Post[]>();
-// Map to: Category -> Post[]
 for (const post of posts) {
   const category = categories.find(category => category.slug === post.category);
   if (category) {
@@ -27,7 +28,7 @@ for (const post of posts) {
 }
 
 useHead({
-  title: "Categories",
+  title: t("categories.other"),
 });
 </script>
 

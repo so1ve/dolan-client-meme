@@ -2,6 +2,8 @@
 import type { Post } from "@dolan-x/shared";
 
 const route = useRoute();
+const { t } = useI18n();
+
 const slug = $computed(() => route.params.slug);
 const categoryAPIURL = $computed(() => `/api/categories/${slug}` as const);
 const { data: categoryData, error: categoryError } = await useAsyncData(categoryAPIURL, () => $fetch(categoryAPIURL));
@@ -15,7 +17,7 @@ if (categoryData.value && data.value) {
   // TODO
   }
   posts = data.value.data;
-  title = `Category: ${categoryData.value.data.name}`;
+  title = `${t("categories.one")}: ${categoryData.value.data.name}`;
   useHead({
     title,
   });

@@ -4,7 +4,6 @@ import type { MenuItem } from "@/types/config";
 const props = defineProps<{
   items: MenuItem[]
 }>();
-const localePath = useLocalePath();
 </script>
 
 <template>
@@ -16,6 +15,9 @@ const localePath = useLocalePath();
         </li>
         <li v-else-if="item.identifier === 'theme-switcher'" class="menu-item">
           <HeaderThemeSwitcher />
+        </li>
+        <li v-else-if="item.identifier === 'language-switcher'" class="menu-item">
+          <HeaderLanguageSwitcher />
         </li>
       </template>
     </ul>

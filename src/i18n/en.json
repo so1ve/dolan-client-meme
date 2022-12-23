@@ -48,5 +48,9 @@
   "september": { "other": "September" },
   "october": { "other": "October" },
   "november": { "other": "November" },
-  "december": { "other": "December" }
+  "december": { "other": "December" },
+  "home": { "other": "Home" },
+  "tags": { "other": "Tags", "one": "Tag" },
+  "categories": { "other": "Categories", "one": "Category" },
+  "index": { "other": "Index" }
 }

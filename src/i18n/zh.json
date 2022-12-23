@@ -48,5 +48,9 @@
   "september": { "other": "九月" },
   "october": { "other": "十月" },
   "november": { "other": "十一月" },
-  "december": { "other": "十二月" }
+  "december": { "other": "十二月" },
+  "home": { "other": "主页" },
+  "tags": { "other": "标签", "one": "标签" },
+  "categories": { "other": "分类", "one": "分类" },
+  "index": { "other": "索引" }
 }

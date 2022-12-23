@@ -3,6 +3,7 @@ import type { Page } from "@dolan-x/shared";
 
 const route = useRoute();
 const configStore = useConfigStore();
+
 const customConfig = $computed(() => configStore.config.custom);
 
 const slug = $computed(() => route.params.slug);

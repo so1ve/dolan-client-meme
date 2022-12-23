@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Metas, Post } from "@dolan-x/shared";
 
+const { t } = useI18n();
+
 const { data, error } = await useFetch("/api/posts");
 
 let posts = $ref([] as Post[]);
@@ -10,7 +12,7 @@ if (data.value) {
   metas = data.value.metas;
 }
 useHead({
-  title: "Posts",
+  title: t("home.other"),
 });
 </script>
 

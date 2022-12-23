@@ -5,7 +5,7 @@ export interface CommonItem {
   icon?: string
 }
 export type MenuItem = CommonItem | {
-  identifier: "theme-switcher"
+  identifier: "theme-switcher" | "language-switcher"
 };
 
 // Copied from waline dist file
