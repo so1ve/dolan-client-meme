@@ -5,9 +5,12 @@ const page = +route.params.page;
 const { data, error } = await useFetch("/api/posts", {
   query: { page },
 });
-let posts: Post[];
-let metas: Metas;
+let posts = $ref([] as Post[]);
+let metas = $ref({} as Metas);
 if (data.value) {
+  if (data.value.data.length === 0) {
+    throw notFound();
+  }
   posts = data.value.data;
   metas = data.value.metas;
 }
