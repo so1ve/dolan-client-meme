@@ -22,7 +22,8 @@
     "lint:css:fix": "nr lint:css --fix",
     "lint": "nr lint:js && nr lint:css",
     "lint:fix": "nr lint:js:fix && nr lint:css:fix",
-    "postinstall": "nuxi prepare"
+    "postinstall": "nuxi prepare",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
@@ -47,6 +48,7 @@
     "eslint": "^8.30.0",
     "fs-extra": "^11.1.0",
     "gitalk": "^1.8.0",
+    "husky": "^8.0.2",
     "nuxt": "3.0.0",
     "pinia": "^2.0.28",
     "qrcode.vue": "^3.3.3",
