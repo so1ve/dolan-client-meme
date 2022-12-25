@@ -202,9 +202,6 @@
                       "items": {
                         "anyOf": [
                           {
-                            "type": "string"
-                          },
-                          {
                             "type": "object",
                             "properties": {
                               "name": {
@@ -234,13 +231,17 @@
                               "icon",
                               "items"
                             ]
+                          },
+                          {
+                            "type": [
+                              "string"
+                            ]
                           }
                         ]
                       }
                     },
                     {
-                      "type": "boolean",
-                      "const": false
+                      "type": "boolean"
                     }
                   ]
                 },
@@ -493,9 +494,6 @@
                   "items": {
                     "anyOf": [
                       {
-                        "type": "string"
-                      },
-                      {
                         "type": "object",
                         "properties": {
                           "name": {
@@ -525,13 +523,17 @@
                           "icon",
                           "items"
                         ]
+                      },
+                      {
+                        "type": [
+                          "string"
+                        ]
                       }
                     ]
                   }
                 },
                 {
-                  "type": "boolean",
-                  "const": false
+                  "type": "boolean"
                 }
               ]
             },

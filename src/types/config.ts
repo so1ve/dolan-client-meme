@@ -20,6 +20,7 @@ interface WalineEmojiInfo {
   icon: string
   items: string[]
 }
+type WalineEmojiPresets = `//${string}` | `http://${string}` | `https://${string}`;
 interface WalineComment {
   type: "waline"
   serverURL: string
@@ -29,7 +30,7 @@ interface WalineComment {
   pageSize?: number
   lang?: string
   commentSorting?: WalineCommentSorting
-  emoji?: (string | WalineEmojiInfo)[] | false
+  emoji?: (WalineEmojiInfo | WalineEmojiPresets)[] | boolean
   login?: WalineLoginStatus
   copyright?: boolean
   recaptchaV3Key?: string
