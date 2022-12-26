@@ -352,6 +352,17 @@
             }
           ]
         },
+        "donate": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "afdian": {
+              "type": "string"
+            }
+          }
+        },
         "grayFilter": {
           "type": "boolean"
         }
@@ -643,6 +654,17 @@
           ]
         }
       ]
+    },
+    "donate": {
+      "type": "object",
+      "properties": {
+        "enable": {
+          "type": "boolean"
+        },
+        "afdian": {
+          "type": "string"
+        }
+      }
     },
     "grayFilter": {
       "type": "boolean"
