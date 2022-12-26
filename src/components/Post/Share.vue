@@ -93,7 +93,7 @@ const qzoneShareUrl = $computed(() => `https://sns.qzone.qq.com/cgi-bin/qzshare/
 @import "@/styles/variables.scss";
 
 .post-share {
-  margin-top: 5rem;
+  margin-top: 4rem;
   color: alpha(var(--color-contrast-medium), 0.8);
 
   a {

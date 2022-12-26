@@ -43,6 +43,7 @@ if (data.value) {
         </template>
       </Article>
       <PostMinimalFooter :tags="tags" />
+      <PostDonate />
       <ClientOnly>
         <PostShare :post="post" :tags="tags" />
       </ClientOnly>

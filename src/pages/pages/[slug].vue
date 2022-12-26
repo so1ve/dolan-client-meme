@@ -31,6 +31,7 @@ if (data.value) {
   <div>
     <ErrorWrapper :error="error">
       <Article :rendered-content="renderedContent" :title="title" />
+      <PostDonate />
       <template v-if="customConfig.comment">
         <br>
         <Comment :config="customConfig.comment" />

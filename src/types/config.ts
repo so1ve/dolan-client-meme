@@ -88,5 +88,9 @@ export interface ConfigSchema {
   siteCreated: string
   share: Share
   comment: WalineComment | GitalkComment
+  donate?: {
+    enable?: boolean
+    afdian?: string
+  }
   grayFilter?: boolean
 }
