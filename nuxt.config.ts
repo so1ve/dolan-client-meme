@@ -16,6 +16,8 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "unplugin-icons/nuxt",
+    "@nuxtjs/critters",
+    "nuxt-purgecss",
     // "@kevinmarrec/nuxt-pwa",
   ],
   colorMode: {
