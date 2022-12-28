@@ -10,11 +10,11 @@ const localePath = useLocalePath();
 
 <template>
   <NuxtLink v-if="!useIsExternal(props.item.url)" class="menu-item-link" :to="localePath(props.item.url)">
-    <Icon v-if="props.item.icon" :icon="props.item.icon || ''" />
+    <FontAwesomeIcon v-if="props.item.icon" :icon="props.item.icon || ''" />
     <span class="menu-item-name">{{ props.item.name }}</span>
   </NuxtLink>
   <a v-else class="menu-item-link" target="_blank" :href="props.item.url">
-    <Icon v-if="props.item.icon" :icon="props.item.icon || ''" />
+    <FontAwesomeIcon v-if="props.item.icon" :icon="props.item.icon || ''" />
     <span class="menu-item-name">{{ props.item.name }}</span>
   </a>
 </template>

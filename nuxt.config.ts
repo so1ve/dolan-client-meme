@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     // "nuxt-purgecss",
     // "@kevinmarrec/nuxt-pwa",
   ],
+  css: [
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   colorMode: {
     fallback: "light",
     dataValue: "theme",
