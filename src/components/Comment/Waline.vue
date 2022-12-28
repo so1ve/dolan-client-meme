@@ -13,11 +13,12 @@ const Waline = defineComponent<Omit<WalineInitOptions, "el">>(_Waline);
 
 const route = useRoute();
 const colorMode = useColorMode();
+const { locale } = useI18n();
 
 const path = $computed(() => route.path);
 const darkmode = $computed(() => typeof window === "undefined" ? "auto" : colorMode.value === "dark");
 </script>
 
 <template>
-  <Waline v-bind="props.config" :path="path" :dark="darkmode" />
+  <Waline v-bind="props.config" :lang="locale" :path="path" :dark="darkmode" />
 </template>

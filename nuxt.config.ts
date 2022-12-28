@@ -15,8 +15,8 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
-    "unplugin-icons/nuxt",
     "@nuxtjs/critters",
+    "unplugin-icons/nuxt",
     // "nuxt-purgecss",
     // "@kevinmarrec/nuxt-pwa",
   ],
@@ -59,7 +59,7 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
-      redirectOn: "root", // recommended
+      redirectOn: "root",
     },
   },
   // pwa: {},
