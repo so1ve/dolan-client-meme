@@ -15,9 +15,7 @@ const localePath = useLocalePath();
       </NuxtLink>
     </h2>
     <PostMeta :post="props.post" />
-    <summary class="summary">
-      {{ props.post.excerpt }}
-    </summary>
+    <summary class="summary" v-html="props.post.excerpt" />
     <div class="read-more-container">
       <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="read-more-link">
         {{ $t('readMore.other') }}
