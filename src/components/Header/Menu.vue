@@ -45,7 +45,7 @@ const props = defineProps<{
   .menu-item {
     justify-content: center;
     margin: 0;
-    padding: 2em;
+    padding: 2em 1em;
 
     .icon {
       margin: 0;
