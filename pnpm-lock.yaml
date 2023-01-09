@@ -5,7 +5,7 @@ overrides:
 
 specifiers:
   '@antfu/ni': ^0.18.8
-  '@dolan-x/markdown-renderer': ^0.0.42
+  '@dolan-x/markdown-renderer': ^0.0.46
   '@dolan-x/shared': ^0.0.42
   '@fortawesome/fontawesome-svg-core': ^6.2.1
   '@fortawesome/free-brands-svg-icons': ^6.2.1
@@ -52,7 +52,7 @@ specifiers:
 
 devDependencies:
   '@antfu/ni': 0.18.8
-  '@dolan-x/markdown-renderer': 0.0.42
+  '@dolan-x/markdown-renderer': 0.0.46
   '@dolan-x/shared': 0.0.42
   '@fortawesome/fontawesome-svg-core': 6.2.1
   '@fortawesome/free-brands-svg-icons': 6.2.1
@@ -1407,8 +1407,8 @@ packages:
       postcss-selector-parser: 6.0.11
     dev: true
 
-  /@dolan-x/markdown-renderer/0.0.42:
-    resolution: {integrity: sha512-N7DWT4vMwzqmz98ENU6HPOs4sxQzb8pf0nioZU1OneaB0KUhCrR180ogt1zI4QCIvlo9Z9TvZ/5DWmGZdPRvHQ==}
+  /@dolan-x/markdown-renderer/0.0.46:
+    resolution: {integrity: sha512-VxRShJQ0ARS9gmUV09V5W6dhvtpkeWI+Qy87CpfGAH2iADbK0Xr2WqHV5qQegolY+mrlxPYLiNOsquezrloPgA==}
     dependencies:
       rehype-katex: 6.0.2
       rehype-stringify: 9.0.3
