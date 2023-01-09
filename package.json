@@ -29,7 +29,7 @@
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
     "@dolan-x/markdown-renderer": "^0.0.42",
-    "@dolan-x/shared": "^0.0.42",
+    "@dolan-x/shared": "^0.0.46",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
