@@ -63,7 +63,7 @@
     "pinia": "^2.0.28",
     "qrcode.vue": "^3.3.3",
     "sass": "^1.57.1",
-    "shiki-es": "^0.1.2",
+    "shiki-es": "^0.2.0",
     "stylelint": "^14.16.0",
     "ts-json-schema-generator": "^1.2.0",
     "tsx": "^3.12.1",
