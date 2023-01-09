@@ -25,7 +25,7 @@ specifiers:
   '@so1ve/eslint-config': ^0.37.0
   '@so1ve/rehype-shiki': 2.2.1-fix.1
   '@so1ve/stylelint-config': ^0.3.0
-  '@types/fs-extra': ^9.0.13
+  '@types/fs-extra': ^11.0.0
   '@vueuse/nuxt': ^9.9.0
   '@waline/client': ^2.14.3
   defu: ^6.1.1
@@ -72,7 +72,7 @@ devDependencies:
   '@so1ve/eslint-config': 0.37.1_iukboom6ndih5an6iafl45j2fe
   '@so1ve/rehype-shiki': 2.2.1-fix.1
   '@so1ve/stylelint-config': 0.3.0_stylelint@14.16.1
-  '@types/fs-extra': 9.0.13
+  '@types/fs-extra': 11.0.0
   '@vueuse/nuxt': 9.10.0_nuxt@3.0.0
   '@waline/client': 2.14.5
   defu: 6.1.1
@@ -2588,9 +2588,10 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
-  /@types/fs-extra/9.0.13:
-    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
+  /@types/fs-extra/11.0.0:
+    resolution: {integrity: sha512-zdV5odfHf95B4qr6bdpshG4VMm/3xgnPhSJLa3xh75CYr35e34k+4FQli82Q48sPqwHazJGy+6+jl4T+Vw1AMg==}
     dependencies:
+      '@types/jsonfile': 6.1.1
       '@types/node': 18.11.18
     dev: true
 
@@ -2606,6 +2607,12 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.11.18
     dev: true
 
   /@types/katex/0.11.1:

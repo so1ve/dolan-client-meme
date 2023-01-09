@@ -48,7 +48,7 @@
     "@so1ve/eslint-config": "^0.37.0",
     "@so1ve/rehype-shiki": "2.2.1-fix.1",
     "@so1ve/stylelint-config": "^0.3.0",
-    "@types/fs-extra": "^9.0.13",
+    "@types/fs-extra": "^11.0.0",
     "@vueuse/nuxt": "^9.9.0",
     "@waline/client": "^2.14.3",
     "defu": "^6.1.1",
