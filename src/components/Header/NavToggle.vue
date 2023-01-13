@@ -8,13 +8,13 @@ const toggleNav = (e: MouseEvent) => {
 </script>
 
 <template>
-  <a class="nav-toggle" :class="{ open: store.showNav, fade: !store.showNav }" @click="toggleNav">
+  <span class="nav-toggle" :class="{ open: store.showNav, fade: !store.showNav }" @click="toggleNav">
     <div class="nav-toggle-inner">
       <span />
       <span />
       <span />
     </div>
-  </a>
+  </span>
   <label ref="curtainRef" for="nav-toggle" class="nav-curtain" />
 </template>
 
@@ -26,6 +26,7 @@ const toggleNav = (e: MouseEvent) => {
 @media (max-width: $maxWidth) {
   .nav-toggle {
     display: block !important;
+    cursor: pointer;
   }
 }
 
