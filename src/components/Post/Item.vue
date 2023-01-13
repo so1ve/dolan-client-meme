@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import type { Post } from "@dolan-x/shared";
+import { renderMarkdownSync } from "@dolan-x/markdown-renderer";
 
 const props = defineProps<{
   post: Post
 }>();
+
 const localePath = useLocalePath();
+
+const renderedExcerpt = $computed(() => renderMarkdownSync(props.post.excerpt));
 </script>
 
 <template>
@@ -15,7 +19,7 @@ const localePath = useLocalePath();
       </NuxtLink>
     </h2>
     <PostMeta :post="props.post" />
-    <summary class="summary" v-html="props.post.excerpt" />
+    <summary class="summary" v-html="renderedExcerpt" />
     <div class="read-more-container">
       <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="read-more-link">
         {{ $t('readMore.other') }}
