@@ -4,7 +4,7 @@ overrides:
   nitropack: npm:@so1ve/nitropack@1.0.0-feat.1
 
 specifiers:
-  '@antfu/ni': ^0.18.8
+  '@antfu/ni': ^0.19.0
   '@dolan-x/markdown-renderer': ^0.0.42
   '@dolan-x/shared': ^0.0.42
   '@fortawesome/fontawesome-svg-core': ^6.2.1
@@ -51,7 +51,7 @@ specifiers:
   vue-utterances: ^0.3.4
 
 devDependencies:
-  '@antfu/ni': 0.18.8
+  '@antfu/ni': 0.19.0
   '@dolan-x/markdown-renderer': 0.0.42
   '@dolan-x/shared': 0.0.42
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -114,8 +114,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/ni/0.18.8:
-    resolution: {integrity: sha512-0m++AudwQq+wWAz/Ax7g+sh/wFW51HHQ6BtPLsuTAsFIzWB/bv/0COwZE7BRS+u0nqMb6Ks6nlk6cY1TpPDwHg==}
+  /@antfu/ni/0.19.0:
+    resolution: {integrity: sha512-33VKTuBjoW2canoVMGa4g5oGCg7KK8UVmBBmUKzvQ+Fa69kk2YI8sqt94WCpvSWmW/yD5ZXsD9G9s689b9KwwQ==}
     hasBin: true
     dev: true
 
