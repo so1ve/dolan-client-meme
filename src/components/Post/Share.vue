@@ -36,47 +36,87 @@ const qzoneShareUrl = $computed(() => `https://sns.qzone.qq.com/cgi-bin/qzshare/
 
     <div class="share-items">
       <div v-if="shareConfig.shareOnTwitter" class="share-item twitter">
-        <a :href="twitterShareUrl" :title="t('shareOnTitle.other') + t('twitter.other')" target="_blank" rel="noopener">
+        <a
+          :href="twitterShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('twitter.other')"
+        >
           <Icon icon="twitter" />
         </a>
       </div>
-      <div v-if="shareConfig.shareOnFacebook" class="share-item facebook">
-        <a :href="facebookShareUrl" :title="t('shareOnTitle.other') + t('facebook.other')" target="_blank" rel="noopener">
+      <div v-if="shareConfig.shareOnFacebook" class="facebook share-item">
+        <a
+          :href="facebookShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('facebook.other')"
+        >
           <Icon icon="facebook" />
         </a>
       </div>
-      <div v-if="shareConfig.shareOnLinkedIn" class="share-item linkedin">
-        <a :href="linkedinShareUrl" :title="t('shareOnTitle.other') + t('linkedin.other')" target="_blank" rel="noopener">
+      <div v-if="shareConfig.shareOnLinkedIn" class="linkedin share-item">
+        <a
+          :href="linkedinShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('linkedin.other')"
+        >
           <Icon icon="linkedin" />
         </a>
       </div>
       <div v-if="shareConfig.shareOnTelegram" class="share-item telegram">
-        <a :href="telegramShareUrl" :title="t('shareOnTitle.other') + t('telegram.other')" target="_blank" rel="noopener">
+        <a
+          :href="telegramShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('telegram.other')"
+        >
           <Icon icon="telegram" />
         </a>
       </div>
       <div v-if="shareConfig.shareOnWeibo" class="share-item weibo">
-        <a :href="weiboShareUrl" :title="t('shareOnTitle.other') + t('weibo.other')" target="_blank" rel="noopener">
+        <a
+          :href="weiboShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('weibo.other')"
+        >
           <Icon icon="weibo" />
         </a>
       </div>
-      <div v-if="shareConfig.shareOnDouban" class="share-item douban">
-        <a :href="doubanShareUrl" :title="t('shareOnTitle.other') + t('douban.other')" target="_blank" rel="noopener">
+      <div v-if="shareConfig.shareOnDouban" class="douban share-item">
+        <a
+          :href="doubanShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('douban.other')"
+        >
           <Icon icon="douban" />
         </a>
       </div>
-      <div v-if="shareConfig.shareOnQQ" class="share-item qq">
-        <a :href="qqShareUrl" :title="t('shareOnTitle.other') + t('qq.other')" target="_blank" rel="noopener">
+      <div v-if="shareConfig.shareOnQQ" class="qq share-item">
+        <a
+          :href="qqShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('qq.other')"
+        >
           <Icon icon="qq" />
         </a>
       </div>
-      <div v-if="shareConfig.shareOnQzone" class="share-item qzone">
-        <a :href="qzoneShareUrl" :title="t('shareOnTitle.other') + t('qzone.other')" target="_blank" rel="noopener">
+      <div v-if="shareConfig.shareOnQzone" class="qzone share-item">
+        <a
+          :href="qzoneShareUrl"
+          rel="noopener noreferrer"
+          target="_blank"
+          :title="t('shareOnTitle.other') + t('qzone.other')"
+        >
           <Icon icon="qzone" />
         </a>
       </div>
 
-      <div class="share-item qrcode">
+      <div class="qrcode share-item">
         <div class="qrcode-container" :title="t('shareViaTitle.other') + t('qrcode.other')">
           <Icon icon="qrcode" />
           <div id="qrcode-img">

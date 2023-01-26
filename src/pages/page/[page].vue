@@ -19,12 +19,7 @@ if (data.value) {
 <template>
   <div class="home">
     <ErrorWrapper :error="error">
-      <HomePost :posts="posts" :metas="metas" />
-      <!-- <template #error>
-        <div>
-          1
-        </div>
-      </template> -->
+      <HomePost :metas="metas" :posts="posts" />
     </ErrorWrapper>
   </div>
 </template>

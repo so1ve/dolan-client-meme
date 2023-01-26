@@ -24,7 +24,7 @@ const headerAnimationClass = $computed(() => {
     <div class="header-wrapper">
       <div class="header-inner">
         <div class="site-brand">
-          <NuxtLink :to="localePath('/')" class="brand">
+          <NuxtLink class="brand" :to="localePath('/')">
             {{ props.title }}
           </NuxtLink>
         </div>

@@ -18,7 +18,7 @@ const yearNow = useDateFormat(new Date(), "YYYY");
           - {{ yearNow }}
         </template>
         <div v-if="props.displayPoweredBy" class="powered-by">
-          Powered by <a href="https://github.com/dolan-x" target="_blank">Dolan</a> | Client is <a href="https://github.com/so1ve/dolan-client-meme" target="_blank">MemE</a>
+          Powered by <a href="https://github.com/dolan-x" rel="noopener noreferrer" target="_blank">Dolan</a> | Client is <a href="https://github.com/so1ve/dolan-client-meme" rel="noopener noreferrer" target="_blank">MemE</a>
         </div>
       </div>
     </div>

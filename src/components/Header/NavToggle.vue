@@ -15,7 +15,7 @@ const toggleNav = (e: MouseEvent) => {
       <span />
     </div>
   </span>
-  <label ref="curtainRef" for="nav-toggle" class="nav-curtain" />
+  <label class="nav-curtain" for="nav-toggle" />
 </template>
 
 <style scoped lang="scss">

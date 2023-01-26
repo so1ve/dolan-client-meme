@@ -21,12 +21,12 @@ const nextLink = $computed(() => `/page/${page + 1}`);
     <PostItem v-for="post in props.posts" :key="post.slug" :post="post" />
     <ul class="pagination">
       <li v-if="hasPrev" class="pagination-prev">
-        <NuxtLink :to="localePath(prevLink)" rel="prev">
+        <NuxtLink rel="prev" :to="localePath(prevLink)">
           &lt; {{ $t('prevPage.other') }}
         </NuxtLink>
       </li>
       <li v-if="hasNext" class="pagination-next">
-        <NuxtLink :to="localePath(nextLink)" rel="prev">
+        <NuxtLink rel="prev" :to="localePath(nextLink)">
           {{ $t('nextPage.other') }} &gt;
         </NuxtLink>
       </li>

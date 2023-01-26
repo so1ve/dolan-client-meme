@@ -9,7 +9,13 @@ const props = defineProps<{
 <template>
   <footer class="minimal-footer">
     <div class="post-tag">
-      <NuxtLink v-for="tag, i in props.tags" :key="tag.slug" :to="useTagLink(tag.slug)" rel="tag" class="post-tag-link">
+      <NuxtLink
+        v-for="tag, i in props.tags"
+        :key="tag.slug"
+        class="post-tag-link"
+        rel="tag"
+        :to="useTagLink(tag.slug)"
+      >
         <template v-if="i > 0">
 &nbsp;
         </template>

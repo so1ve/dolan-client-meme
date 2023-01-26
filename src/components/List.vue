@@ -41,17 +41,17 @@ const groupByYearedPosts = $computed(() => {
     <h1 class="list-title">
       {{ props.title }}
     </h1>
-    <!-- Hello {{ props.name }} -->
+    <!-- eslint-disable-next-line vue/no-v-for-template-key -->
     <template v-for="item in groupByYearedPosts" :key="item.year">
       <h2 class="list-year">
         {{ item.year }}<Icon class="chinese-zodiac" :icon="item.zodiac" />
       </h2>
       <ul class="list-part">
         <li v-for="post in item.posts" :key="post.slug" class="list-item">
-          <NuxtLink :to="usePostLink(post.slug)" class="list-item-title">
+          <NuxtLink class="list-item-title" :to="usePostLink(post.slug)">
             {{ post.title }}
           </nuxtlink>
-          <time :datetime="String(post.created)" class="list-item-time">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
+          <time class="list-item-time" :datetime="String(post.created)">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
         </li>
       </ul>
     </template>

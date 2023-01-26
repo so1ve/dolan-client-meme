@@ -12,16 +12,16 @@ const renderedExcerpt = $computed(() => renderMarkdownSync(props.post.excerpt));
 </script>
 
 <template>
-  <article class="content post home">
+  <article class="content home post">
     <h2 class="post-title">
-      <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="summary-title-link">
+      <NuxtLink class="summary-title-link" :to="localePath(usePostLink(props.post.slug))">
         {{ props.post.title }}
       </NuxtLink>
     </h2>
     <PostMeta :post="props.post" />
     <summary class="summary" v-html="renderedExcerpt" />
     <div class="read-more-container">
-      <NuxtLink :to="localePath(usePostLink(props.post.slug))" class="read-more-link">
+      <NuxtLink class="read-more-link" :to="localePath(usePostLink(props.post.slug))">
         {{ $t('readMore.other') }}
       </NuxtLink>
     </div>

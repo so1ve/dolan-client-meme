@@ -9,14 +9,14 @@ const props = defineProps<{
 <template>
   <nav class="nav">
     <ul id="menu" class="menu">
-      <template v-for="item in props.items" :key="item.name">
-        <li v-if="!('identifier' in item)" class="menu-item">
+      <template v-for="item in props.items">
+        <li v-if="!('identifier' in item)" :key="item.name" class="menu-item">
           <HeaderMenuLink :item="item" />
         </li>
-        <li v-else-if="item.identifier === 'theme-switcher'" class="menu-item">
+        <li v-else-if="item.identifier === 'theme-switcher'" :key="item.identifier" class="menu-item">
           <HeaderThemeSwitcher />
         </li>
-        <li v-else-if="item.identifier === 'language-switcher'" class="menu-item">
+        <li v-else-if="item.identifier === 'language-switcher'" :key="item.identifier" class="menu-item">
           <HeaderLanguageSwitcher />
         </li>
       </template>

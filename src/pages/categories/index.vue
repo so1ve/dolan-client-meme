@@ -42,7 +42,7 @@ useHead({
       <div class="tree">
         <ul class="list-categories">
           <li v-for="item in map" :key="item[0].slug">
-            <NuxtLink :to="useCategoryLink(item[0].slug)" class="category-item">
+            <NuxtLink class="category-item" :to="useCategoryLink(item[0].slug)">
               {{ item[0].name }}
             </NuxtLink>
             <span class="category-count">({{ item[1].length }})</span>

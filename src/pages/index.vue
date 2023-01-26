@@ -19,7 +19,7 @@ useHead({
 <template>
   <div class="home">
     <ErrorWrapper :error="error">
-      <HomePost :posts="posts" :metas="metas" />
+      <HomePost :metas="metas" :posts="posts" />
     </ErrorWrapper>
   </div>
 </template>

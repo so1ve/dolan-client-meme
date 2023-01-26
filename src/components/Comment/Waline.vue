@@ -20,5 +20,10 @@ const darkmode = $computed(() => typeof window === "undefined" ? "auto" : colorM
 </script>
 
 <template>
-  <Waline v-bind="props.config" :lang="locale" :path="path" :dark="darkmode" />
+  <Waline
+    v-bind="props.config"
+    :dark="darkmode"
+    :lang="locale"
+    :path="path"
+  />
 </template>

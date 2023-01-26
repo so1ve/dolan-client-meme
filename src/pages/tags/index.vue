@@ -25,8 +25,8 @@ useHead({
       <NuxtLink
         v-for="tag in tags"
         :key="tag.slug"
-        :to="useTagLink(tag.slug)"
         class="tag-cloud-item"
+        :to="useTagLink(tag.slug)"
       >
         {{ tag.name }}
       </NuxtLink>

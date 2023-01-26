@@ -25,18 +25,18 @@ const wordCount = $computed(() => props.post.content.length);
 
 <template>
   <div class="post-meta">
-    <time :datetime="String(props.post.created)" class="post-meta-item">
+    <time class="post-meta-item" :datetime="String(props.post.created)">
       <!-- TODO: Custom Icon -->
-      <Icon icon="calendar-alt" class="post-meta-icon" />&nbsp;{{ formattedCreatedTime }}
+      <Icon class="post-meta-icon" icon="calendar-alt" />&nbsp;{{ formattedCreatedTime }}
     </time>
-    <time :datetime="String(props.post.updated)" class="post-meta-item">
-      <Icon icon="calendar-check" class="post-meta-icon" />&nbsp;{{ formattedUpdatedTime }}
+    <time class="post-meta-item" :datetime="String(props.post.updated)">
+      <Icon class="post-meta-icon" icon="calendar-check" />&nbsp;{{ formattedUpdatedTime }}
     </time>
-    <NuxtLink v-if="category.name" :to="useCategoryLink(category.slug)" class="post-meta-item">
-      <Icon icon="folder" class="post-meta-icon" />&nbsp;{{ category.name }}
+    <NuxtLink v-if="category.name" class="post-meta-item" :to="useCategoryLink(category.slug)">
+      <Icon class="post-meta-icon" icon="folder" />&nbsp;{{ category.name }}
     </NuxtLink>
     <span class="post-meta-item wordcount">
-      <Icon icon="pencil-alt" class="post-meta-icon" />&nbsp;{{ wordCount }}
+      <Icon class="post-meta-icon" icon="pencil-alt" />&nbsp;{{ wordCount }}
     </span>
   </div>
 </template>

@@ -13,7 +13,13 @@ const localePath = useLocalePath();
     <FontAwesomeIcon v-if="props.item.icon" :icon="props.item.icon || ''" />
     <span class="menu-item-name">{{ props.item.name }}</span>
   </NuxtLink>
-  <a v-else class="menu-item-link" target="_blank" :href="props.item.url">
+  <a
+    v-else
+    class="menu-item-link"
+    :href="props.item.url"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
     <FontAwesomeIcon v-if="props.item.icon" :icon="props.item.icon || ''" />
     <span class="menu-item-name">{{ props.item.name }}</span>
   </a>

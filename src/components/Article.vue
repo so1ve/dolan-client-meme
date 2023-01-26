@@ -9,7 +9,7 @@ const props = defineProps<{
   <article class="content post">
     <h1 class="post-title" v-html="props.title" />
     <slot name="meta" />
-    <div class="post-body e-content" v-html="props.renderedContent" />
+    <div class="e-content post-body" v-html="props.renderedContent" />
   </article>
 </template>
 

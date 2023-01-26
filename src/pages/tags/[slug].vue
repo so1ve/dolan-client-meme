@@ -26,6 +26,6 @@ if (tagData.value && data.value) {
 
 <template>
   <div>
-    <List :title="title" :posts="posts" />
+    <List :posts="posts" :title="title" />
   </div>
 </template>
