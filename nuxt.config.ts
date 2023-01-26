@@ -16,8 +16,8 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@nuxtjs/critters",
+    "@nuxtjs/robots",
     "unplugin-icons/nuxt",
-    '@nuxtjs/robots'
     // "nuxt-purgecss",
     // "@kevinmarrec/nuxt-pwa",
   ],
@@ -66,6 +66,7 @@ export default defineNuxtConfig({
   // pwa: {},
   nitro: {
     rollupConfig: {
+      // @ts-expect-error ???
       plugins: [
         DenoFixPlugin(),
       ],
