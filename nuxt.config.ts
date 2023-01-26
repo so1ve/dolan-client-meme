@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/critters",
     "unplugin-icons/nuxt",
+    '@nuxtjs/robots'
     // "nuxt-purgecss",
     // "@kevinmarrec/nuxt-pwa",
   ],
