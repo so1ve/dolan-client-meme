@@ -17,7 +17,7 @@ specifiers:
   '@nuxtjs/color-mode': ^3.2.0
   '@nuxtjs/critters': ^0.4.0
   '@nuxtjs/google-fonts': 3.0.0
-  '@nuxtjs/i18n': 8.0.0-beta.8
+  '@nuxtjs/i18n': 8.0.0-beta.10
   '@nuxtjs/robots': ^3.0.0
   '@pinia/nuxt': ^0.4.6
   '@so1ve/eslint-config': ^0.42.2
@@ -65,7 +65,7 @@ devDependencies:
   '@nuxtjs/color-mode': 3.2.0
   '@nuxtjs/critters': 0.4.0
   '@nuxtjs/google-fonts': 3.0.0
-  '@nuxtjs/i18n': 8.0.0-beta.8
+  '@nuxtjs/i18n': 8.0.0-beta.10
   '@nuxtjs/robots': 3.0.0
   '@pinia/nuxt': 0.4.7_typescript@4.9.5
   '@so1ve/eslint-config': 0.42.2_ycpbpc6yetojsgtrx3mwntkhsu
@@ -2238,26 +2238,6 @@ packages:
       - supports-color
     dev: true
 
-  /@intlify/bundle-utils/3.4.0_vue-i18n@9.3.0-beta.16:
-    resolution: {integrity: sha512-2UQkqiSAOSPEHMGWlybqWm4G2K0X+FyYho5AwXz6QklSX1EY5EDmOSxZmwscn2qmKBnp6OYsme5kUrnN9xrWzQ==}
-    engines: {node: '>= 12'}
-    peerDependencies:
-      petite-vue-i18n: '*'
-      vue-i18n: '*'
-    peerDependenciesMeta:
-      petite-vue-i18n:
-        optional: true
-      vue-i18n:
-        optional: true
-    dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.16
-      '@intlify/shared': 9.3.0-beta.16
-      jsonc-eslint-parser: 1.4.1
-      source-map: 0.6.1
-      vue-i18n: 9.3.0-beta.16
-      yaml-eslint-parser: 0.3.2
-    dev: true
-
   /@intlify/bundle-utils/4.0.0_vue-i18n@9.3.0-beta.16:
     resolution: {integrity: sha512-klXrYT9VXyKEXsD6UY3pShg0O5MPC07n0TZ5RrSs5ry6T1eZVolIFGJi9c3qcDrh1qjJxgikRnPBmD7qGDqbjw==}
     engines: {node: '>= 12'}
@@ -2301,11 +2281,6 @@ packages:
     dependencies:
       '@intlify/shared': 9.3.0-beta.16
       source-map: 0.6.1
-    dev: true
-
-  /@intlify/shared/9.3.0-beta.11:
-    resolution: {integrity: sha512-CtbotesxTRiC3bRyXyv1NG39fkqJ790f8z8xFaeIXSZpOdiyxoh5BIyypCzSFQZDGLwz0Q9gyWbW1XpxQJm68Q==}
-    engines: {node: '>= 14'}
     dev: true
 
   /@intlify/shared/9.3.0-beta.16:
@@ -2857,12 +2832,12 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/i18n/8.0.0-beta.8:
-    resolution: {integrity: sha512-XXOGdAnlbjHPVtY0exI+V+K9Lz0xo3oOtR0mZDV1hvO5H5EOQGvHtHvG6aufFsR10rgw4tI66pCvo/MLKeoH4g==}
+  /@nuxtjs/i18n/8.0.0-beta.10:
+    resolution: {integrity: sha512-a7xcWKSJvABxF6O7W7MKscyT3OJxaKpBQZ84PGuTop9YrlBFkTV+bUQX3cayQqd0EYVLjgdE9R0uri5JMIVQWQ==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
-      '@intlify/bundle-utils': 3.4.0_vue-i18n@9.3.0-beta.16
-      '@intlify/shared': 9.3.0-beta.11
+      '@intlify/bundle-utils': 4.0.0_vue-i18n@9.3.0-beta.16
+      '@intlify/shared': 9.3.0-beta.16
       '@intlify/unplugin-vue-i18n': 0.8.2_vue-i18n@9.3.0-beta.16
       '@nuxt/kit': 3.2.3
       '@vue/compiler-sfc': 3.2.47
@@ -2879,7 +2854,7 @@ packages:
       ufo: 1.1.1
       unplugin: 1.1.0
       vue-i18n: 9.3.0-beta.16
-      vue-i18n-routing: 0.10.3_vue-i18n@9.3.0-beta.16
+      vue-i18n-routing: 0.12.2_vue-i18n@9.3.0-beta.16
     transitivePeerDependencies:
       - '@vue/composition-api'
       - petite-vue-i18n
@@ -12276,8 +12251,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-i18n-routing/0.10.3_vue-i18n@9.3.0-beta.16:
-    resolution: {integrity: sha512-U+tD43Lbv1+ZrMW2lDwF/suYfHc+ezeDZXSkyQOMcmsm/Brfw8CwpAx822Ur8SKYeUjsNLhIyEn9QX8df/Ey+Q==}
+  /vue-i18n-routing/0.12.2_vue-i18n@9.3.0-beta.16:
+    resolution: {integrity: sha512-VzYUzbUJyPHUP74t973dN42/sJnZUzBwdcYX+TJgr9YHD08+9uouw5Ume2jHO2Pi8Nymu4cz/UiHWDPeMyc/bQ==}
     engines: {node: '>= 14.6'}
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1

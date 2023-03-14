@@ -43,7 +43,7 @@
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/critters": "^0.4.0",
     "@nuxtjs/google-fonts": "3.0.0",
-    "@nuxtjs/i18n": "8.0.0-beta.8",
+    "@nuxtjs/i18n": "8.0.0-beta.10",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.4.6",
     "@so1ve/eslint-config": "^0.42.2",
