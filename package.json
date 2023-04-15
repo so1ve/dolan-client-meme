@@ -1,7 +1,7 @@
 {
   "name": "dolan-client-volantis",
   "version": "0.0.0",
-  "packageManager": "pnpm@7.30.5",
+  "packageManager": "pnpm@7.32.0",
   "main": "nuxt.config.ts",
   "files": [
     "src",
@@ -59,7 +59,7 @@
     "gitalk": "^1.8.0",
     "husky": "^8.0.3",
     "mini-cz": "^0.5.0",
-    "nuxt": "3.3.2",
+    "nuxt": "3.4.1",
     "nuxt-purgecss": "^2.0.0",
     "pinia": "^2.0.29",
     "qrcode.vue": "^3.3.3",
