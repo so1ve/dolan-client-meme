@@ -12,7 +12,7 @@ specifiers:
   '@giscus/vue': ^2.2.6
   '@iconify-json/carbon': ^1.1.14
   '@iconify-json/zondicons': ^1.1.3
-  '@kevinmarrec/nuxt-pwa': ^0.15.0
+  '@kevinmarrec/nuxt-pwa': ^0.17.0
   '@mini-cz/config-default': ^0.8.0
   '@nuxtjs/color-mode': ^3.2.0
   '@nuxtjs/critters': ^0.4.0
@@ -60,7 +60,7 @@ devDependencies:
   '@giscus/vue': 2.2.8
   '@iconify-json/carbon': 1.1.16
   '@iconify-json/zondicons': 1.1.4
-  '@kevinmarrec/nuxt-pwa': 0.15.0
+  '@kevinmarrec/nuxt-pwa': 0.17.0
   '@mini-cz/config-default': 0.8.0_mini-cz@0.5.0
   '@nuxtjs/color-mode': 3.2.0
   '@nuxtjs/critters': 0.4.1
@@ -1884,8 +1884,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@kevinmarrec/nuxt-pwa/0.15.0:
-    resolution: {integrity: sha512-7aEX3k123gq15859pHLnZZgSGSsTnH1BduK4sICktnkOJK6u62Uo0TT85ma9m5OOC27RJuCo/G8nBWEa39dD+g==}
+  /@kevinmarrec/nuxt-pwa/0.17.0:
+    resolution: {integrity: sha512-TI/0Fe30g6/VL2Y2jDLF/q5sov8UBE5K4/+CRPUnJbQPCXhCzTBM8EjllDUwslZ3bPtCk2TqwDFZOHaKtY/eoA==}
     dependencies:
       hasha: 5.2.2
       sharp: 0.31.3

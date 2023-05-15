@@ -38,7 +38,7 @@
     "@giscus/vue": "^2.2.6",
     "@iconify-json/carbon": "^1.1.14",
     "@iconify-json/zondicons": "^1.1.3",
-    "@kevinmarrec/nuxt-pwa": "^0.15.0",
+    "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@mini-cz/config-default": "^0.8.0",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/critters": "^0.4.0",
