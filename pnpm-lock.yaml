@@ -44,7 +44,7 @@ specifiers:
   tsx: ^3.12.2
   twikoo: ^1.6.8
   typescript: ^5.0.0
-  unplugin-icons: ^0.15.1
+  unplugin-icons: ^0.16.0
   vite-plugin-toml: ^0.5.0
   vue-utterances: ^0.3.4
 
@@ -92,7 +92,7 @@ devDependencies:
   tsx: 3.12.7
   twikoo: 1.6.16
   typescript: 5.0.4
-  unplugin-icons: 0.15.3
+  unplugin-icons: 0.16.1
   vite-plugin-toml: 0.5.0
   vue-utterances: 0.3.4
 
@@ -11122,10 +11122,10 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin-icons/0.15.3:
-    resolution: {integrity: sha512-YWgJqv5AahrokeOnta8uX/m1damZA6Rf6zPClgHg2Fa/45iyOe3Lj+Wn/Ba+CSsq9yBffn17YfKfJNyWCNZPvw==}
+  /unplugin-icons/0.16.1:
+    resolution: {integrity: sha512-qTunFUkpAyDnwzwV7YV1ZgCWRYfLuURcCurhhXOWMy2ipY88qx1pADvral2hJu4Xymh0X0t3Zcll3BIru2AVLQ==}
     peerDependencies:
-      '@svgr/core': '>=5.5.0'
+      '@svgr/core': '>=7.0.0'
       '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
       vue-template-compiler: ^2.6.12
       vue-template-es2015-compiler: ^1.9.0

@@ -70,7 +70,7 @@
     "tsx": "^3.12.2",
     "twikoo": "^1.6.8",
     "typescript": "^5.0.0",
-    "unplugin-icons": "^0.15.1",
+    "unplugin-icons": "^0.16.0",
     "vite-plugin-toml": "^0.5.0",
     "vue-utterances": "^0.3.4"
   },
