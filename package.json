@@ -65,7 +65,7 @@
     "qrcode.vue": "^3.3.3",
     "sass": "^1.57.1",
     "shiki-es": "^0.2.0",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.0.0",
     "ts-json-schema-generator": "^1.2.0",
     "tsx": "^3.12.2",
     "twikoo": "^1.6.8",
