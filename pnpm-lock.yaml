@@ -32,7 +32,7 @@ specifiers:
   fs-extra: ^11.1.0
   gitalk: ^1.8.0
   husky: ^8.0.3
-  mini-cz: ^0.5.0
+  mini-cz: ^0.8.0
   nuxt: 3.4.3
   nuxt-purgecss: ^2.0.0
   pinia: ^2.0.29
@@ -61,7 +61,7 @@ devDependencies:
   '@iconify-json/carbon': 1.1.16
   '@iconify-json/zondicons': 1.1.4
   '@kevinmarrec/nuxt-pwa': 0.17.0
-  '@mini-cz/config-default': 0.8.0_mini-cz@0.5.0
+  '@mini-cz/config-default': 0.8.0_mini-cz@0.8.0
   '@nuxtjs/color-mode': 3.2.0
   '@nuxtjs/critters': 0.4.1
   '@nuxtjs/google-fonts': 3.0.0
@@ -80,7 +80,7 @@ devDependencies:
   fs-extra: 11.1.1
   gitalk: 1.8.0
   husky: 8.0.3
-  mini-cz: 0.5.0
+  mini-cz: 0.8.0
   nuxt: 3.4.3_gdophfzyfzajihkpkbnmqcgjq4
   nuxt-purgecss: 2.0.0
   pinia: 2.0.36_typescript@5.0.4
@@ -1920,12 +1920,12 @@ packages:
       - supports-color
     dev: true
 
-  /@mini-cz/config-default/0.8.0_mini-cz@0.5.0:
+  /@mini-cz/config-default/0.8.0_mini-cz@0.8.0:
     resolution: {integrity: sha512-qmShzxsNKOQ1GC+EONWCaBCinbZImROk1vwBfgaVDJOsEjqySy+xE18HXKVp8AKpJ1XqLfdZo+wXOaPPXGRfoA==}
     peerDependencies:
       mini-cz: '*'
     dependencies:
-      mini-cz: 0.5.0
+      mini-cz: 0.8.0
     dev: true
 
   /@netlify/functions/1.6.0:
@@ -7733,8 +7733,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /mini-cz/0.5.0:
-    resolution: {integrity: sha512-JzELCCv0ncWjSDU8KropnogpkNUUZKu4Jbn6bkphEPs2CMX+vcDgAvZ7VBTHzQVo4Xcyo73veQxa81VYB8iaQQ==}
+  /mini-cz/0.8.0:
+    resolution: {integrity: sha512-dcaUD5T2/kdYu9JOgFsIRCTfklfGafjam8Nb89k/rOKSEzsDNJ6nH180onPI82UWRxPHXuFKeKHKwvLRSztyVA==}
     hasBin: true
     dev: true
 
