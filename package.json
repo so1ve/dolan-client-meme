@@ -50,7 +50,7 @@
     "@so1ve/rehype-shiki": "2.2.1-fix.1",
     "@so1ve/stylelint-config": "^0.3.0",
     "@types/fs-extra": "^11.0.1",
-    "@vueuse/nuxt": "^9.11.1",
+    "@vueuse/nuxt": "^10.0.0",
     "@waline/client": "^2.14.7",
     "defu": "^6.1.2",
     "discuss": "^1.2.1",
