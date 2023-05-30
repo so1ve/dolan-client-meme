@@ -5,7 +5,7 @@
 import Gitalk from "gitalk";
 import "gitalk/dist/gitalk.css";
 
-const { config } = defineProps<{
+const props = defineProps<{
   config: Gitalk.GitalkOptions;
 }>();
 
@@ -16,7 +16,7 @@ const id = computed(() => route.path);
 
 onMounted(() => {
   const gitalk = new Gitalk({
-    ...config,
+    ...props.config,
     id: id.value,
   });
   gitalk.render(containerRef.value!);
