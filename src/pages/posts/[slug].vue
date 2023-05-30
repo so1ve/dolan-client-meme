@@ -16,6 +16,7 @@ const tags = ref([] as Tag[]);
 const title = ref("");
 const renderedContent = ref("");
 if (data.value) {
+  console.log(data.value)
   if (data.value.code === 404) {
     throw notFound();
     // TODO

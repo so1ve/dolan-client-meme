@@ -1,1 +1,3 @@
-{}
+{
+  "exclude": ["@nuxtjs/i18n"]
+}
