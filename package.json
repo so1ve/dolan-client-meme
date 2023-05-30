@@ -22,7 +22,6 @@
     "lint:js:fix": "nr lint:js --fix",
     "nuxi": "nuxi",
     "postinstall": "nuxi prepare",
-    "prepare": "husky install",
     "start": "node .output/server/index.mjs",
     "typecheck": "vue-tsc --noEmit"
   },
@@ -58,7 +57,6 @@
     "eslint": "^8.41.0",
     "fs-extra": "^11.1.1",
     "gitalk": "^1.8.0",
-    "husky": "^8.0.3",
     "mini-cz": "^0.8.0",
     "nuxt": "3.5.2",
     "nuxt-purgecss": "^2.0.0",
