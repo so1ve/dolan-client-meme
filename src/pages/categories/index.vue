@@ -3,21 +3,27 @@ import type { Category, Post } from "@dolan-x/shared";
 
 const { t } = useI18n();
 
-const { data: categoriesData, error: categoriesError } = await useFetch("/api/categories");
-const { data: postsData, error: postsError } = await useFetch("/api/posts", { params: { all: "" } });
+const { data: categoriesData, error: categoriesError } = await useFetch(
+  "/api/categories",
+);
+const { data: postsData } = await useFetch("/api/posts", {
+  params: { all: "" },
+});
 
-let categories = $ref([] as Category[]);
+const categories = ref([] as Category[]);
 if (categoriesData.value) {
-  categories = categoriesData.value.data;
+  categories.value = categoriesData.value.data;
 }
-let posts = $ref([] as Post[]);
+const posts = ref([] as Post[]);
 if (postsData.value) {
-  posts = postsData.value.data;
+  posts.value = postsData.value.data;
 }
 
 const map = new Map<Category, Post[]>();
-for (const post of posts) {
-  const category = categories.find(category => category.slug === post.category);
+for (const post of posts.value) {
+  const category = categories.value.find(
+    (category) => category.slug === post.category,
+  );
   if (category) {
     if (map.has(category)) {
       map.get(category)!.push(post);

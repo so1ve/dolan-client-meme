@@ -5,11 +5,12 @@ const { t } = useI18n();
 
 const { data, error } = await useFetch("/api/posts");
 
-let posts = $ref([] as Post[]);
-let metas = $ref({} as Metas);
+const posts = ref([] as Post[]);
+const metas = ref({} as Metas);
+
 if (data.value) {
-  posts = data.value.data;
-  metas = data.value.metas;
+  posts.value = data.value.data;
+  metas.value = data.value.metas;
 }
 useHead({
   title: t("home.other"),

@@ -4,9 +4,9 @@ import type { Tag } from "@dolan-x/shared";
 const { t } = useI18n();
 const { data, error } = await useFetch("/api/tags");
 
-let tags = $ref([] as Tag[]);
+const tags = ref([] as Tag[]);
 if (data.value) {
-  tags = data.value.data;
+  tags.value = data.value.data;
 }
 
 useHead({

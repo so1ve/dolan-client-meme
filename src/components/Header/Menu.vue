@@ -2,7 +2,7 @@
 import type { MenuItem } from "@/types/config";
 
 const props = defineProps<{
-  items: MenuItem[]
+  items: MenuItem[];
 }>();
 </script>
 
@@ -13,10 +13,18 @@ const props = defineProps<{
         <li v-if="!('identifier' in item)" :key="item.name" class="menu-item">
           <HeaderMenuLink :item="item" />
         </li>
-        <li v-else-if="item.identifier === 'theme-switcher'" :key="item.identifier" class="menu-item">
+        <li
+          v-else-if="item.identifier === 'theme-switcher'"
+          :key="item.identifier"
+          class="menu-item"
+        >
           <HeaderThemeSwitcher />
         </li>
-        <li v-else-if="item.identifier === 'language-switcher'" :key="item.identifier" class="menu-item">
+        <li
+          v-else-if="item.identifier === 'language-switcher'"
+          :key="item.identifier"
+          class="menu-item"
+        >
           <HeaderLanguageSwitcher />
         </li>
       </template>

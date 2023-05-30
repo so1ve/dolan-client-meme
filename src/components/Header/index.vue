@@ -2,19 +2,20 @@
 import type { MenuItem } from "@/types/config";
 
 const props = defineProps<{
-  title: string
-  menuItems: MenuItem[]
+  title: string;
+  menuItems: MenuItem[];
 }>();
 
 const localePath = useLocalePath();
 const store = useStore();
-const headerAnimationClass = $computed(() => {
+const headerAnimationClass = computed(() => {
   if (store.showNav === true) {
     return "open";
   }
   if (store.showNav === false) {
     return "fade";
   }
+
   return "";
 });
 </script>

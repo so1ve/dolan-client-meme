@@ -2,7 +2,7 @@
 import type { Tag } from "@dolan-x/shared";
 
 const props = defineProps<{
-  tags: Tag[]
+  tags: Tag[];
 }>();
 </script>
 
@@ -10,15 +10,13 @@ const props = defineProps<{
   <footer class="minimal-footer">
     <div class="post-tag">
       <NuxtLink
-        v-for="tag, i in props.tags"
+        v-for="(tag, i) in props.tags"
         :key="tag.slug"
         class="post-tag-link"
         rel="tag"
         :to="useTagLink(tag.slug)"
       >
-        <template v-if="i > 0">
-&nbsp;
-        </template>
+        <template v-if="i > 0">&nbsp;</template>
         #{{ tag.name }}
       </NuxtLink>
     </div>

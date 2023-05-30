@@ -2,17 +2,17 @@
 import type { Post } from "@dolan-x/shared";
 
 const props = defineProps<{
-  posts: Post[]
-  metas: Record<string, any>
+  posts: Post[];
+  metas: Record<string, any>;
 }>();
 const localePath = useLocalePath();
 const route = useRoute();
 const page = +(route.params.page || 1);
 
-const hasPrev = $computed(() => page > 1 && props.metas.pages > 1);
-const prevLink = $computed(() => page - 1 === 1 ? "/" : `/page/${page - 1}`);
-const hasNext = $computed(() => page < props.metas.pages);
-const nextLink = $computed(() => `/page/${page + 1}`);
+const hasPrev = computed(() => page > 1 && props.metas.pages > 1);
+const prevLink = computed(() => (page - 1 === 1 ? "/" : `/page/${page - 1}`));
+const hasNext = computed(() => page < props.metas.pages);
+const nextLink = computed(() => `/page/${page + 1}`);
 </script>
 
 <template>
@@ -22,12 +22,12 @@ const nextLink = $computed(() => `/page/${page + 1}`);
     <ul class="pagination">
       <li v-if="hasPrev" class="pagination-prev">
         <NuxtLink rel="prev" :to="localePath(prevLink)">
-          &lt; {{ $t('prevPage.other') }}
+          &lt; {{ $t("prevPage.other") }}
         </NuxtLink>
       </li>
       <li v-if="hasNext" class="pagination-next">
         <NuxtLink rel="prev" :to="localePath(nextLink)">
-          {{ $t('nextPage.other') }} &gt;
+          {{ $t("nextPage.other") }} &gt;
         </NuxtLink>
       </li>
     </ul>

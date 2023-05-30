@@ -3,26 +3,32 @@ import type { Post } from "@dolan-x/shared";
 import { renderMarkdownSync } from "@dolan-x/markdown-renderer";
 
 const props = defineProps<{
-  post: Post
+  post: Post;
 }>();
 
 const localePath = useLocalePath();
 
-const renderedExcerpt = $computed(() => renderMarkdownSync(props.post.excerpt));
+const renderedExcerpt = computed(() => renderMarkdownSync(props.post.excerpt));
 </script>
 
 <template>
   <article class="content home post">
     <h2 class="post-title">
-      <NuxtLink class="summary-title-link" :to="localePath(usePostLink(props.post.slug))">
+      <NuxtLink
+        class="summary-title-link"
+        :to="localePath(usePostLink(props.post.slug))"
+      >
         {{ props.post.title }}
       </NuxtLink>
     </h2>
     <PostMeta :post="props.post" />
     <summary class="summary" v-html="renderedExcerpt" />
     <div class="read-more-container">
-      <NuxtLink class="read-more-link" :to="localePath(usePostLink(props.post.slug))">
-        {{ $t('readMore.other') }}
+      <NuxtLink
+        class="read-more-link"
+        :to="localePath(usePostLink(props.post.slug))"
+      >
+        {{ $t("readMore.other") }}
       </NuxtLink>
     </div>
   </article>

@@ -10,7 +10,7 @@ library.add(fas, fab, far);
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
-    FAIcon: typeof FontAwesomeIcon
+    FAIcon: typeof FontAwesomeIcon;
   }
 }
 

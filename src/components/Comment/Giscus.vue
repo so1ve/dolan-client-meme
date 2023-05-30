@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import Giscus from "@giscus/vue";
-
-const props = defineProps<{
-  name: string
-}>();
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 import SVG from "@/data/SVG.toml";
 
 const props = defineProps<{
-  icon: string
+  icon: string;
 }>();
 
 const icon = computed(() => SVG[props.icon]);

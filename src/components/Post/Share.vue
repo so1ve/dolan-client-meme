@@ -3,35 +3,56 @@ import QRCode from "qrcode.vue";
 import type { Post, Tag } from "@dolan-x/shared";
 
 const props = defineProps<{
-  post: Post
-  tags: Tag[]
+  post: Post;
+  tags: Tag[];
 }>();
 
 const configStore = useConfigStore();
 const { t } = useI18n();
 
-const host = $computed(() => location.host);
-const useAbsoluteUrl = (path: string) => {
-  return `https://${host}${path}`;
-};
-const siteName = $computed(() => configStore.config.site.name);
-const shareConfig = $computed(() => configStore.config.custom.share);
-const hashtags = $computed(() => props.tags.map(t => t.name).join(","));
-const postLink = $computed(() => useAbsoluteUrl(usePostLink(props.post.slug)));
-const twitterShareUrl = $computed(() => `https://twitter.com/share?url=${postLink}&text=${props.post.title}&hashtags=${hashtags}`);
-const facebookShareUrl = $computed(() => `https://www.facebook.com/sharer/sharer.php?u=${postLink}&hashtag=${hashtags}`);
-const linkedinShareUrl = $computed(() => `https://www.linkedin.com/shareArticle?mini=true&url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&source=${siteName}`);
-const telegramShareUrl = $computed(() => `https://t.me/share/url?url=${postLink}&text=${props.post.title}`);
-const weiboShareUrl = $computed(() => `http://service.weibo.com/share/share.php?url=${postLink}&title=${props.post.title}&searchPic=false&style=simple`);
-const doubanShareUrl = $computed(() => `https://www.douban.com/share/service?href=${postLink}&name=${props.post.title}&text=${props.post.excerpt}`);
-const qqShareUrl = $computed(() => `https://connect.qq.com/widget/shareqq/index.html?url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName}`);
-const qzoneShareUrl = $computed(() => `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName}`);
+const host = computed(() => location.host);
+const useAbsoluteUrl = (path: string) => `https://${host}${path}`;
+const siteName = computed(() => configStore.config.site.name);
+const shareConfig = computed(() => configStore.config.custom.share);
+const hashtags = computed(() => props.tags.map((t) => t.name).join(","));
+const postLink = computed(() => useAbsoluteUrl(usePostLink(props.post.slug)));
+const twitterShareUrl = computed(
+  () =>
+    `https://twitter.com/share?url=${postLink}&text=${props.post.title}&hashtags=${hashtags}`,
+);
+const facebookShareUrl = computed(
+  () =>
+    `https://www.facebook.com/sharer/sharer.php?u=${postLink}&hashtag=${hashtags}`,
+);
+const linkedinShareUrl = computed(
+  () =>
+    `https://www.linkedin.com/shareArticle?mini=true&url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&source=${siteName}`,
+);
+const telegramShareUrl = computed(
+  () => `https://t.me/share/url?url=${postLink}&text=${props.post.title}`,
+);
+const weiboShareUrl = computed(
+  () =>
+    `http://service.weibo.com/share/share.php?url=${postLink}&title=${props.post.title}&searchPic=false&style=simple`,
+);
+const doubanShareUrl = computed(
+  () =>
+    `https://www.douban.com/share/service?href=${postLink}&name=${props.post.title}&text=${props.post.excerpt}`,
+);
+const qqShareUrl = computed(
+  () =>
+    `https://connect.qq.com/widget/shareqq/index.html?url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName}`,
+);
+const qzoneShareUrl = computed(
+  () =>
+    `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName}`,
+);
 </script>
 
 <template>
   <div v-if="shareConfig.enable" class="post-share">
     <div class="share-text">
-      {{ t('shareOn.other') }}
+      {{ t("shareOn.other") }}
     </div>
 
     <div class="share-items">
@@ -117,7 +138,10 @@ const qzoneShareUrl = $computed(() => `https://sns.qzone.qq.com/cgi-bin/qzshare/
       </div>
 
       <div class="qrcode share-item">
-        <div class="qrcode-container" :title="t('shareViaTitle.other') + t('qrcode.other')">
+        <div
+          class="qrcode-container"
+          :title="t('shareViaTitle.other') + t('qrcode.other')"
+        >
           <Icon icon="qrcode" />
           <div id="qrcode-img">
             <QRCode :value="postLink" />

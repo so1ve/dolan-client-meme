@@ -1,14 +1,18 @@
 <script setup lang="ts">
 const store = useStore();
 
-const toggleNav = (e: MouseEvent) => {
+function toggleNav(e: MouseEvent) {
   e.preventDefault();
   store.toggleNav();
-};
+}
 </script>
 
 <template>
-  <span class="nav-toggle" :class="{ open: store.showNav, fade: !store.showNav }" @click="toggleNav">
+  <span
+    class="nav-toggle"
+    :class="{ open: store.showNav, fade: !store.showNav }"
+    @click="toggleNav"
+  >
     <div class="nav-toggle-inner">
       <span />
       <span />

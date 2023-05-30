@@ -1,37 +1,45 @@
 <script setup lang="ts">
 import type { Post } from "@dolan-x/shared";
 
-import { renderMarkdown } from "@dolan-x/markdown-renderer";
 import chineseZodiac from "@/data/ChineseZodiac.toml";
 
 const props = defineProps<{
-  title: string
-  posts: Post[]
+  title: string;
+  posts: Post[];
 }>();
 
-const getZodiac = (year: number) => {
+function getZodiac(year: number) {
   const zodiac = chineseZodiac[year % 12];
-  return zodiac;
-};
 
-const groupByYearedPosts = $computed(() => {
-  const yearedPosts = props.posts.reduce((acc, post) => {
-    const year = new Date(post.created).getFullYear();
-    const zodiac = getZodiac(year);
-    if (!acc[year]) {
-      acc[year] = {
-        year,
-        zodiac,
-        posts: [],
-      };
-    }
-    acc[year].posts.push(post);
-    return acc;
-  }, {} as Record<number, {
-    year: number
-    zodiac: string
-    posts: Post[]
-  }>);
+  return zodiac;
+}
+
+const groupByYearedPosts = computed(() => {
+  const yearedPosts = props.posts.reduce(
+    (acc, post) => {
+      const year = new Date(post.created).getFullYear();
+      const zodiac = getZodiac(year);
+      if (!acc[year]) {
+        acc[year] = {
+          year,
+          zodiac,
+          posts: [],
+        };
+      }
+      acc[year].posts.push(post);
+
+      return acc;
+    },
+    {} as Record<
+      number,
+      {
+        year: number;
+        zodiac: string;
+        posts: Post[];
+      }
+    >,
+  );
+
   return Object.values(yearedPosts).sort((a, b) => b.year - a.year);
 });
 </script>
@@ -44,14 +52,17 @@ const groupByYearedPosts = $computed(() => {
     <!-- eslint-disable-next-line vue/no-v-for-template-key -->
     <template v-for="item in groupByYearedPosts" :key="item.year">
       <h2 class="list-year">
-        {{ item.year }}<Icon class="chinese-zodiac" :icon="item.zodiac" />
+        {{ item.year }}
+        <Icon class="chinese-zodiac" :icon="item.zodiac" />
       </h2>
       <ul class="list-part">
         <li v-for="post in item.posts" :key="post.slug" class="list-item">
           <NuxtLink class="list-item-title" :to="usePostLink(post.slug)">
             {{ post.title }}
-          </nuxtlink>
-          <time class="list-item-time" :datetime="String(post.created)">{{ useDateFormat(post.created, "YYYY-MM-DD").value }}</time>
+          </NuxtLink>
+          <time class="list-item-time" :datetime="String(post.created)">
+            {{ useDateFormat(post.created, "YYYY-MM-DD").value }}
+          </time>
         </li>
       </ul>
     </template>

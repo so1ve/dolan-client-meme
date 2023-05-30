@@ -6,25 +6,29 @@ const { t } = useI18n();
 
 await configStore.fetchConfig();
 
-const siteConfig = $computed(() => configStore.config.site);
-const customConfig = $computed(() => configStore.config.custom);
+const siteConfig = computed(() => configStore.config.site);
+const customConfig = computed(() => configStore.config.custom);
 
 useHead({
   title: t("index.other"),
-  titleTemplate: `%s | ${siteConfig.name}`,
+  titleTemplate: `%s | ${siteConfig.value.name}`,
   meta: [
-    { name: "description", content: siteConfig.description },
-    { name: "author", content: customConfig.author.name },
-    { name: "keywords", content: siteConfig.keywords.join(", ") },
+    { name: "description", content: siteConfig.value.description },
+    { name: "author", content: customConfig.value.author.name },
+    { name: "keywords", content: siteConfig.value.keywords.join(", ") },
     { name: "apple-mobile-web-app-capable", content: "yes" },
     { name: "apple-mobile-web-app-status-bar-style", content: "black" },
-    { name: "apple-mobile-web-app-title", content: customConfig.title },
+    { name: "apple-mobile-web-app-title", content: customConfig.value.title },
     { name: "mobile-web-app-capable", content: "yes" },
-    { name: "application-name", content: customConfig.title },
+    { name: "application-name", content: customConfig.value.title },
   ],
   link: [
-    { rel: "shortcut icon", href: customConfig.favicon },
-    { rel: "apple-touch-icon", sizes: "180x180", href: customConfig.appleTouchIcon },
+    { rel: "shortcut icon", href: customConfig.value.favicon },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      href: customConfig.value.appleTouchIcon,
+    },
   ],
 });
 </script>

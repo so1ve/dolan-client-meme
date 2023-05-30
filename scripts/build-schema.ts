@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+
 import type { Config } from "ts-json-schema-generator";
 import { createGenerator } from "ts-json-schema-generator";
 

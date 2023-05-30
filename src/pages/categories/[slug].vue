@@ -4,20 +4,23 @@ import type { Post } from "@dolan-x/shared";
 const route = useRoute();
 const { t } = useI18n();
 
-const slug = $computed(() => route.params.slug);
-const categoryAPIURL = $computed(() => `/api/categories/${slug}` as const);
-const { data: categoryData, error: categoryError } = await useAsyncData(categoryAPIURL, () => $fetch(categoryAPIURL));
-const { data, error } = await useAsyncData(`/api/posts?category=${slug}`, () => $fetch("/api/posts", { query: { category: slug } }));
+const slug = computed(() => route.params.slug);
+const categoryAPIURL = computed(() => `/api/categories/${slug}` as const);
+const { data: categoryData } = await useAsyncData(categoryAPIURL.value, () =>
+  $fetch(categoryAPIURL.value),
+);
+const { data } = await useAsyncData(`/api/posts?category=${slug}`, () =>
+  $fetch("/api/posts", { query: { category: slug } }),
+);
 
-let posts = $ref([] as Post[]);
-let title = $ref("");
+const posts = ref([] as Post[]);
+const title = ref("");
 if (categoryData.value && data.value) {
   if (categoryData.value.code === 404) {
     throw notFound();
-  // TODO
   }
-  posts = data.value.data;
-  title = `${t("categories.one")}: ${categoryData.value.data.name}`;
+  posts.value = data.value.data;
+  title.value = `${t("categories.one")}: ${categoryData.value.data.name}`;
   useHead({
     title,
   });

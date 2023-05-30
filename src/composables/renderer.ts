@@ -3,5 +3,6 @@ export async function useRenderMarkdown(md: string) {
     method: "POST",
     body: { md },
   });
+
   return data.value!;
 }

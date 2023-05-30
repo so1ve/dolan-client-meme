@@ -2,14 +2,18 @@
 import type { CommonItem } from "@/types/config";
 
 const props = defineProps<{
-  item: CommonItem
+  item: CommonItem;
 }>();
 
 const localePath = useLocalePath();
 </script>
 
 <template>
-  <NuxtLink v-if="!useIsExternal(props.item.url)" class="menu-item-link" :to="localePath(props.item.url)">
+  <NuxtLink
+    v-if="!useIsExternal(props.item.url)"
+    class="menu-item-link"
+    :to="localePath(props.item.url)"
+  >
     <FontAwesomeIcon v-if="props.item.icon" :icon="props.item.icon || ''" />
     <span class="menu-item-name">{{ props.item.name }}</span>
   </NuxtLink>

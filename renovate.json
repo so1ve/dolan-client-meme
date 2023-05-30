@@ -1,6 +1,4 @@
 {
   "extends": ["github>so1ve/renovate-config"],
-  "ignoreDeps": [
-    "@nuxtjs/i18n"
-  ]
+  "ignoreDeps": ["@nuxtjs/i18n"]
 }

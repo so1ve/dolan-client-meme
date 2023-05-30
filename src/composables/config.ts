@@ -1,6 +1,7 @@
 import type { ConfigAll } from "@dolan-x/shared";
 import { acceptHMRUpdate, defineStore } from "pinia";
 import defu from "defu";
+
 import type { ConfigSchema } from "@/types/config";
 
 const defaultCustomConfig: Partial<ConfigSchema> = {
@@ -26,16 +27,20 @@ const defaultCustomConfig: Partial<ConfigSchema> = {
 };
 
 export const useConfigStore = defineStore("config", () => {
-  const config = useState("config", () => ({
-    functions: {},
-    authors: {},
-    categories: {},
-    tags: {},
-    posts: {},
-    pages: {},
-    site: {},
-    custom: {},
-  } as ConfigAll & { custom: ConfigSchema }));
+  const config = useState(
+    "config",
+    () =>
+      ({
+        functions: {},
+        authors: {},
+        categories: {},
+        tags: {},
+        posts: {},
+        pages: {},
+        site: {},
+        custom: {},
+      } as ConfigAll & { custom: ConfigSchema }),
+  );
 
   async function fetchConfig() {
     const { data } = await useFetch("/api/config");
@@ -49,4 +54,6 @@ export const useConfigStore = defineStore("config", () => {
   };
 });
 
-if (import.meta.hot) { import.meta.hot.accept(acceptHMRUpdate(useConfigStore, import.meta.hot)); }
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useConfigStore, import.meta.hot));
+}

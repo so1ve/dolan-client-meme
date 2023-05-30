@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Workaround
 const props = defineProps<{
-  error: any
+  error: any;
 }>();
 </script>
 

@@ -1,9 +1,11 @@
 <script setup lang="ts">
 const configStore = useConfigStore();
 
-const customConfig = $computed(() => configStore.config.custom);
+const customConfig = computed(() => configStore.config.custom);
 
-const grayFilter = $computed(() => customConfig.grayFilter ? "grayscale(1)" : "none");
+const grayFilter = computed(() =>
+  customConfig.value.grayFilter ? "grayscale(1)" : "none",
+);
 </script>
 
 <template>
@@ -14,7 +16,10 @@ const grayFilter = $computed(() => customConfig.grayFilter ? "grayscale(1)" : "n
         <slot />
       </div>
     </main>
-    <Footer :display-powered-by="customConfig.displayPoweredBy" :site-created="customConfig.siteCreated" />
+    <Footer
+      :display-powered-by="customConfig.displayPoweredBy"
+      :site-created="customConfig.siteCreated"
+    />
   </div>
 </template>
 

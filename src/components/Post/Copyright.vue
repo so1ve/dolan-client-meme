@@ -1,44 +1,7 @@
-<script setup lang="ts">
-const props = defineProps<{
-  name: string
-}>();
-
-// const configStore = useConfigStore();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <ul class="post-copyright">
-    <!--
-      <li class="copyright-item author">
-      {{- with $author.website -}}
-      <span class="copyright-item-text">{{ i18n "copyrightAuthor" }}</span>{{ i18n "colon" }}<a href="{{ . }}" class="p-author h-card" target="_blank" rel="noopener noreferrer">{{ $author.name }}</a>
-      {{- else -}}
-      <span class="copyright-item-text">{{ i18n "copyrightAuthor" }}</span>{{ i18n "colon" }}<span class="p-author h-card">{{ $author.name }}</span>
-      {{- end -}}
-      </li>
-      {{ if $.Params.original | default $.Site.Params.original }}
-      {{ $url := urls.Parse $.Permalink }}
-      {{ $decodedBaseURL := (printf `%s://%s` $url.Scheme $url.Host) }}
-      {{ $decodedPath := $url.Path }}
-      {{ $decodedPermalink := (printf `%s%s` $decodedBaseURL $decodedPath) }}
-      <li class="copyright-item link">
-      <span class="copyright-item-text">{{ i18n "copyrightLink" }}</span>{{ i18n "colon" }}<a href="{{ $.RelPermalink }}" target="_blank" rel="noopener noreferrer">{{ $decodedPermalink }}</a>
-      </li>
-      {{ else }}
-      {{ with $.Params.link }}
-      <li class="copyright-item link">
-      <span class="copyright-item-text">{{ i18n "copyrightLink" }}</span>{{ i18n "colon" }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>
-      </li>
-      {{ end }}
-      {{ end }}
-      {{ with $author.copyright }}
-      {{- $raw := . -}}
-      <li class="copyright-item license">
-      <span class="copyright-item-text">{{ i18n "copyrightLicense" }}</span>{{ i18n "colon" }}{{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}
-      </li>
-      {{ end }}
-    -->
-  </ul>
+  <ul class="post-copyright"></ul>
 </template>
 
 <style scoped lang="scss">

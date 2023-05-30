@@ -2,7 +2,7 @@ import { acceptHMRUpdate, defineStore } from "pinia";
 
 export const useStore = defineStore("store", () => {
   const showNav = ref<null | boolean>(null);
-  const toggleNav = () => showNav.value = !showNav.value;
+  const toggleNav = () => (showNav.value = !showNav.value);
 
   return {
     showNav,
@@ -10,4 +10,6 @@ export const useStore = defineStore("store", () => {
   };
 });
 
-if (import.meta.hot) { import.meta.hot.accept(acceptHMRUpdate(useStore, import.meta.hot)); }
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useStore, import.meta.hot));
+}

@@ -5,9 +5,7 @@
   "editor.tabCompletion": "on",
   "diffEditor.codeLens": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "i18n-ally.localesPaths": [
-    "src/i18n"
-  ],
+  "i18n-ally.localesPaths": ["src/i18n"],
   "i18n-ally.keystyle": "nested",
   "yaml.schemas": {
     "https://json.schemastore.org/github-workflow.json": "file:///e%3A/Node/dolan-client-meme/.github/workflows/deploy.yml"

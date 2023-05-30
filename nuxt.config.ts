@@ -1,13 +1,12 @@
 import { ViteToml } from "vite-plugin-toml";
+
 import { DenoFixPlugin } from "./src/rollup-plugins/deno-fix";
 
 export default defineNuxtConfig({
   srcDir: "src/",
   build: { transpile: ["vscode-textmate"] },
   vite: {
-    plugins: [
-      ViteToml(),
-    ],
+    plugins: [ViteToml()],
   },
   modules: [
     "@vueuse/nuxt",
@@ -18,12 +17,8 @@ export default defineNuxtConfig({
     "@nuxtjs/critters",
     "@nuxtjs/robots",
     "unplugin-icons/nuxt",
-    // "nuxt-purgecss",
-    // "@kevinmarrec/nuxt-pwa",
   ],
-  css: [
-    "@fortawesome/fontawesome-svg-core/styles.css",
-  ],
+  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
   colorMode: {
     fallback: "light",
     dataValue: "theme",
@@ -63,17 +58,14 @@ export default defineNuxtConfig({
       redirectOn: "root",
     },
   },
-  // pwa: {},
   nitro: {
     rollupConfig: {
       // @ts-expect-error ???
-      plugins: [
-        DenoFixPlugin(),
-      ],
+      plugins: [DenoFixPlugin()],
     },
   },
   experimental: {
-    reactivityTransform: true,
+    watcher: "parcel",
   },
   typescript: {
     shim: false,

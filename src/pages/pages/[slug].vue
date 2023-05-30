@@ -4,25 +4,26 @@ import type { Page } from "@dolan-x/shared";
 const route = useRoute();
 const configStore = useConfigStore();
 
-const customConfig = $computed(() => configStore.config.custom);
+const customConfig = computed(() => configStore.config.custom);
 
-const slug = $computed(() => route.params.slug);
-const apiURL = $computed(() => `/api/pages/${slug}` as const);
-const { data, error } = await useAsyncData(apiURL, () => $fetch(apiURL));
+const slug = computed(() => route.params.slug);
+const apiURL = computed(() => `/api/pages/${slug}` as const);
+const { data, error } = await useAsyncData(apiURL.value, () =>
+  $fetch(apiURL.value),
+);
 
-let page = $ref({} as Page);
-let title = $ref("");
-let renderedContent = $ref("");
+const page = ref({} as Page);
+const title = ref("");
+const renderedContent = ref("");
 if (data.value) {
   if (data.value.code === 404) {
     throw notFound();
-  // TODO
   }
-  page = data.value.data;
-  title = page.title;
-  renderedContent = await useRenderMarkdown(page.content);
+  page.value = data.value.data;
+  title.value = page.value.title;
+  renderedContent.value = await useRenderMarkdown(page.value.content);
   useHead({
-    title: page.title,
+    title: page.value.title,
   });
 }
 </script>
@@ -33,7 +34,7 @@ if (data.value) {
       <Article :rendered-content="renderedContent" :title="title" />
       <PostDonate />
       <template v-if="customConfig.comment">
-        <br>
+        <br />
         <Comment :config="customConfig.comment" />
       </template>
     </ErrorWrapper>

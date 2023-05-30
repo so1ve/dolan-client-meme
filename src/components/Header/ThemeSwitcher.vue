@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { ColorScheme as _ColorScheme } from "#components";
+
 // Workaround: Type
 const ColorScheme = defineComponent(_ColorScheme);
 
 const colorMode = useColorMode();
 
-const isLight = $computed(() => {
-  return colorMode.value === "light";
-});
+const isLight = computed(() => colorMode.value === "light");
 function toggleColorMode(e: MouseEvent) {
   e.preventDefault();
   colorMode.preference = colorMode.preference === "light" ? "dark" : "light";

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { locale, setLocale } = useI18n();
 
-const isEnglish = $computed(() => locale.value === "en");
+const isEnglish = computed(() => locale.value === "en");
 
 function switchLanguage() {
   setLocale(locale.value === "en" ? "zh" : "en");
