@@ -16,7 +16,6 @@ const tags = ref([] as Tag[]);
 const title = ref("");
 const renderedContent = ref("");
 if (data.value) {
-  console.log(data.value)
   if (data.value.code === 404) {
     throw notFound();
     // TODO
@@ -26,11 +25,11 @@ if (data.value) {
   renderedContent.value = await useRenderMarkdown(post.value.content);
   const slugString = computed(() => post.value.tags.join(","));
   const { data: tagData } = await useAsyncData(
-    `/api/tags/slug:${slugString}`,
+    `/api/tags/slug:${slugString.value}`,
     () =>
       $fetch("/api/tags", {
         query: {
-          slugs: slugString,
+          slugs: slugString.value,
         },
       }),
   );
