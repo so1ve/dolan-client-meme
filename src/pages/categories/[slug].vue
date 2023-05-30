@@ -5,12 +5,12 @@ const route = useRoute();
 const { t } = useI18n();
 
 const slug = computed(() => route.params.slug);
-const categoryAPIURL = computed(() => `/api/categories/${slug}` as const);
+const categoryAPIURL = computed(() => `/api/categories/${slug.value}` as const);
 const { data: categoryData } = await useAsyncData(categoryAPIURL.value, () =>
   $fetch(categoryAPIURL.value),
 );
-const { data } = await useAsyncData(`/api/posts?category=${slug}`, () =>
-  $fetch("/api/posts", { query: { category: slug } }),
+const { data } = await useAsyncData(`/api/posts?category=${slug.value}`, () =>
+  $fetch("/api/posts", { query: { category: slug.value } }),
 );
 
 const posts = ref([] as Post[]);

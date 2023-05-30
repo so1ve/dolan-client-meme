@@ -6,7 +6,7 @@ const configStore = useConfigStore();
 const customConfig = computed(() => configStore.config.custom);
 
 const slug = computed(() => route.params.slug);
-const apiURL = computed(() => `/api/posts/${slug}` as const);
+const apiURL = computed(() => `/api/posts/${slug.value}` as const);
 const { data, error } = await useAsyncData(apiURL.value, () =>
   $fetch(apiURL.value),
 );
