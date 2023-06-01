@@ -1,7 +1,6 @@
 import { ViteToml } from "vite-plugin-toml";
 
 import { DenoFixPlugin } from "./src/rollup-plugins/deno-fix";
-import { ProcessVersionsNodePlugin } from "./src/rollup-plugins/process-versions-node";
 
 export default defineNuxtConfig({
   srcDir: "src/",
@@ -62,7 +61,7 @@ export default defineNuxtConfig({
   nitro: {
     rollupConfig: {
       // @ts-expect-error ???
-      plugins: [DenoFixPlugin(), ProcessVersionsNodePlugin()],
+      plugins: [DenoFixPlugin()],
     },
   },
   experimental: {
