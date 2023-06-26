@@ -1,7 +1,7 @@
 {
   "name": "dolan-client-volantis",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.6.4",
+  "packageManager": "pnpm@8.6.5",
   "main": "nuxt.config.ts",
   "files": [
     "src",
