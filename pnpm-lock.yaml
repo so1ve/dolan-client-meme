@@ -117,8 +117,8 @@ devDependencies:
     specifier: ^1.62.1
     version: 1.62.1
   shiki-es:
-    specifier: ^0.2.0
-    version: 0.2.0
+    specifier: ^0.14.0
+    version: 0.14.0
   stylelint:
     specifier: ^15.6.2
     version: 15.6.2
@@ -11149,8 +11149,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shiki-es@0.2.0:
-    resolution: {integrity: sha512-RbRMD+IuJJseSZljDdne9ThrUYrwBwJR04FvN4VXpfsU3MNID5VJGHLAD5je/HGThCyEKNgH+nEkSFEWKD7C3Q==}
+  /shiki-es@0.14.0:
+    resolution: {integrity: sha512-e+/aueHx0YeIEut6RXC6K8gSf0PykwZiHD7q7AHtpTW8Kd8TpFUIWqTwhAnrGjOyOMyrwv+syr5WPagMpDpVYQ==}
     dev: true
 
   /side-channel@1.0.4:
