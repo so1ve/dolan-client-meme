@@ -1,6 +1,6 @@
-import { getHighlighter } from "shiki-es";
-import rehypeShiki from "@so1ve/rehype-shiki";
 import { getRenderer } from "@dolan-x/markdown-renderer";
+import rehypeShiki from "@so1ve/rehype-shiki";
+import { getHighlighter } from "shiki-es";
 
 export default defineEventHandler(async (req) => {
   const { md = "" } = await readBody(req);
