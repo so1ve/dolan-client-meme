@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <ul class="post-copyright"></ul>
+  <ul class="post-copyright" />
 </template>
 
 <style scoped lang="scss">

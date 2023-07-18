@@ -1,6 +1,6 @@
 import type { ConfigAll } from "@dolan-x/shared";
-import { acceptHMRUpdate, defineStore } from "pinia";
 import defu from "defu";
+import { acceptHMRUpdate, defineStore } from "pinia";
 
 import type { ConfigSchema } from "@/types/config";
 

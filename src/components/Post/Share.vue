@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import QRCode from "qrcode.vue";
 import type { Post, Tag } from "@dolan-x/shared";
+import QRCode from "qrcode.vue";
 
 const props = defineProps<{
   post: Post;

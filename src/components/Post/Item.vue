@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Post } from "@dolan-x/shared";
 import { renderMarkdownSync } from "@dolan-x/markdown-renderer";
+import type { Post } from "@dolan-x/shared";
 
 const props = defineProps<{
   post: Post;

@@ -2,6 +2,7 @@
 import type { WalineInitOptions } from "@waline/client";
 // @ts-expect-error Ignore type
 import { Waline as _Waline } from "@waline/client/dist/component.mjs";
+
 import "@waline/client/dist/waline.css";
 
 const props = defineProps<{

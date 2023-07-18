@@ -3,6 +3,7 @@
 // Implement gitalk comment component
 
 import Gitalk from "gitalk";
+
 import "gitalk/dist/gitalk.css";
 
 const props = defineProps<{
