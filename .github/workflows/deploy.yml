@@ -44,6 +44,7 @@ jobs:
           root: .output
 
   deploy-static:
+    if: github.repository == 'so1ve/dolan-client-meme'
     runs-on: ubuntu-latest
 
     permissions:
