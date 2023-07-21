@@ -41,7 +41,7 @@
     "@mini-cz/config-default": "^0.8.0",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/critters": "^0.4.1",
-    "@nuxtjs/google-fonts": "3.0.1",
+    "@nuxtjs/google-fonts": "3.0.2",
     "@nuxtjs/i18n": "8.0.0-beta.10",
     "@nuxtjs/robots": "^3.0.0",
     "@parcel/watcher": "^2.1.0",

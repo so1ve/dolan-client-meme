@@ -51,8 +51,8 @@ devDependencies:
     specifier: ^0.4.1
     version: 0.4.1
   '@nuxtjs/google-fonts':
-    specifier: 3.0.1
-    version: 3.0.1
+    specifier: 3.0.2
+    version: 3.0.2
   '@nuxtjs/i18n':
     specifier: 8.0.0-beta.10
     version: 8.0.0-beta.10
@@ -2275,7 +2275,7 @@ packages:
     dependencies:
       '@nuxt/schema': 3.5.2
       c12: 1.4.2
-      consola: 3.1.0
+      consola: 3.2.3
       defu: 6.1.2
       globby: 13.2.2
       hash-sum: 2.0.0
@@ -2476,12 +2476,12 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/google-fonts@3.0.1:
-    resolution: {integrity: sha512-9W5jZhpJ4UTmiPebljdoxs+ju89rOBVD5gb0sPRe73BVXCUUv46lV2Q0ynPZPsnono5WlTB6nyZbOCECa7IWDQ==}
+  /@nuxtjs/google-fonts@3.0.2:
+    resolution: {integrity: sha512-9DY0NcBnx/I6+3Lr7NeB64k5A7GbqCN1pqVgU9ld00NEXSpDUht2+lG8mcC5UnmpTi8KCdCJckDbD/bqW3ncYg==}
     dependencies:
-      '@nuxt/kit': 3.5.2
-      google-fonts-helper: 3.3.0
-      pathe: 1.1.0
+      '@nuxt/kit': 3.6.5
+      google-fonts-helper: 3.3.1
+      pathe: 1.1.1
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -4578,10 +4578,6 @@ packages:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: true
 
-  /consola@3.1.0:
-    resolution: {integrity: sha512-rrrJE6rP0qzl/Srg+C9x/AE5Kxfux7reVm1Wh0wCjuXvih6DqZgqDZe8auTD28fzJ9TF0mHlSDrPpWlujQRo1Q==}
-    dev: true
-
   /consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -6592,8 +6588,8 @@ packages:
     resolution: {integrity: sha512-xYfnw62CKG8nLkZBfWbhWwDw02CHty86jfPcc2cr3ZfeuK9ysoVPPEUxf21bAD/rWAgk52SuBrLJlefNy8mvFg==}
     dev: true
 
-  /google-fonts-helper@3.3.0:
-    resolution: {integrity: sha512-aFEVbmaavTY6wN3m6jZaWXQHfakMy6XNqdWN8YzHqHWCGpGma91zp8MiWsyb5i8gXQXYeGUWegb9ca/Jf/Q7Yw==}
+  /google-fonts-helper@3.3.1:
+    resolution: {integrity: sha512-zMycq4nUUaplGe7pzCOGBC52LB3VpwxS9temmCx1EucEaBdBEpG5MeQlJhtRu63gKI1hb/l+yHkasQtee59sFA==}
     dependencies:
       deepmerge: 4.3.1
       hookable: 5.5.3
