@@ -11,7 +11,7 @@ const configStore = useConfigStore();
 const { t } = useI18n();
 
 const host = computed(() => location.host);
-const useAbsoluteUrl = (path: string) => `https://${host}${path}`;
+const useAbsoluteUrl = (path: string) => `https://${host.value}${path}`;
 const siteName = computed(() => configStore.config.site.name);
 const shareConfig = computed(() => configStore.config.custom.share);
 const hashtags = computed(() => props.tags.map((t) => t.name).join(","));
