@@ -8,7 +8,9 @@ const afdianLink = computed(
 );
 const afdianBadge = computed(
   () =>
-    `https://img.shields.io/badge/${t("afdian.other")}-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA`,
+    `https://img.shields.io/badge/${t(
+      "afdian.other",
+    )}-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA`,
 );
 </script>
 
