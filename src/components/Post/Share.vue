@@ -18,34 +18,34 @@ const hashtags = computed(() => props.tags.map((t) => t.name).join(","));
 const postLink = computed(() => useAbsoluteUrl(usePostLink(props.post.slug)));
 const twitterShareUrl = computed(
   () =>
-    `https://twitter.com/share?url=${postLink}&text=${props.post.title}&hashtags=${hashtags}`,
+    `https://twitter.com/share?url=${postLink.value}&text=${props.post.title}&hashtags=${hashtags.value}`,
 );
 const facebookShareUrl = computed(
   () =>
-    `https://www.facebook.com/sharer/sharer.php?u=${postLink}&hashtag=${hashtags}`,
+    `https://www.facebook.com/sharer/sharer.php?u=${postLink.value}&hashtag=${hashtags.value}`,
 );
 const linkedinShareUrl = computed(
   () =>
-    `https://www.linkedin.com/shareArticle?mini=true&url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&source=${siteName}`,
+    `https://www.linkedin.com/shareArticle?mini=true&url=${postLink.value}&title=${props.post.title}&summary=${props.post.excerpt}&source=${siteName.value}`,
 );
 const telegramShareUrl = computed(
-  () => `https://t.me/share/url?url=${postLink}&text=${props.post.title}`,
+  () => `https://t.me/share/url?url=${postLink.value}&text=${props.post.title}`,
 );
 const weiboShareUrl = computed(
   () =>
-    `http://service.weibo.com/share/share.php?url=${postLink}&title=${props.post.title}&searchPic=false&style=simple`,
+    `http://service.weibo.com/share/share.php?url=${postLink.value}&title=${props.post.title}&searchPic=false&style=simple`,
 );
 const doubanShareUrl = computed(
   () =>
-    `https://www.douban.com/share/service?href=${postLink}&name=${props.post.title}&text=${props.post.excerpt}`,
+    `https://www.douban.com/share/service?href=${postLink.value}&name=${props.post.title}&text=${props.post.excerpt}`,
 );
 const qqShareUrl = computed(
   () =>
-    `https://connect.qq.com/widget/shareqq/index.html?url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName}`,
+    `https://connect.qq.com/widget/shareqq/index.html?url=${postLink.value}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName.value}`,
 );
 const qzoneShareUrl = computed(
   () =>
-    `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${postLink}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName}`,
+    `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${postLink.value}&title=${props.post.title}&summary=${props.post.excerpt}&site=${siteName.value}`,
 );
 </script>
 
