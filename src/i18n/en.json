@@ -52,5 +52,6 @@
   "home": { "other": "Home" },
   "tags": { "other": "Tags", "one": "Tag" },
   "categories": { "other": "Categories", "one": "Category" },
-  "index": { "other": "Index" }
+  "index": { "other": "Index" },
+  "afdian": { "other": "Afdian" }
 }
