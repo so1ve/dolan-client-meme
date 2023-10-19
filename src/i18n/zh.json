@@ -52,5 +52,6 @@
   "home": { "other": "主页" },
   "tags": { "other": "标签", "one": "标签" },
   "categories": { "other": "分类", "one": "分类" },
-  "index": { "other": "索引" }
+  "index": { "other": "索引" },
+  "afdian": { "other": "爱发电" }
 }
