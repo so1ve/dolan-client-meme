@@ -7,7 +7,7 @@ settings:
 devDependencies:
   '@antfu/ni':
     specifier: ^0.21.3
-    version: 0.21.3
+    version: 0.21.12
   '@dolan-x/markdown-renderer':
     specifier: ^0.0.46
     version: 0.0.46
@@ -169,8 +169,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/ni@0.21.3:
-    resolution: {integrity: sha512-iDtQMeMW1kKV4nzQ+tjYOIPUm6nmh7pJe4sM0kx1jdAChKSCBLStqlgIoo5Tce++p+o8cBiWIzC3jg6oHyjzMA==}
+  /@antfu/ni@0.21.12:
+    resolution: {integrity: sha512-2aDL3WUv8hMJb2L3r/PIQWsTLyq7RQr3v9xD16fiz6O8ys1xEyLhhTOv8gxtZvJiTzjTF5pHoArvRdesGL1DMQ==}
     hasBin: true
     dev: true
 
@@ -12478,6 +12478,9 @@ packages:
   /sqlite3@5.1.7:
     resolution: {integrity: sha512-GGIyOiFaG+TUra3JIfkI/zGP8yZYLPQ0pl1bH+ODjiX57sPhrLU5sQJn1y9bDKZUFYkX1crlrPfSYt0BKKdkog==}
     requiresBuild: true
+    peerDependenciesMeta:
+      node-gyp:
+        optional: true
     dependencies:
       bindings: 1.5.0
       node-addon-api: 7.1.0
