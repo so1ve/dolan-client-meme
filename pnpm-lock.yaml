@@ -28,7 +28,7 @@ devDependencies:
     version: 6.5.2
   '@fortawesome/vue-fontawesome':
     specifier: ^3.0.3
-    version: 3.0.6(@fortawesome/fontawesome-svg-core@6.5.2)
+    version: 3.0.8(@fortawesome/fontawesome-svg-core@6.5.2)
   '@giscus/vue':
     specifier: ^2.2.8
     version: 2.4.0
@@ -1863,8 +1863,8 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.5.2
     dev: true
 
-  /@fortawesome/vue-fontawesome@3.0.6(@fortawesome/fontawesome-svg-core@6.5.2):
-    resolution: {integrity: sha512-akrL7lTroyNpPkoHtvK2UpsMzJr6jXdHaQ0YdcwqDsB8jdwlpNHZYijpOUd9KJsARr+VB3WXY4EyObepqJ4ytQ==}
+  /@fortawesome/vue-fontawesome@3.0.8(@fortawesome/fontawesome-svg-core@6.5.2):
+    resolution: {integrity: sha512-yyHHAj4G8pQIDfaIsMvQpwKMboIZtcHTUvPqXjOHyldh1O1vZfH4W03VDPv5RvI9P6DLTzJQlmVgj9wCf7c2Fw==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
       vue: '>= 3.0.0 < 4'
