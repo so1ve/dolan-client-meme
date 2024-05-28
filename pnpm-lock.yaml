@@ -130,7 +130,7 @@ devDependencies:
     version: 3.14.0
   twikoo:
     specifier: ^1.6.16
-    version: 1.6.35
+    version: 1.6.36
   typescript:
     specifier: ^5.0.4
     version: 5.4.5
@@ -13240,8 +13240,8 @@ packages:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
     dev: true
 
-  /twikoo@1.6.35:
-    resolution: {integrity: sha512-7YpHRBeLtdtPWmSOGboAp1sJYaQTk4HrAKwS/AkoaaaFC738GCuFh+St0R9FjlNZnls/gykmZRGzjMGSAQHWmg==}
+  /twikoo@1.6.36:
+    resolution: {integrity: sha512-Xafec9hq3jEiadZ2AOjOnC2TKbw/7hGjko2pWwt6pjarMNQZ0Ly2Qzm8tJnM9lnzJ8UG5cdDUIjU35Ym+8Em7g==}
     dev: true
 
   /type-check@0.4.0:
