@@ -109,7 +109,7 @@ devDependencies:
     version: 2.0.0
   pinia:
     specifier: ^2.1.3
-    version: 2.2.0(typescript@5.5.4)
+    version: 2.2.1(typescript@5.5.4)
   qrcode.vue:
     specifier: ^3.4.0
     version: 3.4.1
@@ -2861,7 +2861,7 @@ packages:
     resolution: {integrity: sha512-bhuNFngJpmBCdAqWguezNJ/oJFR7wvKieqiZrmmdmPR07XjsidAw8RLXHMZE9kUm32M9E6T057OBbG/22jERTg==}
     dependencies:
       '@nuxt/kit': 3.12.4
-      pinia: 2.2.0(typescript@5.5.4)
+      pinia: 2.2.1(typescript@5.5.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - magicast
@@ -11095,8 +11095,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pinia@2.2.0(typescript@5.5.4):
-    resolution: {integrity: sha512-iPrIh26GMqfpUlMOGyxuDowGmYousTecbTHFwT0xZ1zJvh23oQ+Cj99ZoPQA1TnUPhU6AuRPv6/drkTCJ0VHQA==}
+  /pinia@2.2.1(typescript@5.5.4):
+    resolution: {integrity: sha512-ltEU3xwiz5ojVMizdP93AHi84Rtfz0+yKd8ud75hr9LVyWX2alxp7vLbY1kFm7MXFmHHr/9B08Xf8Jj6IHTEiQ==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
