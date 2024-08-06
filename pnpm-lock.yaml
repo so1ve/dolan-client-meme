@@ -63,8 +63,8 @@ devDependencies:
     specifier: ^2.1.0
     version: 2.4.1
   '@pinia/nuxt':
-    specifier: ^0.4.11
-    version: 0.4.11(typescript@5.5.4)
+    specifier: ^0.5.0
+    version: 0.5.2(typescript@5.5.4)
   '@so1ve/eslint-config':
     specifier: ^0.97.2
     version: 0.97.2(eslint@8.57.0)(prettier@2.8.8)(svelte@4.2.18)(typescript@5.5.4)(vitest@2.0.5)
@@ -2857,8 +2857,8 @@ packages:
       typescript: 5.5.4
     dev: true
 
-  /@pinia/nuxt@0.4.11(typescript@5.5.4):
-    resolution: {integrity: sha512-bhuNFngJpmBCdAqWguezNJ/oJFR7wvKieqiZrmmdmPR07XjsidAw8RLXHMZE9kUm32M9E6T057OBbG/22jERTg==}
+  /@pinia/nuxt@0.5.2(typescript@5.5.4):
+    resolution: {integrity: sha512-YvQqcv1LehSnH1OTC+9wU53UK+UxB45+vJXpc/RljJiSAfbEVGE+3NZ8WRsWC+YvL7A3FgtbmeuqhGka0lANJA==}
     dependencies:
       '@nuxt/kit': 3.12.4
       pinia: 2.2.0(typescript@5.5.4)
