@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@antfu/ni':
-    specifier: ^0.21.3
-    version: 0.21.12
+    specifier: ^0.22.0
+    version: 0.22.0
   '@dolan-x/markdown-renderer':
     specifier: ^0.0.46
     version: 0.0.46
@@ -164,8 +164,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/ni@0.21.12:
-    resolution: {integrity: sha512-2aDL3WUv8hMJb2L3r/PIQWsTLyq7RQr3v9xD16fiz6O8ys1xEyLhhTOv8gxtZvJiTzjTF5pHoArvRdesGL1DMQ==}
+  /@antfu/ni@0.22.0:
+    resolution: {integrity: sha512-qP2zFsmypfWpKnmQcjoqMfYrPRHbqcXnhaUrg3VGqPGFXyN9sKz2+/TvNKByWDqAfuVStE8Fy2ppuVdoWQDjkw==}
     hasBin: true
     dev: true
 
