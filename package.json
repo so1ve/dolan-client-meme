@@ -45,7 +45,7 @@
     "@nuxtjs/i18n": "8.0.0-beta.10",
     "@nuxtjs/robots": "^3.0.0",
     "@parcel/watcher": "^2.1.0",
-    "@pinia/nuxt": "^0.4.11",
+    "@pinia/nuxt": "^0.9.0",
     "@so1ve/eslint-config": "^0.97.2",
     "@so1ve/rehype-shiki": "2.2.1-fix.1",
     "@so1ve/stylelint-config": "^0.3.0",
