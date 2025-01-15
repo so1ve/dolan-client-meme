@@ -63,8 +63,8 @@ devDependencies:
     specifier: ^2.1.0
     version: 2.5.0
   '@pinia/nuxt':
-    specifier: ^0.4.11
-    version: 0.4.11(typescript@5.7.3)
+    specifier: ^0.9.0
+    version: 0.9.0(pinia@2.3.0)
   '@so1ve/eslint-config':
     specifier: ^0.97.2
     version: 0.97.2(eslint@8.57.1)(prettier@2.8.8)(svelte@4.2.19)(typescript@5.7.3)(vitest@2.1.8)
@@ -2876,18 +2876,17 @@ packages:
       typescript: 5.7.3
     dev: true
 
-  /@pinia/nuxt@0.4.11(typescript@5.7.3):
-    resolution: {integrity: sha512-bhuNFngJpmBCdAqWguezNJ/oJFR7wvKieqiZrmmdmPR07XjsidAw8RLXHMZE9kUm32M9E6T057OBbG/22jERTg==}
+  /@pinia/nuxt@0.9.0(pinia@2.3.0):
+    resolution: {integrity: sha512-2yeRo7LeyCF68AbNeL3xu2h6uw0617RkcsYxmA8DJM0R0PMdz5wQHnc44KeENQxR/Mrq8T910XVT6buosqsjBQ==}
+    peerDependencies:
+      pinia: ^2.3.0
     dependencies:
       '@nuxt/kit': 3.13.2
       pinia: 2.3.0(typescript@5.7.3)
     transitivePeerDependencies:
-      - '@vue/composition-api'
       - magicast
       - rollup
       - supports-color
-      - typescript
-      - vue
       - webpack-sources
     dev: true
 
