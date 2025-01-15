@@ -138,8 +138,8 @@ devDependencies:
     specifier: ^0.16.1
     version: 0.16.6
   vite-plugin-toml:
-    specifier: ^0.5.0
-    version: 0.5.0
+    specifier: ^0.7.0
+    version: 0.7.0
   vue-tsc:
     specifier: ^1.6.5
     version: 1.8.27(typescript@5.7.3)
@@ -14005,13 +14005,6 @@ packages:
     engines: {node: '>=0.6'}
     dev: true
 
-  /toml-eslint-parser@0.4.0:
-    resolution: {integrity: sha512-lwMC8RPBoAksoMFpQnB4c3zz+o9JPv1sxsduVH9AHb2o4kxQl7mtP5YaYoS33+6IdVrzHAXxi4JgowJDERoynw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
   /toml-eslint-parser@0.6.1:
     resolution: {integrity: sha512-7xjjVOdu0c6GpaP2AmA48ZcjesBL7KB2qeMNz93gMG76yV/lHVzQiSlD6HqwAdMJiL9hM44fung0NzhjTfihtw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -14842,17 +14835,17 @@ packages:
       vue-tsc: 1.8.27(typescript@5.7.3)
     dev: true
 
-  /vite-plugin-toml@0.5.0:
-    resolution: {integrity: sha512-68KbihVlcXzw7iUpQkuedjjrmHrEB3U6kfnW2dhFossK20wAt4nruNfI1Sn16DXnCmaA1McX+NNFlBW2ydwMnw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+  /vite-plugin-toml@0.7.0:
+    resolution: {integrity: sha512-NFU6ySuBGzl4Br3mdEs8RkCmPFQ/YoagY3ossMKIij2EdThIDwW20t5/C+JUopWLW+gE+nSWK5yBzSe3UwT2jw==}
+    engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
-      rollup: ^2.77.0 || ^3.0.0
+      rollup: ^2.77.0 || ^3.0.0 || ^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 4.2.1
-      toml-eslint-parser: 0.4.0
+      '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
+      toml-eslint-parser: 0.9.3
     dev: true
 
   /vite@4.3.9(@types/node@22.10.6)(sass@1.83.4):
